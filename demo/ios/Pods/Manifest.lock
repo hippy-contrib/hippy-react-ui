@@ -1,0 +1,16 @@
+PODS:
+  - hippy (2.0.0)
+
+DEPENDENCIES:
+  - hippy
+
+SPEC REPOS:
+  trunk:
+    - hippy
+
+SPEC CHECKSUMS:
+  hippy: 72bb77ae9012f33e1f1ae620d3b0f168cff78bee
+
+PODFILE CHECKSUM: 518552f6ec8a5a51e433b7989db4040143a5f50b
+
+COCOAPODS: 1.8.4

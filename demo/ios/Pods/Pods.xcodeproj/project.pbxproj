@@ -1,0 +1,2101 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01CDF73B40EBFAF97DD81FB74C383224 /* HippyViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CA89DE108589DA0C7831DE0256EA8 /* HippyViewPager.m */; };
+		020FC8303FE1D415CDFC96E558282326 /* HippyBorderDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = AD2A605C6FFB86D30129CBA320DBBA8C /* HippyBorderDrawing.m */; };
+		028116ED59391A700789F3A488125D87 /* logging-impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FF919FC570F61E167A0B617103031B3 /* logging-impl.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		05487C7600BF3B97485AAFC572BAF44D /* thread-id.h in Headers */ = {isa = PBXBuildFile; fileRef = 61FFF73742FAD53B2FD3365DC868BBC2 /* thread-id.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		057B9336430D7C579EF84C22AEB96271 /* task-runner.h in Headers */ = {isa = PBXBuildFile; fileRef = ED788E2623F9ECFB53ED2E7BB37C4629 /* task-runner.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		05F05A64F4A02B66721B17DC614BD313 /* HippyVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D58B92CF2FDA74EE9E5DA93C3D0C2D0 /* HippyVideoPlayer.m */; };
+		0668E0D7AECA6CD7ACE4ACB621EFA81E /* logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 36CF4747E9360CA1B3B891D7702AA248 /* logging.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		087C096764C04E20681DFF1C32B46773 /* HippyUIManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0315FBAAFDC1C5FFC0F0E8E605DBC1D3 /* HippyUIManager.mm */; };
+		0AC235900D73C04636567DC08DFD5BF6 /* native-source-code-ios.cc in Sources */ = {isa = PBXBuildFile; fileRef = 6C4C85DE70EC35202D6C81A4C094F615 /* native-source-code-ios.cc */; };
+		0BF321721EDE4DC457EE3EF49E92A0AD /* HippyNavigationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1E158097ABB38F33F039D51274FDA4 /* HippyNavigationControllerAnimator.m */; };
+		0D4E0366E120C9AF5C766B0AEF955510 /* HippyVirtualTextNode.m in Sources */ = {isa = PBXBuildFile; fileRef = B717634E5672ECC36A86236F0EA1C3D2 /* HippyVirtualTextNode.m */; };
+		0DC2393927CC1AF7A3CD495CB148B413 /* HippyScrollViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4763533104346EF8DB0A0E5FEBE53665 /* HippyScrollViewManager.mm */; };
+		0EB2979851B6441F23D6FA521096BB5C /* logging.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38100DEFE83FABC63667594B82D2DD08 /* logging.cc */; };
+		0EB81EADD4639E74C29DA1E231BD9FE6 /* HippyNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 0979868A34214A77314A8F5E31B6D5FC /* HippyNetWork.m */; };
+		0FFE4246898BF144BED7AEB37D6D3710 /* HippyShadowText.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6456297CD4ED7DC8A0185F6E450D0737 /* HippyShadowText.mm */; };
+		1014DFDB8883C68D133774AFEE5A580A /* hippy-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9DBEDAD98C05317E1EE495E1920664 /* hippy-dummy.m */; };
+		10C0C9C020159F4BC3A7B480ED0D3053 /* macros.h in Headers */ = {isa = PBXBuildFile; fileRef = D086901EC08D1F3B2AFDDD4124937B8B /* macros.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11CE7DDDBE7EB5047CB2941E838D67DF /* HippyExtAnimationViewParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A82A1F0F19DB419131990FD23656811 /* HippyExtAnimationViewParams.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		11E52C231034ED12C901943A9F730B01 /* HippyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC2593E9979F4FF2C1C9F3263D587 /* HippyUtils.m */; };
+		123E4881187E55D6198509BA4C3DC47E /* HippyExtAnimationModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A84BFCE8B844028033152FB587F1353 /* HippyExtAnimationModule.m */; };
+		1345C7BE637598645042D9564D28D1AE /* HippyComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = EC824E687D18FD8E7838B26054DC90BB /* HippyComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1675B29E4F9DBE04DC5DAF363B51BEB1 /* HippyPointerEvents.h in Headers */ = {isa = PBXBuildFile; fileRef = E7024EFECAD61D2CF520D2783E2F9BE2 /* HippyPointerEvents.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		16B31F39BB1A20BB71C5F01DD96DEFF6 /* HippyTextSelection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D26F6120A1941554178B7AE4CA1EF17 /* HippyTextSelection.m */; };
+		16D9A33E38BCAE3B9690C1099E0285C2 /* UIView+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C708FC21D3ED04B327BC74DB0A0F6C3 /* UIView+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		174352CE5715B31A1117B61A1E8D4FE3 /* HippyFetchInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 34AABCDB21A186595E8288E69E26AE89 /* HippyFetchInfo.m */; };
+		175DCA41C86B1734F304B7E8484FD566 /* HippyBundleURLProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 66249707C2A085BCA2462C09621CD747 /* HippyBundleURLProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		180BF9CEA3AD5A5C40EB8353421B47A5 /* HippyRootViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DF7EF4499739C8E39C8D73389ED5F542 /* HippyRootViewDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1829CE848DB18EB550772161B30F06B4 /* HippyNavigatorViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E0B6115FDE5792978D1C5F5884DDC /* HippyNavigatorViewManager.m */; };
+		19158856BA29E2FC7D1F9D9C91A16230 /* HippyParserUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EA765515AF9BF82F2792455DB16972B /* HippyParserUtils.m */; };
+		1A26D498B19FE9988F0F19258BE16CE8 /* js-value-helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 34A16EE6D7C87507A4A84F84048A4D21 /* js-value-helper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A7AEE17DA5BB54E9DE17D6DB5CFF6C7 /* NSArray+HippyArrayDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 574C6B65A8D0AB8F380BA318524171E9 /* NSArray+HippyArrayDeepCopy.m */; };
+		1C905BCEB8C706F49068032151F2DDBB /* HippyImageLoaderModule.h in Headers */ = {isa = PBXBuildFile; fileRef = D222BB6B7DD51D59367DB61FFAC0032A /* HippyImageLoaderModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1CC3FFE0DB06E586666178230B1CDF7A /* HippyTextViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2F8E2506F83C4766ABD6BF5E3C3C43AA /* HippyTextViewManager.mm */; };
+		1D730AEE02D74BFB2F612799B1321F22 /* module-register.h in Headers */ = {isa = PBXBuildFile; fileRef = 6506EFB14CEF4F358B3F175F7546376C /* module-register.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E1D8F72CA18279F5AB3410E7F85C962 /* NSDictionary+HippyDictionaryDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = ECAA4551290848C5C78D7A09B703807A /* NSDictionary+HippyDictionaryDeepCopy.m */; };
+		1EE4938AF282374F73EFB0A245DD094D /* HippyTiming.h in Headers */ = {isa = PBXBuildFile; fileRef = A79F6E25F0CF7AEE55F97195CC08557D /* HippyTiming.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2135DA9412E0860A14C86D4161E1A84D /* HippyUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 721E4743DD441DA1698344FB5DA60F1A /* HippyUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		218ABACCC4589E5F5D9CE351E81EBA29 /* MTTUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 890121E688750CE6ABBF34A907F634CB /* MTTUtil.cpp */; };
+		225D4EF13CC2F7A327FA340B6D177C1D /* HippyComponentData.h in Headers */ = {isa = PBXBuildFile; fileRef = 973272C1D9A26A033F15955C9ED326C9 /* HippyComponentData.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		22AA130B02831604968335BBD01F09D8 /* HippyBaseListViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 30EFB28D6896DEF2CAAC60BDA242DC2C /* HippyBaseListViewDataSource.m */; };
+		22D04E785DDBBD3FB6EDC55174389325 /* Pods-hippyDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E21031CA48B3A9479AB790434B4376EA /* Pods-hippyDemo-dummy.m */; };
+		25A8BAEE46D02FE5096027C41819A751 /* HippyModalHostViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9626863D6AF41140CD7FA185939714B4 /* HippyModalHostViewManager.mm */; };
+		272B4375BE6505E9CA08C179DACDD379 /* javascript-loader.cc in Sources */ = {isa = PBXBuildFile; fileRef = 664749B9657F627802332545B6571EA0 /* javascript-loader.cc */; };
+		273D3FEFB7C97BFD1A30FE754259C302 /* HippyBackgroundImageCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DF015B925A401C1C63C0B9F2BE4D59E /* HippyBackgroundImageCacheManager.m */; };
+		282393AA2D9DF19E54C5D7AF3294671F /* NSNumber+HippyNumberDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A78BD2B4C7F7435FFDE915C25D8C9D /* NSNumber+HippyNumberDeepCopy.m */; };
+		282DBA0CE58770C3BF7ABCC626E9C559 /* UIImageView+React.h in Headers */ = {isa = PBXBuildFile; fileRef = 5501785BAEE04F0D8BD6578FAD844E96 /* UIImageView+React.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2A66177361F74CE4804D95A5E7C0C929 /* HippyJSStackFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = DDEBB3D38BBFEAB5D364840BED02ACE2 /* HippyJSStackFrame.m */; };
+		2A9CFD37CA342EACF10D7BA3B05D1EEB /* HippyJSCExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E5A1F1836DAE2F3532B059F3E78122B /* HippyJSCExecutor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B5B0D29445F4F7326CF6D17C37CC285 /* console-module.cc in Sources */ = {isa = PBXBuildFile; fileRef = C497C91373F65F45498F4B9CF5FBD961 /* console-module.cc */; };
+		2BB5E1C602157295B9C5855A73FED648 /* HippyTextManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9FBA5106A67415053D36F3A89A6C812C /* HippyTextManager.mm */; };
+		2BE930DF4A088830AE0DAA0EA35E85CF /* HippyBaseListViewProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 504924A3B5314FC791B344832BE96AB7 /* HippyBaseListViewProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2D5EAE803B1036E376868165ED09E711 /* HippyWebSocketManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 84CF6BF3CBFD68798DD8D38F6521F8E8 /* HippyWebSocketManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2E9433BAD4072A5B9FCDDAE790EB6488 /* HippyRefreshWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE4DE878B33A6119720068C9C23127D /* HippyRefreshWrapper.m */; };
+		2FFA65CDA302CF2DDE43B715EF95C7F8 /* HippyShadowTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = AAC29463CF590324B73959C7FBB535CD /* HippyShadowTextView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		30D202F6DC73DCE6CF08C8A77C742A46 /* HippyTouchHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AE8B64996F05B03D47139232F11DB93 /* HippyTouchHandler.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31A85B1E6C895D90535F9F7E4706E743 /* x5LayoutUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 44AAAC0707555C3579CC728DFA736A58 /* x5LayoutUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		31CB460E64498368157AC6CF4F10D5F4 /* HippyBaseListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4021157FC18935D75CF239A9A92129DA /* HippyBaseListView.m */; };
+		329E937400CF3C8E6D54A59C686F4605 /* HippyTextDecorationLineType.h in Headers */ = {isa = PBXBuildFile; fileRef = A10405B4E6AB414B02EFC7A4CCA1A362 /* HippyTextDecorationLineType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3415076D39E2CCE3AC91BB0CE9CC415D /* HippyAsyncLocalStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = BC85AD25D16C42D5BF66ACF246BCD232 /* HippyAsyncLocalStorage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3574B3AB4BA36BA3CAA5E98095162994 /* HippyPerformanceLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 24D2699CD3318B7A63A6BEA1994E5A3B /* HippyPerformanceLogger.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3586A0B661EA6D0B7D9AF8FAB1DA2359 /* HippyInvalidating.h in Headers */ = {isa = PBXBuildFile; fileRef = 6030B1DA2C06B7B43403C1F6ADED3FF4 /* HippyInvalidating.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3615E8D96927D765B4511AAD43D13CDA /* HippyExtAnimationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF1A8DA5330ADE7F38F8A5C56A77219 /* HippyExtAnimationGroup.m */; };
+		368B707345AA32F0CC5667C91D9B1B5F /* HippyTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B6F4E189C44ED85495EE55347569E2E /* HippyTextView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3743C2E7162AD6ADF5898591E9D00ED6 /* HippyNavigationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A7CE97640C0471E117A41FEDBD153CC /* HippyNavigationControllerAnimator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		39FA601E1900599513BA1487A4F06E99 /* HippyKeyCommands.m in Sources */ = {isa = PBXBuildFile; fileRef = 226BEEE8433916C7F1B97E77BEB002DB /* HippyKeyCommands.m */; };
+		3CBDAE5278E472C04376BE12DE084591 /* js-native-jsc-helper.cc in Sources */ = {isa = PBXBuildFile; fileRef = 96BEAF1D4A6B0C1A44DCC4DF65C705CC /* js-native-jsc-helper.cc */; };
+		3CC80ACBDDB9716D2C270E7D34B309D0 /* HippyAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2039CCB4B9B307100B173D553B005746 /* HippyAnimatedImageView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D6D362E7E268CAB6D50169B42EC9352 /* environment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1286A86049AC38F815CEF0D36A4E477D /* environment.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3D793918911147B7C0C94A2D701DAC23 /* engine-impl.cc in Sources */ = {isa = PBXBuildFile; fileRef = 68596887095E1F494EBAE75AFAC8F15A /* engine-impl.cc */; };
+		3D87D16D5DBC4223066E217FE0E9B119 /* HippyRootView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5492910D93CEB9CF1710280227682C8D /* HippyRootView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3E7E9448BBE1001ABECF4AD2C76229BB /* MTTFlex.h in Headers */ = {isa = PBXBuildFile; fileRef = 401064E1603FFD3CE702379B7FEC38D9 /* MTTFlex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F40E97F7098D0AD26488E1F6962743A /* HippyTextViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE88D10A27C712CC2634EFB8EAC7AC12 /* HippyTextViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		411704FE153A221C00E1C1EA50235B2E /* HippyLog.mm in Sources */ = {isa = PBXBuildFile; fileRef = DBC93E3394C09FA35CA84BDC7886DA01 /* HippyLog.mm */; };
+		4119B354C9DFF74654C73961448737CC /* HippyEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 8190E7703ADFB90B4137F70538367A39 /* HippyEventDispatcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		415F7B6B5EA8A13BCEF8C99121BABDFE /* HippyBaseTextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = AB2A2915C2F5246AFED6E3A75C40CA46 /* HippyBaseTextInput.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		41AD2A99A693360B29F31C34CC676AD3 /* task.cc in Sources */ = {isa = PBXBuildFile; fileRef = 28BFCB97EF48FB88B2C3404D5DF0FE73 /* task.cc */; };
+		423728FB073D62F60533DD32A596D7AB /* HippyVideoPlayerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = C2DB517CFA83DD53479F2F35292183B6 /* HippyVideoPlayerManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		430DD0DCB18C999CF93B0DE2D1A5099C /* HippyScrollableProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 386D0E479462B237862AF89B80600D0E /* HippyScrollableProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		433BE6A537A79A9054E774C04817E38F /* HippyPerformanceLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AFA1D4B1549405D6DA95668FA6F083 /* HippyPerformanceLogger.m */; };
+		4447D19CE8FA080B237F01102093DA47 /* lock-queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 137630D1037F944CA3983FF998CF9491 /* lock-queue.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44959FFBE7331D8E8A2E6CB609436070 /* HippyModuleMethod.mm in Sources */ = {isa = PBXBuildFile; fileRef = 45B328A34F7AD5138621DDF5E2E6712E /* HippyModuleMethod.mm */; };
+		44BD29B0D8F5EF78E2F8A4B37C2BECC2 /* HippyModalCustomAnimationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BBCF40AFA84251F6C7FDEFA09AED46 /* HippyModalCustomAnimationTransition.m */; };
+		44C9EC242BEF67F53A85E622E72BB562 /* HippyDevLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB20538AB224CB58258A9C424CF02B /* HippyDevLoadingView.m */; };
+		45F84BF015C0F6B429750F51303AAC1B /* HippyMemoryOpt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F64A8D3D5C2EFA0D6463EC5F2D5DCA5 /* HippyMemoryOpt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		471BABE8FD6BF84EB0BE18E93A6E57F3 /* HippyWebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC345B332B9961D651D7A7CB1DCB8436 /* HippyWebSocketManager.m */; };
+		47902EB2ECE22E456ED821C915CF533A /* HippyExtAnimation+Value.m in Sources */ = {isa = PBXBuildFile; fileRef = B43658C64DCEFB643313F2FBDC22D2D1 /* HippyExtAnimation+Value.m */; };
+		47EADEAC49E248C4C0C45DD1A94923B5 /* HippyBridgeMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A223A707BBE5DDA202A7CE4531FE9AD /* HippyBridgeMethod.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		481B0468CFF1CDDD7E98C8D6E047F95A /* HippyRedBox.h in Headers */ = {isa = PBXBuildFile; fileRef = B44C1664BF40E776A774F9D5981AC707 /* HippyRedBox.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		486CBD969D544CF4895FC8A32074A582 /* HippyViewPagerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB1DE4DBB13826F342D422AFA8ADB8 /* HippyViewPagerManager.m */; };
+		4889F6A949611B2DA393D3697A103DFB /* HippyFrameUpdate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6501BBED06626EEAD9E01C4B18A8A2EB /* HippyFrameUpdate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4A95A29BD95EA78D6819A1191D2678F8 /* HippyNetWork.h in Headers */ = {isa = PBXBuildFile; fileRef = 64E445561478301565B40A24111AE40A /* HippyNetWork.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CAC882A5BDB133F87CE9F2E49424B1D /* NSData+Format.h in Headers */ = {isa = PBXBuildFile; fileRef = B291B8B2470651B81233CC9225D53A1F /* NSData+Format.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CCE491DA51AE6BEF0080700FC5BC875 /* logging-impl.cc in Sources */ = {isa = PBXBuildFile; fileRef = D25CAE3CB90A46B49909031BF4FCFA64 /* logging-impl.cc */; };
+		4D09B39591D3F0E28256CD7937F16208 /* HippyModalHostView.h in Headers */ = {isa = PBXBuildFile; fileRef = B26CB9D6FE2A96841632EC0A61938A76 /* HippyModalHostView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4D3F2BBE861EE35D50C20AE16DA87CDA /* NSData+Format.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C349F14032D9FFE3636389CBDD98E /* NSData+Format.m */; };
+		4DDFCC7B099F6DB05E8B736BE9609BD3 /* HippyVirtualNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 42C7283402D0C60975E5FC2D118AED0B /* HippyVirtualNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4F9F2E3E537C3D90163920A2AD36177C /* HippyTextView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0601AE52C6BD13CFE08DDEB485AAC2C2 /* HippyTextView.mm */; };
+		508F19264B757B2385DAC9CB129A6ABE /* HippyFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BC538CCF7CA5D1E7B65E9446F96E9AE /* HippyFont.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		56A5AF5FDCE6AC89F1D5F4D7FF5141DF /* environment.cc in Sources */ = {isa = PBXBuildFile; fileRef = A25A502B9C895FC18C2D86A5AA08CA69 /* environment.cc */; };
+		5737F083D4CFC913D2F80120E76CBC29 /* HippyViewPagerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = BFCA7ADFA784B966CB84668A09FACE2A /* HippyViewPagerItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5768C7DF3754AE4CA8A1A53D0320E5F9 /* HippyModalHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A74D6BBA4B1E9014E6764BA7674134 /* HippyModalHostView.m */; };
+		58D1615A8B1296B8FB44960FC7212A36 /* HippyModalCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E84DA95C35A1857E4F39BFB4E5A7C52 /* HippyModalCustomPresentationController.m */; };
+		5B04A81ADD8016AE012D6CF0048D7ABB /* copyable-lambda.h in Headers */ = {isa = PBXBuildFile; fileRef = C151B8FC1B9486E056CE725B7E3AE3CD /* copyable-lambda.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B0B741226E6886291D825566A99C4EE /* HippyViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F75B0D61C4D1DD5AA7B8C68043EC97FD /* HippyViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5B64F3E0FE4EACAB644FFCFA10877884 /* MTTLayout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DC6D67685F883D4F61717EEDF63A329E /* MTTLayout.cpp */; };
+		5C6E687EE22736E283F6DA16706FE882 /* HippyImageViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C12E52E6EDA43B07AB9DF88A4AC12EF /* HippyImageViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5C8F336D0857B625E9984A78A1C0F2D5 /* HippyDeepCopyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D6B2B4C93A0F73EE01D6AA7E4A2527 /* HippyDeepCopyProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5D4164DAAAD7A0AFA937EED03D373AE7 /* javascript-task.cc in Sources */ = {isa = PBXBuildFile; fileRef = 7F8B72F99ABD324A7D9D4A5DDF2A2478 /* javascript-task.cc */; };
+		5D5BF45941DAC9D03FEBB4795B5D1DBE /* HippySimpleWebViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF6CCA343E2C71EB6F6BAE54E666E00 /* HippySimpleWebViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5DC93AC8E95B890EC2FA21BD26E1ED78 /* HippyWebSocketExecutor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 62411D8E22CD96D9EB3A27349474D970 /* HippyWebSocketExecutor.mm */; };
+		5F3E2389E3EC494CCF6897C3F3374374 /* HippyAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF62F5CE62EBAFF991AB6650B768FCF /* HippyAnimatedImageView.m */; };
+		5F40841A3E02E06A01E41B1D1C643613 /* HippyDisplayLink.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6B9D44B44D2B191F6E54244480DB55 /* HippyDisplayLink.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5F7C87283B6A9B21C64381E4943FFA0F /* HippyRootShadowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BDC0EC91686260FF5E75C4085347996 /* HippyRootShadowView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FF10D9E49C5B9D2922C2C53BB1FEADB /* HippyDevLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 517CB765CA4385E6E902AAE1D3A58EBE /* HippyDevLoadingView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FF3BCB1ECA39B4B3B693D5D10A0B9DE /* HippyVideoPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7BBBDE2EA1EE868CB36E1610EAA4DB /* HippyVideoPlayerManager.m */; };
+		60725AF6F65F688A6EF3AD1840F8B961 /* HippyBaseListView.h in Headers */ = {isa = PBXBuildFile; fileRef = E6634DBF2E1BD152C54FD89EC8CB13DD /* HippyBaseListView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		60A0931BEEF46D9E87E7EBF4BF4FC452 /* HippyTiming.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4DFEF4DF0EB2AAF9428A07AFD96A12B2 /* HippyTiming.mm */; };
+		638FBBE86EDAA84651F84D489BD99563 /* HippyWebSocketProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C320A03061425C41467A765C324C182 /* HippyWebSocketProxyDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6522F872B91F66F45A19F083628680C4 /* engine.cc in Sources */ = {isa = PBXBuildFile; fileRef = E872DF5A5ECE2DA6F7C194DDE4A0BE8E /* engine.cc */; };
+		6568F13642BE0CC4C06277DD720D6375 /* task.h in Headers */ = {isa = PBXBuildFile; fileRef = F53BE5E8BD58E8B4C8F9C7BEF2A742AB /* task.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		65EB3983E81C2BD6A895A4F7CBEC90A8 /* js-native-jsc-helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 30E134D3137E571EB2091C950B6E28BB /* js-native-jsc-helper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		66ADA641EC8D54F57761FE1C0490A07B /* HippyViewEventProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 996CED98697A6049A45390BBAA6C9EBC /* HippyViewEventProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		66E30969B32E88135C6ABBB5D657D160 /* HippyBaseListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E045FC4AF9E30A9FC2AC5DB00343F8D /* HippyBaseListItemView.m */; };
+		66F29B841E3973008139D7661BAB84C1 /* HippyModalHostViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A3743D5AB060797F25868BFA9687DCFE /* HippyModalHostViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		679078065DA44F1F8A183EF9777D9B4D /* HippyBatchedBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 60DB2AB90C23536A76EF580430A86718 /* HippyBatchedBridge.mm */; };
+		68AFEBFCCA1224404161B0CCEA50C6E0 /* javascript-task-runner.h in Headers */ = {isa = PBXBuildFile; fileRef = 58F4F0C9A286EF089A284884E4F56B5E /* javascript-task-runner.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6932C7ED1131AF4C657076D88D1E7233 /* HippyBundleURLProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD453BA4BFD6A5C6827C65AAC65F701 /* HippyBundleURLProvider.m */; };
+		69993C6A24E49A42FDCDABB0E450C3F3 /* HippyBaseListViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D4FEEDEA5A6D64604C70ABB0F89B86F /* HippyBaseListViewManager.m */; };
+		6D728FE006E8AC83B2DB2F0FF303A415 /* NSDictionary+HippyDictionaryDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = C9CC264088F9A9E89F76AE72CE5394CC /* NSDictionary+HippyDictionaryDeepCopy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6D8C6143C7D8D9614F6255BB0890CC4A /* HippyExtAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 19A3AB4DE33E1BA0AA913D76D45AD4C4 /* HippyExtAnimation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6E8B2F8AFEE79CC03B17C3BBB2D7C706 /* HippyBridgeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DC4BE9AE84C3F0E27FCCEE7D842598AE /* HippyBridgeDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		70057E540683CCDC240DE1A742145AC1 /* HippyDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D0608FCF89809E56CE4DFEDF846232 /* HippyDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		70EB94E0C092AAD1DB822E459175B269 /* HippyEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = D05CCD6348EFBB40FE579F6324B36B1D /* HippyEventDispatcher.m */; };
+		7100D487573DBE0505BF491AD779C358 /* HippyBridge+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 5698AC8DAB5963F4E318CEEA90E8F9A1 /* HippyBridge+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7158E6AACFF2C5F8EF544F351B150EB0 /* HippyNavigatorRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB35C36BDAAFB7A41A0D31355BEF2933 /* HippyNavigatorRootViewController.m */; };
+		72429D3568D71A3B8E086A71E4E692D6 /* HippyRootViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = A39E769E28447678C228491D98E2C983 /* HippyRootViewInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		749E67B99BDF769DD41D59D21433E289 /* HippyShadowText.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A83BFCD9854ABB7C484F89E5A39E746 /* HippyShadowText.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		759DA963F7678C90B5E194154ECF223C /* HippyModalHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D9B319FA0CB1456CA7CA9678C922C7 /* HippyModalHostViewController.m */; };
+		75F0A28DA0B7B2535725F886F8B1EC9C /* HippyView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F4CEF79FE52B7511413EA98FBD44228 /* HippyView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		75F4188F378FE14C3DA84A158AD5C2D1 /* HippyBridge+LocalFileSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 1023D39D195D6F108D547A05DA130520 /* HippyBridge+LocalFileSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		762A2FFD162E4341B4F480AD5BABA6C9 /* HippyBaseListItemViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D90A4E52743276C50B9BB47453F0D654 /* HippyBaseListItemViewManager.m */; };
+		782C93FB7CF4151EAC11135949F08D0C /* contextify-module.cc in Sources */ = {isa = PBXBuildFile; fileRef = 872DE9041315D1CA5CEC3AFBC249BCE2 /* contextify-module.cc */; };
+		791D2F89BCD30B069C3FF4D4D644B2C3 /* HippyWebSocketExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E0EF9D88ED969A51822516508080F06 /* HippyWebSocketExecutor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7A658AF04F0D88D8DAF2A1678F486C49 /* HippyTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BEC577640C6138DABA4577254768B6A /* HippyTextField.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B20B8E9972DF2C8139E081090A2ED60 /* HippyBaseListItemViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 416BF29DBF819EEFCE7FE3AC8C82480B /* HippyBaseListItemViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B69662CD9E8CB4C12BBC9BD5F410A72 /* HippyNavigatorRootViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5038B626BF91FE126CA254D0604597F5 /* HippyNavigatorRootViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B7CA45F70B3C3B739D95433962C11D9 /* module-base.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D47607B138FCDB61A2F08BD1419211F /* module-base.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7D1CF1B38B319D63184EC5030257AA20 /* HippyBaseListItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = D5804D88E6AD5298FF4EBC06C5355559 /* HippyBaseListItemView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7DD5BE4DC1A2CA6BB89AB371254A238C /* HippyRootShadowView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3340F7A9FDC93365883F1977D1A1D133 /* HippyRootShadowView.mm */; };
+		7DDE221F50C3B9D1766FB12A8B0739EB /* HippyBorderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 54348092740680A8E51429E6AA8C1522 /* HippyBorderStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FAFDE7520C0F325A4FF04D120CEF0B1 /* MTTFlexLine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F02378AAE7D639DD42E9AB9F59EC5180 /* MTTFlexLine.cpp */; };
+		80B257EEAAC92F75F8D35BD22856C3D6 /* HippyNetInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B768B9AC6D4ABF55B1D3A1BA7CA3998 /* HippyNetInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		81DDEC5541AF26AB1A90D47467AD5B88 /* HippyImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 712CB08EF3D3C0F6D23E01AD302AD0B7 /* HippyImageView.m */; };
+		831A78D68AB711E4DAF5A87CFB6FFDBF /* HippyBackgroundImageCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BD4EC8B9760C5769FAAD371831B03977 /* HippyBackgroundImageCacheManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		83BA8915C6698A27E7F1A613BE3F2E17 /* HippyText.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F27D8B8E2A950886621C5527D2D9DF3 /* HippyText.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		84618E15BFF90D8D6682D74CE423BBFC /* thread.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BAD596B8064675FFCBE3DB64B69F1EB /* thread.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		84D8144D1C26E154D1F05EDB6A550329 /* HippyViewPagerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 87C5E4CD7FED463586F5A337BCD2EB2E /* HippyViewPagerItem.m */; };
+		85A6D7633FE218AA7FCA2A650EA6CA8C /* HippyShadowTextView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5FE46D56B1BEB1127E980353DAC9A05C /* HippyShadowTextView.mm */; };
+		85CFCF82DC8D9EA3427EC50085E87EFB /* HippyCustomTouchHandlerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D2746EEE760639E6AB8D9CD236F0F9B /* HippyCustomTouchHandlerProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		85E8E0B59969B7DC6CF66BEAC3079FDE /* HippyImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E962E6903B54ED85509E8CADEF3B3 /* HippyImageCache.m */; };
+		86E956359DB08063A80652EE6A32B653 /* HippyJSCWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7A2093E59A1587E5BEDEFA6ECFF2E0C /* HippyJSCWrapper.mm */; };
+		883A6CDD6F3E9774841B287EE489F01C /* javascript-task.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D28A83AA99A3B62442AEDF18F87DEDD /* javascript-task.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		88FA04005E39E39BF3BAB985E54879D8 /* HippyNavigatorHostView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 91E9B6BAA319B015C405A1B29D5A9D87 /* HippyNavigatorHostView.mm */; };
+		8D570797486D9BD8A870941A8DF02710 /* HippyImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = E2A4E8CB3604E5E5139703547BC896A4 /* HippyImageView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8DC563D088075CAFAD59CA85B1684D34 /* HippyRefreshWrapperItemView.h in Headers */ = {isa = PBXBuildFile; fileRef = BD8CF3AD93AF5C7F8464B0C9B19CC608 /* HippyRefreshWrapperItemView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8EB43EF97EA798EFC333133E35E81E66 /* NSNumber+HippyNumberDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 298E8EA6BF4D6C97827DD32B7BC9B1CA /* NSNumber+HippyNumberDeepCopy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8EF18340F5E0779B462A0267748E517A /* NSArray+HippyArrayDeepCopy.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F25A9306E4CEF07FBED75C8232AE566 /* NSArray+HippyArrayDeepCopy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8FAC7D7BE26A0BBA5AE191F5AE52B848 /* HippySRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4293640A947F6CD18DBDA961A42061F5 /* HippySRWebSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8FE31BBF4DD03C8D6953E5E9843FD13A /* HippyModalCustomAnimationTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = BB1D79C047154B008314B28F436466C7 /* HippyModalCustomAnimationTransition.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		90E77BF2CB45A9A2531652D6212CBC06 /* HippyShadowView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93082BEF6EFEEECF4AE76E37BFF2ECC3 /* HippyShadowView.mm */; };
+		91C5D87C2B0ECBD34C744BDB272E079A /* HippyDevMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 869EC6E63E88B8451547B51D6C1B7D57 /* HippyDevMenu.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		91E40AEE15F33EA3F952A9EC44CE1E0B /* HippyJavaScriptExecutor.h in Headers */ = {isa = PBXBuildFile; fileRef = D51FC386EC1EA0A1EED52AD5F31AEF12 /* HippyJavaScriptExecutor.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		92367D1C70B3248EFF603D2BFAD50A42 /* thread.cc in Sources */ = {isa = PBXBuildFile; fileRef = 15EE7F31C9E420F1C823669028844A6F /* thread.cc */; };
+		9290AA28FA887A5876BA2ED968FC4353 /* HippyExtAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 073297D7A87FA730BB588BB37905BE15 /* HippyExtAnimation.m */; };
+		92FFE3339045CF02948969C90B8307FB /* thread-id.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8B1DF53BD9C2C6617993DD936DB1A8E1 /* thread-id.cc */; };
+		95947CFAF362C57256A001E16BA13E16 /* HippyNavigatorItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAC1838AB98234851F474BC89392C6D /* HippyNavigatorItemViewController.m */; };
+		95BC9AFF56DEEF9B810949E8393522AA /* HippyRefreshWrapperItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C7B4CC14B73445A16A3CE526860D87 /* HippyRefreshWrapperItemView.m */; };
+		985B803819AA22F92CB189DBED7ECFC6 /* UIView+React.mm in Sources */ = {isa = PBXBuildFile; fileRef = 80FFAAC1C4C50750FB5FF320502BBA84 /* UIView+React.mm */; };
+		985CBF0261B5E6C539CBB69E2BED6E7A /* HippyImageViewCustomLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B51DB421A39A076325CF1134F513ACE /* HippyImageViewCustomLoader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		99A76272365A63761C1389B9796CF994 /* HippyExceptionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E17FD435D82B65320C421FB1ADE6DA /* HippyExceptionModule.m */; };
+		9A31FB25F4B87015777D722BADBDE99B /* HippyErrorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6F5873C2DF7DF5E37F41AA747D93F /* HippyErrorInfo.m */; };
+		9ACA7FB5E4867D2CA5E19ACC7DC142BB /* HippyImageCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DCA989843EE02DA9DD41FE050573AB1F /* HippyImageCacheManager.m */; };
+		9AE0471347471911FC167A00E6D22B08 /* HippyImageCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D587C75E7BE55F46CCF914F61938AC /* HippyImageCacheManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9E6DDBF1F6DE1F17E7178218B2E00421 /* HippyViewPagerItemManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 57D9F8F758B222EDA921B1274613376B /* HippyViewPagerItemManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F8455C9971E8D07E6CF4F8720ABD6F1 /* HippyViewPager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A01769C17DE96162D49F4D20627E09D /* HippyViewPager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9FF3FBFFA2EB06C60F63A957780C4CEE /* HippyParserUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A9231A7510DB3F74B792695BFEA25BB1 /* HippyParserUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A047A8C70C746B7C28679EC0BCD7CC46 /* HippyExtAnimation+Value.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E0545D6B575629543EFE1D4BAD3ACB /* HippyExtAnimation+Value.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A1177A4E6D2735BE7F69487CA2A200E8 /* HippyDevMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = E3FEE21D2002F9F73B306D6DA2062948 /* HippyDevMenu.mm */; };
+		A2595AFA5383CC94956C8C32AC9638C8 /* HippyBorderDrawing.h in Headers */ = {isa = PBXBuildFile; fileRef = 756DF6B6E12C4873CC3FC054779099E6 /* HippyBorderDrawing.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A307EC6A3609C20F27345C5BBEF040DB /* HippyJSCErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D1864C06FDCCFF47D782D67E170974 /* HippyJSCErrorHandling.m */; };
+		A37BD99F1C32BDE303C9DA87C2E908D8 /* HippyRefreshWrapperViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DFE6819719EE9B4708FD3F803D47A6E7 /* HippyRefreshWrapperViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5157990108E5FDAF215C878F2E4E3DA /* HippyJSStackFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = FE480114BFFD8AF2C7694576AEAA8196 /* HippyJSStackFrame.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A541818ED440C3A2F4392A2C3F715A63 /* HippyMyEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = DDE4E9C3FFACF9A08589140F31D7F083 /* HippyMyEventModule.m */; };
+		A5CDCAF42E317A84CF2597685B981EFB /* x5LayoutUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A14296AB80C53B0C2700A911F7B1BB3 /* x5LayoutUtil.m */; };
+		A606C7CC5E1DC5E94E734A9FFC8DF4BA /* HippyExtAnimation+Group.h in Headers */ = {isa = PBXBuildFile; fileRef = BB94C4035ED1AC01F91223518D4ED54D /* HippyExtAnimation+Group.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6AC36073CD24C35C817DF012BC9D5E7 /* HippyAnimationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 28B395B39123E44583808997254D272E /* HippyAnimationType.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A857EF31469571A6BFFD28BA614D65EA /* HippyTextManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 34C6BEDBDF9B30AD628E1FE69DA7FFF5 /* HippyTextManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AA1F53C2946C631E39FC2C5EAD636495 /* HippyKeyCommands.h in Headers */ = {isa = PBXBuildFile; fileRef = 05BC2C99A45A9ED078B62EABCA96E931 /* HippyKeyCommands.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AC94FEB3C43AFBC654A099214A62C3E2 /* HippyBaseListViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 388D6D66DE85BE1116CEAA12EFF7CCFE /* HippyBaseListViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AD0EC3BD7F80F7BC0B26DE7628A15705 /* HippyBridgeModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF0F84F343153C1DCC6AA10ECE5EC20 /* HippyBridgeModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ADF62F9B427784C64348275CC91E617C /* HippyExceptionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = D81450EFEEEC7A2801625C23D93301D6 /* HippyExceptionModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AE2C4FC7BD894D73FB03693A79C61D70 /* js-native-api.h in Headers */ = {isa = PBXBuildFile; fileRef = F3783DB6BE28DF8EEBDA70AA5F9CB9DE /* js-native-api.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF632ECE6BC8966646DB44806902A1DF /* HippyMyEventModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AF473D251D6997CC617E57D699A9C56 /* HippyMyEventModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B116B56ECED5C8328DC120A8AE24E9D9 /* HippyModuleData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 977C3BE182711E32CC35CE83F8C2F9E6 /* HippyModuleData.mm */; };
+		B1BD5D01DF98323C91BC00D3A24C3BAB /* HippyRedBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C5A5ADB8D6E85E35949302BBA96C62 /* HippyRedBox.m */; };
+		B426D77910D335881995FFD0A1949805 /* HippyBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = EE0041E8B44FF8E12E8F0963DFFB1D14 /* HippyBridge.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B594B36782AD5B4684413628F7794AF8 /* HippyBridge+Mtt.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0075EA2DE7924B98DCAC40E229793508 /* HippyBridge+Mtt.mm */; };
+		B5DF221AC3BD7049F8046FFFFE9EBB94 /* HippySimpleWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B572D8AA4242FD1BFB1D8E7509EA1DF /* HippySimpleWebView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B751613D5F983C16513D8BD0780B7EC5 /* MTTTStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = E6610960AC4FE4410C381FBC25B1B55E /* MTTTStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B7DE9F6213D4AD035024DE2390BE46B3 /* HippyScrollProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 981554BC0343E9CCBB4DA9839385F4E7 /* HippyScrollProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B7E4D1169ED07549171A8817E5E1D8E7 /* HippySimpleWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 852A1DAD809A12784AB944EE1953B44A /* HippySimpleWebView.m */; };
+		B8B23DCCB401949AC589BB6C077502C5 /* HippyNavigatorHostView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A5508B68720409773EAE1C696F17207 /* HippyNavigatorHostView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B9657A544AA942D8F8E50E611545DBBB /* HippyFont.mm in Sources */ = {isa = PBXBuildFile; fileRef = D11E6038FE6727768C1EAB3E12E21E1A /* HippyFont.mm */; };
+		BB7F095C0A84B81218639F7BBB0DC98B /* HippyAsyncLocalStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4E53C3ABF3A7CAE9E6EAB99144D282 /* HippyAsyncLocalStorage.m */; };
+		BCFF4236F39B6392CB767964AB0AE59A /* HippyModalCustomPresentationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 80FDA7017BD2D8CB0BA9FBEDDA747F83 /* HippyModalCustomPresentationController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE35B0F7CCCC9623640BD6B220B79CB6 /* MTTNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 380BAC858B095B60CDF647E393A4DCF1 /* MTTNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE73FD51368037387689629C9791DE91 /* HippyNullability.h in Headers */ = {isa = PBXBuildFile; fileRef = D53516EC658D46C273A3688B28D72F4B /* HippyNullability.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BEBABCBF73F80F2547E4ABD3A68C387A /* HippyScrollViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 00EF653BB8BA51778381092629B6455F /* HippyScrollViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF479C5A6A0EE1494919B0101B9FCD62 /* HippyConvert+Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = 6486C8DF2EAD8DB6D0DF8A1666372DB2 /* HippyConvert+Transform.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF5472AC7D6E6F96A14B4934143FA6E7 /* HippyJSCErrorHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 135D7F5E8CE7808BC1FB314EAB6DCF9E /* HippyJSCErrorHandling.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BFAB699AF2A01E8A17D42A1E4102D7C5 /* HippyViewPagerItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C4C481D36A4EB3D2587AA274D1660E /* HippyViewPagerItemManager.m */; };
+		C0A443A31EB0403E832C25708393D582 /* HippyModuleData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7381DBFDFEC6D71968D9B3C998D6CC0A /* HippyModuleData.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C2E46C4604A6F7940FB42FD3756198A5 /* HippyRefreshWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DED240D851863C8101C0BA59F07F0B90 /* HippyRefreshWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C2F2CC210BF62D3FE3AD7553423E3192 /* MTTLayoutCache.h in Headers */ = {isa = PBXBuildFile; fileRef = FE35FCDFA7A608F54DA16641A8D0880B /* MTTLayoutCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C4B3A3C41BE6F2013B3E320282068CD1 /* MTTNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5642C81CE10BD1EEEAF23F1D07E9597 /* MTTNode.cpp */; };
+		C514098E5495BF334EB6733B02A6ADC8 /* HippyErrorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC5364451D57C229506658A54D21198 /* HippyErrorInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C546DAC5334C82E845C9CEF466A11C40 /* HippyRefreshWrapperItemViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E134CBA40A923781A533D22C2B7519 /* HippyRefreshWrapperItemViewManager.m */; };
+		C646A636EED05E861ADB89F1AA58D23A /* HippyFetchInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 660E391561B01D9AECCC098EE9C24896 /* HippyFetchInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C67E55DDF799C9911339938C822E3855 /* MTTTStyle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19C48AEFB871F986289BE8A4EAA54591 /* MTTTStyle.cpp */; };
+		C6F9F3DEDB5E1E3D77B84B8DD9D45D33 /* HippyLog.h in Headers */ = {isa = PBXBuildFile; fileRef = CD9C970E9E965010B97D5DBAF530C00B /* HippyLog.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C7DF773081E922370E233F28D882B5C9 /* HippyJavaScriptLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = FFC97E40B483AED306830E77FDB6E13B /* HippyJavaScriptLoader.mm */; };
+		C89B8CDD269BC8C85CCD95B40C99DBEE /* MTTFlexLine.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C9EDF71C6FE760558276C258AD3F8D0 /* MTTFlexLine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CA6597C6502807552342A8B764EB104B /* HippyBaseListViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = FC8D2B6B4A4E8045552D2C8DA28A9F82 /* HippyBaseListViewDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CA7D138794415F26429A90324B310D72 /* HippyImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 2552A4DAA65A49C726195CDF27B7AFBD /* HippyImageCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CC8F0654A69A13D33D0CD54218202AA1 /* task-runner.cc in Sources */ = {isa = PBXBuildFile; fileRef = 0E1D6A1ED74E8DDA93E8AC4309016AEE /* task-runner.cc */; };
+		CCAA985956ADF351328493966E6BB5D0 /* HippyAutoInsetsProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 75BEE478FC5F9184769F24F637C6766B /* HippyAutoInsetsProtocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CCBFE203DF27EAA074A759BA794E62E3 /* HippyConvert.mm in Sources */ = {isa = PBXBuildFile; fileRef = 737082455946CFFAE82EA70CE127C0F6 /* HippyConvert.mm */; };
+		CCCF0A66C56EEB5BD2BA8DD571D53C84 /* HippyRefreshWrapperItemViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE50910CA44295D2A6D2461B4DB5D31 /* HippyRefreshWrapperItemViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CD5BDEE542DE95D25D4DDC8E1CCB8340 /* HippyExtAnimationGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = C180DC9F25F913AA0520C196A64B7C9C /* HippyExtAnimationGroup.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CE50AFD5DC2461F07B833DE605BC84BC /* HippyBridge+Mtt.h in Headers */ = {isa = PBXBuildFile; fileRef = D13D59B81C65CA8535D4F77572DD9877 /* HippyBridge+Mtt.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CE9535EBE5BD7FAACC7A3F6244482A2A /* MTTLayoutCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD8CBB3A823C3FCF6E0704BC4B785F4E /* MTTLayoutCache.cpp */; };
+		CF2613B4238C61500052FA26BD03B118 /* HippyNavigatorViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 676058123825F2163AF32CF504AED132 /* HippyNavigatorViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFC36A566A63D54E4F84F120A6FCB9FF /* HippyNetInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A330784D9CDC7238DA4E32983F741 /* HippyNetInfo.m */; };
+		D04AB3E08DED363697BAD19CD7EFC1B8 /* HippyAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 259A1CC8E6D2404376A9D1C08FA465E2 /* HippyAnimatedImage.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D1A6F62CAE335D5AFD12D7DA69B1EFED /* MTTLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E865F90140A20354BBC0DEFD777BA9 /* MTTLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D1BADD27DA302DB1A21FAE1DE17A5BAC /* HippyScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6B59C5D725FE5B2DB3C4C8F8075715 /* HippyScrollView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3450E7A261190F5FD870A4B571F510F /* HippyEventObserverModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 393636F2C72D3004AFA686BE51381CF9 /* HippyEventObserverModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D38770205F9BC9F1F6DFA1F930861325 /* js-native-api-jsc.h in Headers */ = {isa = PBXBuildFile; fileRef = 1303C01FD9C53A9B6F71037AF596A41A /* js-native-api-jsc.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3B1E0119540BA4D1E1373C71A1F283C /* js-native-api-jsc.cc in Sources */ = {isa = PBXBuildFile; fileRef = 8B2E4D672C50574702EC22216F03A27E /* js-native-api-jsc.cc */; };
+		D49BFD2F998DF4CF85E77DA12A550901 /* js-native-api-value-jsc.cc in Sources */ = {isa = PBXBuildFile; fileRef = 76BC5C8547F8464060627C76F8D7AC15 /* js-native-api-value-jsc.cc */; };
+		D57C531F79715369DFB10B3ABA740203 /* timer-module.cc in Sources */ = {isa = PBXBuildFile; fileRef = 37661AA932EECAA2D23733C198A1DB3B /* timer-module.cc */; };
+		D61E692F6399A8CC7F1FC49CE2C9BB45 /* javascript-task-runner.cc in Sources */ = {isa = PBXBuildFile; fileRef = FD1734A592E5919B38DD9CE42A104F47 /* javascript-task-runner.cc */; };
+		D6306E9AE6A7EA64298DCED7FD17447A /* HippyTouchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B977BB5A9376F2C60E3463BBC887E3D5 /* HippyTouchHandler.m */; };
+		D6C6B015D4F54BD7C5B42B6D3294F843 /* HippyClipboardModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B76206439F1B8D07B38727A271FB2 /* HippyClipboardModule.m */; };
+		D6CD989F038DA0EA950B2B5572520BBC /* HippyView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE67B903D5597B5EA30096FDCA9D85F /* HippyView.m */; };
+		D6F58479FC7EC03F1AABB94594BCCF4F /* HippyFrameUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DC0676A478A524527F5FA30DBDCE967 /* HippyFrameUpdate.m */; };
+		D7497E454BCB69BF9D1C578807145209 /* HippySRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EEEDB3C38A9EC2D301B10B60770079C4 /* HippySRWebSocket.m */; };
+		D8983E436C5620D575ECE1FE3264BED5 /* HippyBaseTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F30CEFA815A70D7F9C3E5038455A92A /* HippyBaseTextInput.m */; };
+		D9E4A173C7B60D2BAC2DC56C9F2EC5E6 /* js-native-api-types.h in Headers */ = {isa = PBXBuildFile; fileRef = E0C4FD329AD7A8BAD6AFE4976F38073F /* js-native-api-types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DA127AE3AF93C52A6076404B3781F962 /* console-module.h in Headers */ = {isa = PBXBuildFile; fileRef = 801D1E55716FF192EEE9C2F8A1AA1F51 /* console-module.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DA502F51CE0DC03AC19B964F57829FEE /* HippyJSCWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 822A929FC3528A0A329ABD2126F68B81 /* HippyJSCWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD8A7507965ACCD5A7A0C8173E2C2929 /* HippyExtAnimationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 936954E39DF47875233B580A17ED5008 /* HippyExtAnimationModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DF0E6D1773CA2CD0F7BE760E904EC893 /* HippyJavaScriptLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = B661EA2367754091BF41C8C23C8921CC /* HippyJavaScriptLoader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E10394A6A965E968B7AFF2F1C191A151 /* HippyRootView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 283ED9651E4244E9250AE4C84C1A36C7 /* HippyRootView.mm */; };
+		E11DCEAB916B7C5199515EAA90147C92 /* HippyTextSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 789EDF11258C4FA88B1F9D3115113A3F /* HippyTextSelection.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E37CD0324F8E0ACAA0A86BC727485FAE /* HippyUIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 17419F66B508F5089B2774208CB9C73A /* HippyUIManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E3C732AE1730D896B3D8C1C061128C66 /* HippyImageViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B7EC981745F4CD436E2BD1E1030 /* HippyImageViewManager.m */; };
+		E526005C20859CD5029D3679D93E0109 /* HippyEventObserverModule.m in Sources */ = {isa = PBXBuildFile; fileRef = BE1A75382A48D8DAE9A2FB5E7B07C812 /* HippyEventObserverModule.m */; };
+		E5A827C11446C52BC02B8AB3A1EDDA7C /* engine-impl.h in Headers */ = {isa = PBXBuildFile; fileRef = F0EEBCDE0E010DFF4B6DBB6B76A7DF89 /* engine-impl.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E79AE8A3CA397F18EEDB3C05821C7E0A /* HippyViewPagerManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D32E14C1752FEBE96F3A4E2CCF3E9B /* HippyViewPagerManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E8D7C808156D1BBA94FA2D7317C723BD /* native-source-code.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F418329294972F376DB81D55DEA605E /* native-source-code.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E971F65C7A0856BE3079B37C6F82F308 /* HippyNavigatorItemViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B26901054B8F6CF6B78F36FE526B55 /* HippyNavigatorItemViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EA8FAB30B2464067D1F94599394BC605 /* callback-info.h in Headers */ = {isa = PBXBuildFile; fileRef = B63869FE2EC17FAB4B36334F0C64756C /* callback-info.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EAB2BD4F5D6429C00E2F3D8C90FAFB16 /* HippyExtAnimationViewParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E5218C15C0784D4360D07B637884864 /* HippyExtAnimationViewParams.m */; };
+		EABFEB9001BC3287CB04AF3D5B7D8D83 /* contextify-module.h in Headers */ = {isa = PBXBuildFile; fileRef = 05C07D9BA0A2544E065A5E38ED01521A /* contextify-module.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB44A23E0962F4B659F80379F15A9C7B /* UIView+React.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B5B02ADAC22EDCA77FA2E5A7F023343 /* UIView+React.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EB964A4846916985DABD7BA35A08C9D6 /* module-register.cc in Sources */ = {isa = PBXBuildFile; fileRef = EBD8B6580F0365D13D7F6CB022FC542F /* module-register.cc */; };
+		EC80575C1B4CC1076F978067A8D5A711 /* HippyConvert.h in Headers */ = {isa = PBXBuildFile; fileRef = B0BFDCE2B8B704C0B68B1FA6A0181EF3 /* HippyConvert.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ECCFBAC84F1DC3E93F6712F3202A516F /* HippyRefreshWrapperViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 100E735F0C03EC3384A9B07FA10118AF /* HippyRefreshWrapperViewManager.m */; };
+		ED3E7B0CF656D092BC0F406716892701 /* HippyConvert+Transform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6871018106D605A028D5A56525807069 /* HippyConvert+Transform.m */; };
+		EDE9CE7E66100921B6EB2024FE930613 /* HippyVirtualNode.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BA346BCFC2BE0E2E96718DEA8E0062 /* HippyVirtualNode.m */; };
+		EEC05D520915E6CE56AD583CE280DCD2 /* HippyImageLoaderModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 475A1069D72E5C8F7613E53B00B69504 /* HippyImageLoaderModule.m */; };
+		EF01C465A5546D70D4C6798321EAC83D /* HippyAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = B914D38719C12648672B8B5561A12EC8 /* HippyAssert.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F0E52C34CBA2DF07C3947CC41189AC50 /* HippySimpleWebViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F86AE5C94C403CFF88FCB2D651472E /* HippySimpleWebViewManager.m */; };
+		F1686E4C06C8F2D45A07245F3EA24E1F /* callback-info.cc in Sources */ = {isa = PBXBuildFile; fileRef = 90CE84B4379CE7FDB1F25DAE99113E66 /* callback-info.cc */; };
+		F1EF4B85C4A0BB88D4C034988F153A3D /* HippyJSCExecutor.mm in Sources */ = {isa = PBXBuildFile; fileRef = FAEEAEE2BBB109C0BCE6D4A840ADAE02 /* HippyJSCExecutor.mm */; };
+		F333E793A1403338187F5BB674C3F674 /* HippyModuleMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = FA7211DD7A057D58FF60498F4ACB3806 /* HippyModuleMethod.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F43CB4CBB6B21C1D037B0720FB6FE585 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCF173888A242F6A522D7E7B53A9806 /* common.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F4985276748F800CB4146582470F8674 /* HippyClipboardModule.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBF36EEB7925E073800C0175194C8A5 /* HippyClipboardModule.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F508DF6D5FAD7E697835F17E226FEBB1 /* HippyVirtualTextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B01E2C15252EB3CA88F09AA8CBB9AB6 /* HippyVirtualTextNode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F5436CE3AB8B7F16FB3176C910A2CA84 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 684435398C9EA8585118F24458A48F5F /* engine.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F588C3016132ECEC1031C9BE2489C9F5 /* HippyShadowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 14C7ABF2DE8BA2BEA2C06F6014173F8C /* HippyShadowView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F5A111813EDE29106BC79F9D3B4E5BB7 /* javascript-loader.h in Headers */ = {isa = PBXBuildFile; fileRef = BE848A1E3856ADC492D66CCE447B09BD /* javascript-loader.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F673C409B6E61A9723CC74EAFC50B4D2 /* HippyAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E25CE6C391F879FBA3993322C8D57504 /* HippyAnimatedImage.m */; };
+		F77FFDE4CB116E509181D28A12F1F08F /* HippyDisplayLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FC900D543A857DCD0D7A8551823A6 /* HippyDisplayLink.m */; };
+		F784EEA5D2EA25981A4AEC256536641F /* HippyComponentData.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8EE05793E325F1905AB2DB0C49146855 /* HippyComponentData.mm */; };
+		F7B721E1A9F6D8E59E425AA33C025307 /* HippyText.mm in Sources */ = {isa = PBXBuildFile; fileRef = B3B9E5C10EE6F4A8DB15DA8C5ADE7927 /* HippyText.mm */; };
+		F807AEE7FCAA752FF623EA0F6F5B247D /* UIImageView+React.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0D73F7AFD67C8E0495E4270F5DD14E /* UIImageView+React.m */; };
+		F808996FECFD2F60148A6F3C622F5AC0 /* HippyViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4533A92F73C04CA561375016C43F0FA9 /* HippyViewManager.mm */; };
+		F8AE53DB78A11C3DB937DEAD28B29F2A /* HippyErrorCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 41D1E5EE111C152B3644DADDED890C6E /* HippyErrorCustomizer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F8D887F2F9BF2E25479D109742180B5B /* HippyBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = F27100DA250C4BFD160E4757B09F5A53 /* HippyBridge.mm */; };
+		F9A81132BB4FF85E12579CFEA0325C82 /* HippyAssert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F19D9607999055CE942346E82668CB /* HippyAssert.m */; };
+		FAB996DAE7E709F123C52FF06EFD6577 /* HippyModalHostViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43BC2C166D307592FC3242212FF10C5C /* HippyModalHostViewManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FB211B153493D4EC18D7431C322E9FB3 /* HippyBridge+LocalFileSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCD0EB4205D111938E208A14ED2ACD6 /* HippyBridge+LocalFileSource.m */; };
+		FB3B24A2A78720124E3CB4F2CC22C4AF /* HippyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9DB3ABB4E045690D30A397C058E6D4 /* HippyScrollView.m */; };
+		FC129C28F32E72AA8012262F93E0A223 /* HippyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 602DAD161DE7BFBADC1AC3550AC6453B /* HippyTextField.m */; };
+		FD51990D0593B26A8CEFF2F99556533D /* MTTUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 05BCB36915956E5454B04A6EA8A1B95E /* MTTUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FE4D7FD0DAD20DC566B5885BED1F0E24 /* timer-module.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EBA2C74654F82A7C68B479B0218F9E4 /* timer-module.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FF52F5C4859B000972FF11C4D271317B /* HippyVideoPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = AC10AFF39FA880DE5AADB480A412AA52 /* HippyVideoPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FF9D4AB8FFD567F88EDD391870B8000D /* HippyWebSocketProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = FA936AED76D70972C8BF3640D5834AC5 /* HippyWebSocketProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FC135FB5202FB6D04F9547BF4D1B996 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 927329EF8F33B34F7F9A0655F6ABA7C3;
+			remoteInfo = hippy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0075EA2DE7924B98DCAC40E229793508 /* HippyBridge+Mtt.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = "HippyBridge+Mtt.mm"; sourceTree = "<group>"; };
+		00EF653BB8BA51778381092629B6455F /* HippyScrollViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyScrollViewManager.h; sourceTree = "<group>"; };
+		0315FBAAFDC1C5FFC0F0E8E605DBC1D3 /* HippyUIManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyUIManager.mm; sourceTree = "<group>"; };
+		05BC2C99A45A9ED078B62EABCA96E931 /* HippyKeyCommands.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyKeyCommands.h; sourceTree = "<group>"; };
+		05BCB36915956E5454B04A6EA8A1B95E /* MTTUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTUtil.h; sourceTree = "<group>"; };
+		05C07D9BA0A2544E065A5E38ED01521A /* contextify-module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "contextify-module.h"; sourceTree = "<group>"; };
+		0601AE52C6BD13CFE08DDEB485AAC2C2 /* HippyTextView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyTextView.mm; sourceTree = "<group>"; };
+		073297D7A87FA730BB588BB37905BE15 /* HippyExtAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyExtAnimation.m; sourceTree = "<group>"; };
+		0979868A34214A77314A8F5E31B6D5FC /* HippyNetWork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyNetWork.m; sourceTree = "<group>"; };
+		0AE8B64996F05B03D47139232F11DB93 /* HippyTouchHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTouchHandler.h; sourceTree = "<group>"; };
+		0BE4DE878B33A6119720068C9C23127D /* HippyRefreshWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyRefreshWrapper.m; sourceTree = "<group>"; };
+		0C12E52E6EDA43B07AB9DF88A4AC12EF /* HippyImageViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyImageViewManager.h; sourceTree = "<group>"; };
+		0CD6F5873C2DF7DF5E37F41AA747D93F /* HippyErrorInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyErrorInfo.m; sourceTree = "<group>"; };
+		0D0D73F7AFD67C8E0495E4270F5DD14E /* UIImageView+React.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+React.m"; sourceTree = "<group>"; };
+		0D26F6120A1941554178B7AE4CA1EF17 /* HippyTextSelection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyTextSelection.m; sourceTree = "<group>"; };
+		0D4FEEDEA5A6D64604C70ABB0F89B86F /* HippyBaseListViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBaseListViewManager.m; sourceTree = "<group>"; };
+		0D8E962E6903B54ED85509E8CADEF3B3 /* HippyImageCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyImageCache.m; sourceTree = "<group>"; };
+		0DC0676A478A524527F5FA30DBDCE967 /* HippyFrameUpdate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyFrameUpdate.m; sourceTree = "<group>"; };
+		0E1D6A1ED74E8DDA93E8AC4309016AEE /* task-runner.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "task-runner.cc"; sourceTree = "<group>"; };
+		0F418329294972F376DB81D55DEA605E /* native-source-code.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "native-source-code.h"; sourceTree = "<group>"; };
+		0F64A8D3D5C2EFA0D6463EC5F2D5DCA5 /* HippyMemoryOpt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyMemoryOpt.h; sourceTree = "<group>"; };
+		100E735F0C03EC3384A9B07FA10118AF /* HippyRefreshWrapperViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyRefreshWrapperViewManager.m; sourceTree = "<group>"; };
+		1023D39D195D6F108D547A05DA130520 /* HippyBridge+LocalFileSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HippyBridge+LocalFileSource.h"; sourceTree = "<group>"; };
+		1286A86049AC38F815CEF0D36A4E477D /* environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = environment.h; sourceTree = "<group>"; };
+		1303C01FD9C53A9B6F71037AF596A41A /* js-native-api-jsc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "js-native-api-jsc.h"; sourceTree = "<group>"; };
+		135D7F5E8CE7808BC1FB314EAB6DCF9E /* HippyJSCErrorHandling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyJSCErrorHandling.h; sourceTree = "<group>"; };
+		137630D1037F944CA3983FF998CF9491 /* lock-queue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lock-queue.h"; sourceTree = "<group>"; };
+		14C7ABF2DE8BA2BEA2C06F6014173F8C /* HippyShadowView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyShadowView.h; sourceTree = "<group>"; };
+		15EE7F31C9E420F1C823669028844A6F /* thread.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = thread.cc; sourceTree = "<group>"; };
+		16D21645753CFDB52C175CA6CD2F7349 /* Pods-hippyDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hippyDemo.release.xcconfig"; sourceTree = "<group>"; };
+		17419F66B508F5089B2774208CB9C73A /* HippyUIManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyUIManager.h; sourceTree = "<group>"; };
+		19A3AB4DE33E1BA0AA913D76D45AD4C4 /* HippyExtAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyExtAnimation.h; sourceTree = "<group>"; };
+		19C48AEFB871F986289BE8A4EAA54591 /* MTTTStyle.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = MTTTStyle.cpp; sourceTree = "<group>"; };
+		1B768B9AC6D4ABF55B1D3A1BA7CA3998 /* HippyNetInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNetInfo.h; sourceTree = "<group>"; };
+		1C320A03061425C41467A765C324C182 /* HippyWebSocketProxyDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyWebSocketProxyDelegate.h; sourceTree = "<group>"; };
+		1E2540C148E864FC1B54EFBA5889C426 /* Pods-hippyDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hippyDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1F6B9D44B44D2B191F6E54244480DB55 /* HippyDisplayLink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyDisplayLink.h; sourceTree = "<group>"; };
+		2039CCB4B9B307100B173D553B005746 /* HippyAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyAnimatedImageView.h; sourceTree = "<group>"; };
+		226BEEE8433916C7F1B97E77BEB002DB /* HippyKeyCommands.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyKeyCommands.m; sourceTree = "<group>"; };
+		24D2699CD3318B7A63A6BEA1994E5A3B /* HippyPerformanceLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyPerformanceLogger.h; sourceTree = "<group>"; };
+		2552A4DAA65A49C726195CDF27B7AFBD /* HippyImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyImageCache.h; sourceTree = "<group>"; };
+		259A1CC8E6D2404376A9D1C08FA465E2 /* HippyAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyAnimatedImage.h; sourceTree = "<group>"; };
+		27E0545D6B575629543EFE1D4BAD3ACB /* HippyExtAnimation+Value.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HippyExtAnimation+Value.h"; sourceTree = "<group>"; };
+		283ED9651E4244E9250AE4C84C1A36C7 /* HippyRootView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyRootView.mm; sourceTree = "<group>"; };
+		28B395B39123E44583808997254D272E /* HippyAnimationType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyAnimationType.h; sourceTree = "<group>"; };
+		28BFCB97EF48FB88B2C3404D5DF0FE73 /* task.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = task.cc; sourceTree = "<group>"; };
+		298E8EA6BF4D6C97827DD32B7BC9B1CA /* NSNumber+HippyNumberDeepCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HippyNumberDeepCopy.h"; sourceTree = "<group>"; };
+		29D1864C06FDCCFF47D782D67E170974 /* HippyJSCErrorHandling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyJSCErrorHandling.m; sourceTree = "<group>"; };
+		2B5B02ADAC22EDCA77FA2E5A7F023343 /* UIView+React.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+React.h"; sourceTree = "<group>"; };
+		2BCF173888A242F6A522D7E7B53A9806 /* common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		2C9EDF71C6FE760558276C258AD3F8D0 /* MTTFlexLine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTFlexLine.h; sourceTree = "<group>"; };
+		2F25A9306E4CEF07FBED75C8232AE566 /* NSArray+HippyArrayDeepCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+HippyArrayDeepCopy.h"; sourceTree = "<group>"; };
+		2F4CEF79FE52B7511413EA98FBD44228 /* HippyView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyView.h; sourceTree = "<group>"; };
+		2F8E2506F83C4766ABD6BF5E3C3C43AA /* HippyTextViewManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyTextViewManager.mm; sourceTree = "<group>"; };
+		30E134D3137E571EB2091C950B6E28BB /* js-native-jsc-helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "js-native-jsc-helper.h"; sourceTree = "<group>"; };
+		30EFB28D6896DEF2CAAC60BDA242DC2C /* HippyBaseListViewDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBaseListViewDataSource.m; sourceTree = "<group>"; };
+		3340F7A9FDC93365883F1977D1A1D133 /* HippyRootShadowView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyRootShadowView.mm; sourceTree = "<group>"; };
+		34A16EE6D7C87507A4A84F84048A4D21 /* js-value-helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "js-value-helper.h"; sourceTree = "<group>"; };
+		34AABCDB21A186595E8288E69E26AE89 /* HippyFetchInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyFetchInfo.m; sourceTree = "<group>"; };
+		34C6BEDBDF9B30AD628E1FE69DA7FFF5 /* HippyTextManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTextManager.h; sourceTree = "<group>"; };
+		36CF4747E9360CA1B3B891D7702AA248 /* logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = logging.h; sourceTree = "<group>"; };
+		374CA89DE108589DA0C7831DE0256EA8 /* HippyViewPager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyViewPager.m; sourceTree = "<group>"; };
+		37661AA932EECAA2D23733C198A1DB3B /* timer-module.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "timer-module.cc"; sourceTree = "<group>"; };
+		380BAC858B095B60CDF647E393A4DCF1 /* MTTNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTNode.h; sourceTree = "<group>"; };
+		38100DEFE83FABC63667594B82D2DD08 /* logging.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = logging.cc; sourceTree = "<group>"; };
+		386D0E479462B237862AF89B80600D0E /* HippyScrollableProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyScrollableProtocol.h; sourceTree = "<group>"; };
+		388D6D66DE85BE1116CEAA12EFF7CCFE /* HippyBaseListViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseListViewManager.h; sourceTree = "<group>"; };
+		38D6B2B4C93A0F73EE01D6AA7E4A2527 /* HippyDeepCopyProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyDeepCopyProtocol.h; sourceTree = "<group>"; };
+		393636F2C72D3004AFA686BE51381CF9 /* HippyEventObserverModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyEventObserverModule.h; sourceTree = "<group>"; };
+		3A14296AB80C53B0C2700A911F7B1BB3 /* x5LayoutUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = x5LayoutUtil.m; sourceTree = "<group>"; };
+		3A223A707BBE5DDA202A7CE4531FE9AD /* HippyBridgeMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBridgeMethod.h; sourceTree = "<group>"; };
+		3B51DB421A39A076325CF1134F513ACE /* HippyImageViewCustomLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyImageViewCustomLoader.h; sourceTree = "<group>"; };
+		3C708FC21D3ED04B327BC74DB0A0F6C3 /* UIView+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Private.h"; sourceTree = "<group>"; };
+		3F27D8B8E2A950886621C5527D2D9DF3 /* HippyText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyText.h; sourceTree = "<group>"; };
+		401064E1603FFD3CE702379B7FEC38D9 /* MTTFlex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTFlex.h; sourceTree = "<group>"; };
+		4021157FC18935D75CF239A9A92129DA /* HippyBaseListView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBaseListView.m; sourceTree = "<group>"; };
+		40DAE617448871584A69502231DA2120 /* Pods-hippyDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hippyDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		416BF29DBF819EEFCE7FE3AC8C82480B /* HippyBaseListItemViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseListItemViewManager.h; sourceTree = "<group>"; };
+		41D1E5EE111C152B3644DADDED890C6E /* HippyErrorCustomizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyErrorCustomizer.h; sourceTree = "<group>"; };
+		4293640A947F6CD18DBDA961A42061F5 /* HippySRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippySRWebSocket.h; sourceTree = "<group>"; };
+		42C7283402D0C60975E5FC2D118AED0B /* HippyVirtualNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyVirtualNode.h; sourceTree = "<group>"; };
+		43BC2C166D307592FC3242212FF10C5C /* HippyModalHostViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModalHostViewManager.h; sourceTree = "<group>"; };
+		44AAAC0707555C3579CC728DFA736A58 /* x5LayoutUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = x5LayoutUtil.h; sourceTree = "<group>"; };
+		4533A92F73C04CA561375016C43F0FA9 /* HippyViewManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyViewManager.mm; sourceTree = "<group>"; };
+		45B328A34F7AD5138621DDF5E2E6712E /* HippyModuleMethod.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyModuleMethod.mm; sourceTree = "<group>"; };
+		475A1069D72E5C8F7613E53B00B69504 /* HippyImageLoaderModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyImageLoaderModule.m; sourceTree = "<group>"; };
+		4763533104346EF8DB0A0E5FEBE53665 /* HippyScrollViewManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyScrollViewManager.mm; sourceTree = "<group>"; };
+		4A7CE97640C0471E117A41FEDBD153CC /* HippyNavigationControllerAnimator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNavigationControllerAnimator.h; sourceTree = "<group>"; };
+		4B572D8AA4242FD1BFB1D8E7509EA1DF /* HippySimpleWebView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippySimpleWebView.h; sourceTree = "<group>"; };
+		4BDC0EC91686260FF5E75C4085347996 /* HippyRootShadowView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRootShadowView.h; sourceTree = "<group>"; };
+		4D47607B138FCDB61A2F08BD1419211F /* module-base.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "module-base.h"; sourceTree = "<group>"; };
+		4DFEF4DF0EB2AAF9428A07AFD96A12B2 /* HippyTiming.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyTiming.mm; sourceTree = "<group>"; };
+		4E9DB3ABB4E045690D30A397C058E6D4 /* HippyScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyScrollView.m; sourceTree = "<group>"; };
+		4FF62F5CE62EBAFF991AB6650B768FCF /* HippyAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyAnimatedImageView.m; sourceTree = "<group>"; };
+		5038B626BF91FE126CA254D0604597F5 /* HippyNavigatorRootViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNavigatorRootViewController.h; sourceTree = "<group>"; };
+		504924A3B5314FC791B344832BE96AB7 /* HippyBaseListViewProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseListViewProtocol.h; sourceTree = "<group>"; };
+		517CB765CA4385E6E902AAE1D3A58EBE /* HippyDevLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyDevLoadingView.h; sourceTree = "<group>"; };
+		51D9B319FA0CB1456CA7CA9678C922C7 /* HippyModalHostViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyModalHostViewController.m; sourceTree = "<group>"; };
+		54348092740680A8E51429E6AA8C1522 /* HippyBorderStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBorderStyle.h; sourceTree = "<group>"; };
+		5492910D93CEB9CF1710280227682C8D /* HippyRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRootView.h; sourceTree = "<group>"; };
+		54D32E14C1752FEBE96F3A4E2CCF3E9B /* HippyViewPagerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyViewPagerManager.h; sourceTree = "<group>"; };
+		5501785BAEE04F0D8BD6578FAD844E96 /* UIImageView+React.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageView+React.h"; sourceTree = "<group>"; };
+		5698AC8DAB5963F4E318CEEA90E8F9A1 /* HippyBridge+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HippyBridge+Private.h"; sourceTree = "<group>"; };
+		574C6B65A8D0AB8F380BA318524171E9 /* NSArray+HippyArrayDeepCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HippyArrayDeepCopy.m"; sourceTree = "<group>"; };
+		57D9F8F758B222EDA921B1274613376B /* HippyViewPagerItemManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyViewPagerItemManager.h; sourceTree = "<group>"; };
+		58F4F0C9A286EF089A284884E4F56B5E /* javascript-task-runner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "javascript-task-runner.h"; sourceTree = "<group>"; };
+		5A82A1F0F19DB419131990FD23656811 /* HippyExtAnimationViewParams.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyExtAnimationViewParams.h; sourceTree = "<group>"; };
+		5B6F4E189C44ED85495EE55347569E2E /* HippyTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTextView.h; sourceTree = "<group>"; };
+		5C5E0B6115FDE5792978D1C5F5884DDC /* HippyNavigatorViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyNavigatorViewManager.m; sourceTree = "<group>"; };
+		5C9A330784D9CDC7238DA4E32983F741 /* HippyNetInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyNetInfo.m; sourceTree = "<group>"; };
+		5E5218C15C0784D4360D07B637884864 /* HippyExtAnimationViewParams.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyExtAnimationViewParams.m; sourceTree = "<group>"; };
+		5FE46D56B1BEB1127E980353DAC9A05C /* HippyShadowTextView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyShadowTextView.mm; sourceTree = "<group>"; };
+		602DAD161DE7BFBADC1AC3550AC6453B /* HippyTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyTextField.m; sourceTree = "<group>"; };
+		6030B1DA2C06B7B43403C1F6ADED3FF4 /* HippyInvalidating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyInvalidating.h; sourceTree = "<group>"; };
+		60DB2AB90C23536A76EF580430A86718 /* HippyBatchedBridge.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyBatchedBridge.mm; sourceTree = "<group>"; };
+		61FFF73742FAD53B2FD3365DC868BBC2 /* thread-id.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "thread-id.h"; sourceTree = "<group>"; };
+		62411D8E22CD96D9EB3A27349474D970 /* HippyWebSocketExecutor.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyWebSocketExecutor.mm; sourceTree = "<group>"; };
+		62E17FD435D82B65320C421FB1ADE6DA /* HippyExceptionModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyExceptionModule.m; sourceTree = "<group>"; };
+		6456297CD4ED7DC8A0185F6E450D0737 /* HippyShadowText.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyShadowText.mm; sourceTree = "<group>"; };
+		6486C8DF2EAD8DB6D0DF8A1666372DB2 /* HippyConvert+Transform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HippyConvert+Transform.h"; sourceTree = "<group>"; };
+		64BA7E4221EC1CEDC17F5D5C4AD61EA6 /* hippy-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "hippy-prefix.pch"; sourceTree = "<group>"; };
+		64E445561478301565B40A24111AE40A /* HippyNetWork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNetWork.h; sourceTree = "<group>"; };
+		6501BBED06626EEAD9E01C4B18A8A2EB /* HippyFrameUpdate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyFrameUpdate.h; sourceTree = "<group>"; };
+		6506EFB14CEF4F358B3F175F7546376C /* module-register.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "module-register.h"; sourceTree = "<group>"; };
+		65C5A5ADB8D6E85E35949302BBA96C62 /* HippyRedBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyRedBox.m; sourceTree = "<group>"; };
+		660E391561B01D9AECCC098EE9C24896 /* HippyFetchInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyFetchInfo.h; sourceTree = "<group>"; };
+		66249707C2A085BCA2462C09621CD747 /* HippyBundleURLProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBundleURLProvider.h; sourceTree = "<group>"; };
+		664749B9657F627802332545B6571EA0 /* javascript-loader.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "javascript-loader.cc"; sourceTree = "<group>"; };
+		676058123825F2163AF32CF504AED132 /* HippyNavigatorViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNavigatorViewManager.h; sourceTree = "<group>"; };
+		684435398C9EA8585118F24458A48F5F /* engine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		68596887095E1F494EBAE75AFAC8F15A /* engine-impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "engine-impl.cc"; sourceTree = "<group>"; };
+		6871018106D605A028D5A56525807069 /* HippyConvert+Transform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HippyConvert+Transform.m"; sourceTree = "<group>"; };
+		6AF473D251D6997CC617E57D699A9C56 /* HippyMyEventModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyMyEventModule.h; sourceTree = "<group>"; };
+		6C4C85DE70EC35202D6C81A4C094F615 /* native-source-code-ios.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "native-source-code-ios.cc"; sourceTree = "<group>"; };
+		6C7BBBDE2EA1EE868CB36E1610EAA4DB /* HippyVideoPlayerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyVideoPlayerManager.m; sourceTree = "<group>"; };
+		6D28A83AA99A3B62442AEDF18F87DEDD /* javascript-task.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "javascript-task.h"; sourceTree = "<group>"; };
+		6D58B92CF2FDA74EE9E5DA93C3D0C2D0 /* HippyVideoPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyVideoPlayer.m; sourceTree = "<group>"; };
+		6DF015B925A401C1C63C0B9F2BE4D59E /* HippyBackgroundImageCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBackgroundImageCacheManager.m; sourceTree = "<group>"; };
+		6EA765515AF9BF82F2792455DB16972B /* HippyParserUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyParserUtils.m; sourceTree = "<group>"; };
+		6F6FC900D543A857DCD0D7A8551823A6 /* HippyDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyDisplayLink.m; sourceTree = "<group>"; };
+		6FF0F84F343153C1DCC6AA10ECE5EC20 /* HippyBridgeModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBridgeModule.h; sourceTree = "<group>"; };
+		712CB08EF3D3C0F6D23E01AD302AD0B7 /* HippyImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyImageView.m; sourceTree = "<group>"; };
+		721E4743DD441DA1698344FB5DA60F1A /* HippyUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyUtils.h; sourceTree = "<group>"; };
+		737082455946CFFAE82EA70CE127C0F6 /* HippyConvert.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyConvert.mm; sourceTree = "<group>"; };
+		7381DBFDFEC6D71968D9B3C998D6CC0A /* HippyModuleData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModuleData.h; sourceTree = "<group>"; };
+		756DF6B6E12C4873CC3FC054779099E6 /* HippyBorderDrawing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBorderDrawing.h; sourceTree = "<group>"; };
+		75BEE478FC5F9184769F24F637C6766B /* HippyAutoInsetsProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyAutoInsetsProtocol.h; sourceTree = "<group>"; };
+		76BC5C8547F8464060627C76F8D7AC15 /* js-native-api-value-jsc.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "js-native-api-value-jsc.cc"; sourceTree = "<group>"; };
+		789EDF11258C4FA88B1F9D3115113A3F /* HippyTextSelection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTextSelection.h; sourceTree = "<group>"; };
+		79B26901054B8F6CF6B78F36FE526B55 /* HippyNavigatorItemViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNavigatorItemViewController.h; sourceTree = "<group>"; };
+		7BCB20538AB224CB58258A9C424CF02B /* HippyDevLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyDevLoadingView.m; sourceTree = "<group>"; };
+		7C1E158097ABB38F33F039D51274FDA4 /* HippyNavigationControllerAnimator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyNavigationControllerAnimator.m; sourceTree = "<group>"; };
+		7D7B76206439F1B8D07B38727A271FB2 /* HippyClipboardModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyClipboardModule.m; sourceTree = "<group>"; };
+		7E84DA95C35A1857E4F39BFB4E5A7C52 /* HippyModalCustomPresentationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyModalCustomPresentationController.m; sourceTree = "<group>"; };
+		7F8B72F99ABD324A7D9D4A5DDF2A2478 /* javascript-task.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "javascript-task.cc"; sourceTree = "<group>"; };
+		801D1E55716FF192EEE9C2F8A1AA1F51 /* console-module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "console-module.h"; sourceTree = "<group>"; };
+		8024AD90AD1EAF8C0CF7E511E0A7581E /* hippy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = hippy.xcconfig; sourceTree = "<group>"; };
+		80FDA7017BD2D8CB0BA9FBEDDA747F83 /* HippyModalCustomPresentationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModalCustomPresentationController.h; sourceTree = "<group>"; };
+		80FFAAC1C4C50750FB5FF320502BBA84 /* UIView+React.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = "UIView+React.mm"; sourceTree = "<group>"; };
+		8190E7703ADFB90B4137F70538367A39 /* HippyEventDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyEventDispatcher.h; sourceTree = "<group>"; };
+		822A929FC3528A0A329ABD2126F68B81 /* HippyJSCWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyJSCWrapper.h; sourceTree = "<group>"; };
+		84CF6BF3CBFD68798DD8D38F6521F8E8 /* HippyWebSocketManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyWebSocketManager.h; sourceTree = "<group>"; };
+		852A1DAD809A12784AB944EE1953B44A /* HippySimpleWebView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippySimpleWebView.m; sourceTree = "<group>"; };
+		869EC6E63E88B8451547B51D6C1B7D57 /* HippyDevMenu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyDevMenu.h; sourceTree = "<group>"; };
+		872DE9041315D1CA5CEC3AFBC249BCE2 /* contextify-module.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "contextify-module.cc"; sourceTree = "<group>"; };
+		87C5E4CD7FED463586F5A337BCD2EB2E /* HippyViewPagerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyViewPagerItem.m; sourceTree = "<group>"; };
+		890121E688750CE6ABBF34A907F634CB /* MTTUtil.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = MTTUtil.cpp; sourceTree = "<group>"; };
+		8A84BFCE8B844028033152FB587F1353 /* HippyExtAnimationModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyExtAnimationModule.m; sourceTree = "<group>"; };
+		8B01E2C15252EB3CA88F09AA8CBB9AB6 /* HippyVirtualTextNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyVirtualTextNode.h; sourceTree = "<group>"; };
+		8B1DF53BD9C2C6617993DD936DB1A8E1 /* thread-id.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "thread-id.cc"; sourceTree = "<group>"; };
+		8B2E4D672C50574702EC22216F03A27E /* js-native-api-jsc.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "js-native-api-jsc.cc"; sourceTree = "<group>"; };
+		8BEC577640C6138DABA4577254768B6A /* HippyTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTextField.h; sourceTree = "<group>"; };
+		8CF1A8DA5330ADE7F38F8A5C56A77219 /* HippyExtAnimationGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyExtAnimationGroup.m; sourceTree = "<group>"; };
+		8E045FC4AF9E30A9FC2AC5DB00343F8D /* HippyBaseListItemView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBaseListItemView.m; sourceTree = "<group>"; };
+		8E0EF9D88ED969A51822516508080F06 /* HippyWebSocketExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyWebSocketExecutor.h; sourceTree = "<group>"; };
+		8E4E53C3ABF3A7CAE9E6EAB99144D282 /* HippyAsyncLocalStorage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyAsyncLocalStorage.m; sourceTree = "<group>"; };
+		8EE05793E325F1905AB2DB0C49146855 /* HippyComponentData.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyComponentData.mm; sourceTree = "<group>"; };
+		8FF919FC570F61E167A0B617103031B3 /* logging-impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "logging-impl.h"; sourceTree = "<group>"; };
+		90CE84B4379CE7FDB1F25DAE99113E66 /* callback-info.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "callback-info.cc"; sourceTree = "<group>"; };
+		91E9B6BAA319B015C405A1B29D5A9D87 /* HippyNavigatorHostView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyNavigatorHostView.mm; sourceTree = "<group>"; };
+		93082BEF6EFEEECF4AE76E37BFF2ECC3 /* HippyShadowView.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyShadowView.mm; sourceTree = "<group>"; };
+		936954E39DF47875233B580A17ED5008 /* HippyExtAnimationModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyExtAnimationModule.h; sourceTree = "<group>"; };
+		956C349F14032D9FFE3636389CBDD98E /* NSData+Format.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+Format.m"; sourceTree = "<group>"; };
+		95D587C75E7BE55F46CCF914F61938AC /* HippyImageCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyImageCacheManager.h; sourceTree = "<group>"; };
+		9626863D6AF41140CD7FA185939714B4 /* HippyModalHostViewManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyModalHostViewManager.mm; sourceTree = "<group>"; };
+		96BEAF1D4A6B0C1A44DCC4DF65C705CC /* js-native-jsc-helper.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "js-native-jsc-helper.cc"; sourceTree = "<group>"; };
+		973272C1D9A26A033F15955C9ED326C9 /* HippyComponentData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyComponentData.h; sourceTree = "<group>"; };
+		977C3BE182711E32CC35CE83F8C2F9E6 /* HippyModuleData.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyModuleData.mm; sourceTree = "<group>"; };
+		981554BC0343E9CCBB4DA9839385F4E7 /* HippyScrollProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyScrollProtocol.h; sourceTree = "<group>"; };
+		98A74D6BBA4B1E9014E6764BA7674134 /* HippyModalHostView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyModalHostView.m; sourceTree = "<group>"; };
+		996CED98697A6049A45390BBAA6C9EBC /* HippyViewEventProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyViewEventProtocol.h; sourceTree = "<group>"; };
+		99C7B4CC14B73445A16A3CE526860D87 /* HippyRefreshWrapperItemView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyRefreshWrapperItemView.m; sourceTree = "<group>"; };
+		9A01769C17DE96162D49F4D20627E09D /* HippyViewPager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyViewPager.h; sourceTree = "<group>"; };
+		9A5508B68720409773EAE1C696F17207 /* HippyNavigatorHostView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNavigatorHostView.h; sourceTree = "<group>"; };
+		9A83BFCD9854ABB7C484F89E5A39E746 /* HippyShadowText.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyShadowText.h; sourceTree = "<group>"; };
+		9BAD596B8064675FFCBE3DB64B69F1EB /* thread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = thread.h; sourceTree = "<group>"; };
+		9BC538CCF7CA5D1E7B65E9446F96E9AE /* HippyFont.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyFont.h; sourceTree = "<group>"; };
+		9D2746EEE760639E6AB8D9CD236F0F9B /* HippyCustomTouchHandlerProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyCustomTouchHandlerProtocol.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E5A1F1836DAE2F3532B059F3E78122B /* HippyJSCExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyJSCExecutor.h; sourceTree = "<group>"; };
+		9EBA2C74654F82A7C68B479B0218F9E4 /* timer-module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "timer-module.h"; sourceTree = "<group>"; };
+		9EC5364451D57C229506658A54D21198 /* HippyErrorInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyErrorInfo.h; sourceTree = "<group>"; };
+		9F30CEFA815A70D7F9C3E5038455A92A /* HippyBaseTextInput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBaseTextInput.m; sourceTree = "<group>"; };
+		9FBA5106A67415053D36F3A89A6C812C /* HippyTextManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyTextManager.mm; sourceTree = "<group>"; };
+		A10405B4E6AB414B02EFC7A4CCA1A362 /* HippyTextDecorationLineType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTextDecorationLineType.h; sourceTree = "<group>"; };
+		A25A502B9C895FC18C2D86A5AA08CA69 /* environment.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = environment.cc; sourceTree = "<group>"; };
+		A3743D5AB060797F25868BFA9687DCFE /* HippyModalHostViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModalHostViewController.h; sourceTree = "<group>"; };
+		A39E769E28447678C228491D98E2C983 /* HippyRootViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRootViewInternal.h; sourceTree = "<group>"; };
+		A3BBCF40AFA84251F6C7FDEFA09AED46 /* HippyModalCustomAnimationTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyModalCustomAnimationTransition.m; sourceTree = "<group>"; };
+		A3E134CBA40A923781A533D22C2B7519 /* HippyRefreshWrapperItemViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyRefreshWrapperItemViewManager.m; sourceTree = "<group>"; };
+		A5A78BD2B4C7F7435FFDE915C25D8C9D /* NSNumber+HippyNumberDeepCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HippyNumberDeepCopy.m"; sourceTree = "<group>"; };
+		A79F6E25F0CF7AEE55F97195CC08557D /* HippyTiming.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTiming.h; sourceTree = "<group>"; };
+		A9231A7510DB3F74B792695BFEA25BB1 /* HippyParserUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyParserUtils.h; sourceTree = "<group>"; };
+		AAC29463CF590324B73959C7FBB535CD /* HippyShadowTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyShadowTextView.h; sourceTree = "<group>"; };
+		AB2A2915C2F5246AFED6E3A75C40CA46 /* HippyBaseTextInput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseTextInput.h; sourceTree = "<group>"; };
+		ABF3CE520AE776DB543F7C37CFA486D1 /* libPods-hippyDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-hippyDemo.a"; path = "libPods-hippyDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC10AFF39FA880DE5AADB480A412AA52 /* HippyVideoPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyVideoPlayer.h; sourceTree = "<group>"; };
+		AC345B332B9961D651D7A7CB1DCB8436 /* HippyWebSocketManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyWebSocketManager.m; sourceTree = "<group>"; };
+		AD2A605C6FFB86D30129CBA320DBBA8C /* HippyBorderDrawing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBorderDrawing.m; sourceTree = "<group>"; };
+		ADD453BA4BFD6A5C6827C65AAC65F701 /* HippyBundleURLProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBundleURLProvider.m; sourceTree = "<group>"; };
+		AEE50910CA44295D2A6D2461B4DB5D31 /* HippyRefreshWrapperItemViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRefreshWrapperItemViewManager.h; sourceTree = "<group>"; };
+		AF6B59C5D725FE5B2DB3C4C8F8075715 /* HippyScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyScrollView.h; sourceTree = "<group>"; };
+		B0BFDCE2B8B704C0B68B1FA6A0181EF3 /* HippyConvert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyConvert.h; sourceTree = "<group>"; };
+		B26CB9D6FE2A96841632EC0A61938A76 /* HippyModalHostView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModalHostView.h; sourceTree = "<group>"; };
+		B291B8B2470651B81233CC9225D53A1F /* NSData+Format.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+Format.h"; sourceTree = "<group>"; };
+		B3B9E5C10EE6F4A8DB15DA8C5ADE7927 /* HippyText.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyText.mm; sourceTree = "<group>"; };
+		B43658C64DCEFB643313F2FBDC22D2D1 /* HippyExtAnimation+Value.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HippyExtAnimation+Value.m"; sourceTree = "<group>"; };
+		B44C1664BF40E776A774F9D5981AC707 /* HippyRedBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRedBox.h; sourceTree = "<group>"; };
+		B63869FE2EC17FAB4B36334F0C64756C /* callback-info.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "callback-info.h"; sourceTree = "<group>"; };
+		B661EA2367754091BF41C8C23C8921CC /* HippyJavaScriptLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyJavaScriptLoader.h; sourceTree = "<group>"; };
+		B717634E5672ECC36A86236F0EA1C3D2 /* HippyVirtualTextNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyVirtualTextNode.m; sourceTree = "<group>"; };
+		B914D38719C12648672B8B5561A12EC8 /* HippyAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyAssert.h; sourceTree = "<group>"; };
+		B977BB5A9376F2C60E3463BBC887E3D5 /* HippyTouchHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyTouchHandler.m; sourceTree = "<group>"; };
+		BB1D79C047154B008314B28F436466C7 /* HippyModalCustomAnimationTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModalCustomAnimationTransition.h; sourceTree = "<group>"; };
+		BB94C4035ED1AC01F91223518D4ED54D /* HippyExtAnimation+Group.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HippyExtAnimation+Group.h"; sourceTree = "<group>"; };
+		BC85AD25D16C42D5BF66ACF246BCD232 /* HippyAsyncLocalStorage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyAsyncLocalStorage.h; sourceTree = "<group>"; };
+		BD4EC8B9760C5769FAAD371831B03977 /* HippyBackgroundImageCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBackgroundImageCacheManager.h; sourceTree = "<group>"; };
+		BD8CF3AD93AF5C7F8464B0C9B19CC608 /* HippyRefreshWrapperItemView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRefreshWrapperItemView.h; sourceTree = "<group>"; };
+		BDCD0EB4205D111938E208A14ED2ACD6 /* HippyBridge+LocalFileSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HippyBridge+LocalFileSource.m"; sourceTree = "<group>"; };
+		BE1A75382A48D8DAE9A2FB5E7B07C812 /* HippyEventObserverModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyEventObserverModule.m; sourceTree = "<group>"; };
+		BE848A1E3856ADC492D66CCE447B09BD /* javascript-loader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "javascript-loader.h"; sourceTree = "<group>"; };
+		BFCA7ADFA784B966CB84668A09FACE2A /* HippyViewPagerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyViewPagerItem.h; sourceTree = "<group>"; };
+		C151B8FC1B9486E056CE725B7E3AE3CD /* copyable-lambda.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "copyable-lambda.h"; sourceTree = "<group>"; };
+		C180DC9F25F913AA0520C196A64B7C9C /* HippyExtAnimationGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyExtAnimationGroup.h; sourceTree = "<group>"; };
+		C2DB517CFA83DD53479F2F35292183B6 /* HippyVideoPlayerManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyVideoPlayerManager.h; sourceTree = "<group>"; };
+		C497C91373F65F45498F4B9CF5FBD961 /* console-module.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "console-module.cc"; sourceTree = "<group>"; };
+		C9CC264088F9A9E89F76AE72CE5394CC /* NSDictionary+HippyDictionaryDeepCopy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HippyDictionaryDeepCopy.h"; sourceTree = "<group>"; };
+		CD8CBB3A823C3FCF6E0704BC4B785F4E /* MTTLayoutCache.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = MTTLayoutCache.cpp; sourceTree = "<group>"; };
+		CD9C970E9E965010B97D5DBAF530C00B /* HippyLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyLog.h; sourceTree = "<group>"; };
+		CEAC1838AB98234851F474BC89392C6D /* HippyNavigatorItemViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyNavigatorItemViewController.m; sourceTree = "<group>"; };
+		D05CCD6348EFBB40FE579F6324B36B1D /* HippyEventDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyEventDispatcher.m; sourceTree = "<group>"; };
+		D086901EC08D1F3B2AFDDD4124937B8B /* macros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = macros.h; sourceTree = "<group>"; };
+		D11E6038FE6727768C1EAB3E12E21E1A /* HippyFont.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyFont.mm; sourceTree = "<group>"; };
+		D13D59B81C65CA8535D4F77572DD9877 /* HippyBridge+Mtt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HippyBridge+Mtt.h"; sourceTree = "<group>"; };
+		D222BB6B7DD51D59367DB61FFAC0032A /* HippyImageLoaderModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyImageLoaderModule.h; sourceTree = "<group>"; };
+		D25CAE3CB90A46B49909031BF4FCFA64 /* logging-impl.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "logging-impl.cc"; sourceTree = "<group>"; };
+		D51FC386EC1EA0A1EED52AD5F31AEF12 /* HippyJavaScriptExecutor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyJavaScriptExecutor.h; sourceTree = "<group>"; };
+		D53516EC658D46C273A3688B28D72F4B /* HippyNullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyNullability.h; sourceTree = "<group>"; };
+		D5804D88E6AD5298FF4EBC06C5355559 /* HippyBaseListItemView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseListItemView.h; sourceTree = "<group>"; };
+		D5ED92FB27C903931BF5C4D96FD19D34 /* Pods-hippyDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hippyDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		D5F86AE5C94C403CFF88FCB2D651472E /* HippySimpleWebViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippySimpleWebViewManager.m; sourceTree = "<group>"; };
+		D7DFC2593E9979F4FF2C1C9F3263D587 /* HippyUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyUtils.m; sourceTree = "<group>"; };
+		D81450EFEEEC7A2801625C23D93301D6 /* HippyExceptionModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyExceptionModule.h; sourceTree = "<group>"; };
+		D90A4E52743276C50B9BB47453F0D654 /* HippyBaseListItemViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyBaseListItemViewManager.m; sourceTree = "<group>"; };
+		DBC93E3394C09FA35CA84BDC7886DA01 /* HippyLog.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyLog.mm; sourceTree = "<group>"; };
+		DC4BE9AE84C3F0E27FCCEE7D842598AE /* HippyBridgeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBridgeDelegate.h; sourceTree = "<group>"; };
+		DC6D67685F883D4F61717EEDF63A329E /* MTTLayout.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = MTTLayout.cpp; sourceTree = "<group>"; };
+		DC9F7B7EC981745F4CD436E2BD1E1030 /* HippyImageViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyImageViewManager.m; sourceTree = "<group>"; };
+		DCA989843EE02DA9DD41FE050573AB1F /* HippyImageCacheManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyImageCacheManager.m; sourceTree = "<group>"; };
+		DDE4E9C3FFACF9A08589140F31D7F083 /* HippyMyEventModule.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyMyEventModule.m; sourceTree = "<group>"; };
+		DDEBB3D38BBFEAB5D364840BED02ACE2 /* HippyJSStackFrame.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyJSStackFrame.m; sourceTree = "<group>"; };
+		DED240D851863C8101C0BA59F07F0B90 /* HippyRefreshWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRefreshWrapper.h; sourceTree = "<group>"; };
+		DF7EF4499739C8E39C8D73389ED5F542 /* HippyRootViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRootViewDelegate.h; sourceTree = "<group>"; };
+		DFE6819719EE9B4708FD3F803D47A6E7 /* HippyRefreshWrapperViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyRefreshWrapperViewManager.h; sourceTree = "<group>"; };
+		E0C4FD329AD7A8BAD6AFE4976F38073F /* js-native-api-types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "js-native-api-types.h"; sourceTree = "<group>"; };
+		E21031CA48B3A9479AB790434B4376EA /* Pods-hippyDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hippyDemo-dummy.m"; sourceTree = "<group>"; };
+		E25CE6C391F879FBA3993322C8D57504 /* HippyAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyAnimatedImage.m; sourceTree = "<group>"; };
+		E2A4E8CB3604E5E5139703547BC896A4 /* HippyImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyImageView.h; sourceTree = "<group>"; };
+		E3FEE21D2002F9F73B306D6DA2062948 /* HippyDevMenu.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyDevMenu.mm; sourceTree = "<group>"; };
+		E6610960AC4FE4410C381FBC25B1B55E /* MTTTStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTTStyle.h; sourceTree = "<group>"; };
+		E6634DBF2E1BD152C54FD89EC8CB13DD /* HippyBaseListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseListView.h; sourceTree = "<group>"; };
+		E6D0608FCF89809E56CE4DFEDF846232 /* HippyDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyDefines.h; sourceTree = "<group>"; };
+		E7024EFECAD61D2CF520D2783E2F9BE2 /* HippyPointerEvents.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyPointerEvents.h; sourceTree = "<group>"; };
+		E7A2093E59A1587E5BEDEFA6ECFF2E0C /* HippyJSCWrapper.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyJSCWrapper.mm; sourceTree = "<group>"; };
+		E872DF5A5ECE2DA6F7C194DDE4A0BE8E /* engine.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = engine.cc; sourceTree = "<group>"; };
+		E8C4C481D36A4EB3D2587AA274D1660E /* HippyViewPagerItemManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyViewPagerItemManager.m; sourceTree = "<group>"; };
+		E9AFA1D4B1549405D6DA95668FA6F083 /* HippyPerformanceLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyPerformanceLogger.m; sourceTree = "<group>"; };
+		EB35C36BDAAFB7A41A0D31355BEF2933 /* HippyNavigatorRootViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyNavigatorRootViewController.m; sourceTree = "<group>"; };
+		EBD8B6580F0365D13D7F6CB022FC542F /* module-register.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "module-register.cc"; sourceTree = "<group>"; };
+		EBF6CCA343E2C71EB6F6BAE54E666E00 /* HippySimpleWebViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippySimpleWebViewManager.h; sourceTree = "<group>"; };
+		EC824E687D18FD8E7838B26054DC90BB /* HippyComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyComponent.h; sourceTree = "<group>"; };
+		ECAA4551290848C5C78D7A09B703807A /* NSDictionary+HippyDictionaryDeepCopy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HippyDictionaryDeepCopy.m"; sourceTree = "<group>"; };
+		ED788E2623F9ECFB53ED2E7BB37C4629 /* task-runner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "task-runner.h"; sourceTree = "<group>"; };
+		EE0041E8B44FF8E12E8F0963DFFB1D14 /* HippyBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBridge.h; sourceTree = "<group>"; };
+		EEEDB3C38A9EC2D301B10B60770079C4 /* HippySRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippySRWebSocket.m; sourceTree = "<group>"; };
+		EFABD6153EB23DBA8255182961F638B3 /* libhippy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libhippy.a; path = libhippy.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02378AAE7D639DD42E9AB9F59EC5180 /* MTTFlexLine.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = MTTFlexLine.cpp; sourceTree = "<group>"; };
+		F0EEBCDE0E010DFF4B6DBB6B76A7DF89 /* engine-impl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "engine-impl.h"; sourceTree = "<group>"; };
+		F27100DA250C4BFD160E4757B09F5A53 /* HippyBridge.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyBridge.mm; sourceTree = "<group>"; };
+		F2BA346BCFC2BE0E2E96718DEA8E0062 /* HippyVirtualNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyVirtualNode.m; sourceTree = "<group>"; };
+		F3783DB6BE28DF8EEBDA70AA5F9CB9DE /* js-native-api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "js-native-api.h"; sourceTree = "<group>"; };
+		F53BE5E8BD58E8B4C8F9C7BEF2A742AB /* task.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = task.h; sourceTree = "<group>"; };
+		F5642C81CE10BD1EEEAF23F1D07E9597 /* MTTNode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; path = MTTNode.cpp; sourceTree = "<group>"; };
+		F75B0D61C4D1DD5AA7B8C68043EC97FD /* HippyViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyViewManager.h; sourceTree = "<group>"; };
+		F7F19D9607999055CE942346E82668CB /* HippyAssert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyAssert.m; sourceTree = "<group>"; };
+		F9E865F90140A20354BBC0DEFD777BA9 /* MTTLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTLayout.h; sourceTree = "<group>"; };
+		FA7211DD7A057D58FF60498F4ACB3806 /* HippyModuleMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyModuleMethod.h; sourceTree = "<group>"; };
+		FA936AED76D70972C8BF3640D5834AC5 /* HippyWebSocketProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyWebSocketProxy.h; sourceTree = "<group>"; };
+		FAE67B903D5597B5EA30096FDCA9D85F /* HippyView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyView.m; sourceTree = "<group>"; };
+		FAEEAEE2BBB109C0BCE6D4A840ADAE02 /* HippyJSCExecutor.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyJSCExecutor.mm; sourceTree = "<group>"; };
+		FBBF36EEB7925E073800C0175194C8A5 /* HippyClipboardModule.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyClipboardModule.h; sourceTree = "<group>"; };
+		FBCB1DE4DBB13826F342D422AFA8ADB8 /* HippyViewPagerManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HippyViewPagerManager.m; sourceTree = "<group>"; };
+		FC8D2B6B4A4E8045552D2C8DA28A9F82 /* HippyBaseListViewDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyBaseListViewDataSource.h; sourceTree = "<group>"; };
+		FC9DBEDAD98C05317E1EE495E1920664 /* hippy-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "hippy-dummy.m"; sourceTree = "<group>"; };
+		FD1734A592E5919B38DD9CE42A104F47 /* javascript-task-runner.cc */ = {isa = PBXFileReference; includeInIndex = 1; path = "javascript-task-runner.cc"; sourceTree = "<group>"; };
+		FE35FCDFA7A608F54DA16641A8D0880B /* MTTLayoutCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MTTLayoutCache.h; sourceTree = "<group>"; };
+		FE480114BFFD8AF2C7694576AEAA8196 /* HippyJSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyJSStackFrame.h; sourceTree = "<group>"; };
+		FE88D10A27C712CC2634EFB8EAC7AC12 /* HippyTextViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HippyTextViewManager.h; sourceTree = "<group>"; };
+		FFC97E40B483AED306830E77FDB6E13B /* HippyJavaScriptLoader.mm */ = {isa = PBXFileReference; includeInIndex = 1; path = HippyJavaScriptLoader.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0AA3522F722D649674976D781C4FB1B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF8957A7434BB3E3B19D230B82936DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		006E66F12A757EEEBB7DE0B6A0E1B709 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				4B572D8AA4242FD1BFB1D8E7509EA1DF /* HippySimpleWebView.h */,
+				852A1DAD809A12784AB944EE1953B44A /* HippySimpleWebView.m */,
+				EBF6CCA343E2C71EB6F6BAE54E666E00 /* HippySimpleWebViewManager.h */,
+				D5F86AE5C94C403CFF88FCB2D651472E /* HippySimpleWebViewManager.m */,
+			);
+			name = webview;
+			path = webview;
+			sourceTree = "<group>";
+		};
+		093E4D51834888BA55A72E18828660FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E80049CE323E71E46C90D2CBC5D6CFE9 /* hippy */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		096D36164F895F53D49FD6E938199DC4 /* viewPager */ = {
+			isa = PBXGroup;
+			children = (
+				9A01769C17DE96162D49F4D20627E09D /* HippyViewPager.h */,
+				374CA89DE108589DA0C7831DE0256EA8 /* HippyViewPager.m */,
+				BFCA7ADFA784B966CB84668A09FACE2A /* HippyViewPagerItem.h */,
+				87C5E4CD7FED463586F5A337BCD2EB2E /* HippyViewPagerItem.m */,
+				57D9F8F758B222EDA921B1274613376B /* HippyViewPagerItemManager.h */,
+				E8C4C481D36A4EB3D2587AA274D1660E /* HippyViewPagerItemManager.m */,
+				54D32E14C1752FEBE96F3A4E2CCF3E9B /* HippyViewPagerManager.h */,
+				FBCB1DE4DBB13826F342D422AFA8ADB8 /* HippyViewPagerManager.m */,
+			);
+			name = viewPager;
+			path = viewPager;
+			sourceTree = "<group>";
+		};
+		0E8C1CAF3D9027E594235AE5A1620491 /* event observer */ = {
+			isa = PBXGroup;
+			children = (
+				393636F2C72D3004AFA686BE51381CF9 /* HippyEventObserverModule.h */,
+				BE1A75382A48D8DAE9A2FB5E7B07C812 /* HippyEventObserverModule.m */,
+				6AF473D251D6997CC617E57D699A9C56 /* HippyMyEventModule.h */,
+				DDE4E9C3FFACF9A08589140F31D7F083 /* HippyMyEventModule.m */,
+			);
+			name = "event observer";
+			path = "event observer";
+			sourceTree = "<group>";
+		};
+		15BA41AFDAF165CD3980FC86248DA5C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFABD6153EB23DBA8255182961F638B3 /* libhippy.a */,
+				ABF3CE520AE776DB543F7C37CFA486D1 /* libPods-hippyDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AE71D4D322DB235D93A33CDDB7724B7 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				53A04599F23B5CB5383AFD0458720CA1 /* image */,
+				8196B99FE811B2B532CFC286F9EEE679 /* listview */,
+				756F0FE26E328EBE1AA99415BFB4AB33 /* modal */,
+				CB87F0C6DCA3A241F7BD93D993AA043A /* navigator */,
+				6199C0EAC5315B4BE79A2F996215179D /* refreshview */,
+				C63F4A67B2D210CE1884EF48429E7F6B /* scrollview */,
+				D60F3D85CF2AF30234B8AC5C336CD523 /* text */,
+				1C1DB80C1D8DF19CD334F1CAE922694A /* textinput */,
+				20AECE940BCD130F76C06B0BDF9AF77C /* videoplayer */,
+				C40788B7F9CE83756BB2330F90FC320F /* view */,
+				096D36164F895F53D49FD6E938199DC4 /* viewPager */,
+				006E66F12A757EEEBB7DE0B6A0E1B709 /* webview */,
+			);
+			name = component;
+			path = component;
+			sourceTree = "<group>";
+		};
+		1C1DB80C1D8DF19CD334F1CAE922694A /* textinput */ = {
+			isa = PBXGroup;
+			children = (
+				AB2A2915C2F5246AFED6E3A75C40CA46 /* HippyBaseTextInput.h */,
+				9F30CEFA815A70D7F9C3E5038455A92A /* HippyBaseTextInput.m */,
+				AAC29463CF590324B73959C7FBB535CD /* HippyShadowTextView.h */,
+				5FE46D56B1BEB1127E980353DAC9A05C /* HippyShadowTextView.mm */,
+				8BEC577640C6138DABA4577254768B6A /* HippyTextField.h */,
+				602DAD161DE7BFBADC1AC3550AC6453B /* HippyTextField.m */,
+				789EDF11258C4FA88B1F9D3115113A3F /* HippyTextSelection.h */,
+				0D26F6120A1941554178B7AE4CA1EF17 /* HippyTextSelection.m */,
+				5B6F4E189C44ED85495EE55347569E2E /* HippyTextView.h */,
+				0601AE52C6BD13CFE08DDEB485AAC2C2 /* HippyTextView.mm */,
+				FE88D10A27C712CC2634EFB8EAC7AC12 /* HippyTextViewManager.h */,
+				2F8E2506F83C4766ABD6BF5E3C3C43AA /* HippyTextViewManager.mm */,
+			);
+			name = textinput;
+			path = textinput;
+			sourceTree = "<group>";
+		};
+		1CF2E56B7DC526F08A5EFD8434C21F7A /* virtualNode */ = {
+			isa = PBXGroup;
+			children = (
+				42C7283402D0C60975E5FC2D118AED0B /* HippyVirtualNode.h */,
+				F2BA346BCFC2BE0E2E96718DEA8E0062 /* HippyVirtualNode.m */,
+			);
+			name = virtualNode;
+			path = virtualNode;
+			sourceTree = "<group>";
+		};
+		20AECE940BCD130F76C06B0BDF9AF77C /* videoplayer */ = {
+			isa = PBXGroup;
+			children = (
+				AC10AFF39FA880DE5AADB480A412AA52 /* HippyVideoPlayer.h */,
+				6D58B92CF2FDA74EE9E5DA93C3D0C2D0 /* HippyVideoPlayer.m */,
+				C2DB517CFA83DD53479F2F35292183B6 /* HippyVideoPlayerManager.h */,
+				6C7BBBDE2EA1EE868CB36E1610EAA4DB /* HippyVideoPlayerManager.m */,
+			);
+			name = videoplayer;
+			path = videoplayer;
+			sourceTree = "<group>";
+		};
+		25FA17291A87403BFD356B184942F137 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEC911E67A3A6A5D34C6F10219F12185 /* Pods-hippyDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2877C8929E73448AEDAF2090F48E7DFE /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E872DF5A5ECE2DA6F7C194DDE4A0BE8E /* engine.cc */,
+				684435398C9EA8585118F24458A48F5F /* engine.h */,
+				68596887095E1F494EBAE75AFAC8F15A /* engine-impl.cc */,
+				F0EEBCDE0E010DFF4B6DBB6B76A7DF89 /* engine-impl.h */,
+				A25A502B9C895FC18C2D86A5AA08CA69 /* environment.cc */,
+				1286A86049AC38F815CEF0D36A4E477D /* environment.h */,
+				664749B9657F627802332545B6571EA0 /* javascript-loader.cc */,
+				BE848A1E3856ADC492D66CCE447B09BD /* javascript-loader.h */,
+				7FCDDC3A03C5456F85B4C02B2B32D697 /* base */,
+				B181F3D48CD90466AC45A98F02706BFA /* modules */,
+				A63CF1D6BFE43B8B799CB33CC0006CA3 /* napi */,
+				B8FFC000F5E3DEC3B11CB6AB41121387 /* platform */,
+				5A98994593568A3DD5EE71EC24696193 /* task */,
+			);
+			name = core;
+			path = core;
+			sourceTree = "<group>";
+		};
+		34221E4462E3749FF8690A30D9E9EFC4 /* uimanager */ = {
+			isa = PBXGroup;
+			children = (
+				17419F66B508F5089B2774208CB9C73A /* HippyUIManager.h */,
+				0315FBAAFDC1C5FFC0F0E8E605DBC1D3 /* HippyUIManager.mm */,
+			);
+			name = uimanager;
+			path = uimanager;
+			sourceTree = "<group>";
+		};
+		373A19D3FE3A9FB1571D51B79AFB4627 /* clipboard */ = {
+			isa = PBXGroup;
+			children = (
+				FBBF36EEB7925E073800C0175194C8A5 /* HippyClipboardModule.h */,
+				7D7B76206439F1B8D07B38727A271FB2 /* HippyClipboardModule.m */,
+			);
+			name = clipboard;
+			path = clipboard;
+			sourceTree = "<group>";
+		};
+		46ABB3A0EBEA82B97B38A4FCF5C800AE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				B914D38719C12648672B8B5561A12EC8 /* HippyAssert.h */,
+				F7F19D9607999055CE942346E82668CB /* HippyAssert.m */,
+				B0BFDCE2B8B704C0B68B1FA6A0181EF3 /* HippyConvert.h */,
+				737082455946CFFAE82EA70CE127C0F6 /* HippyConvert.mm */,
+				6486C8DF2EAD8DB6D0DF8A1666372DB2 /* HippyConvert+Transform.h */,
+				6871018106D605A028D5A56525807069 /* HippyConvert+Transform.m */,
+				38D6B2B4C93A0F73EE01D6AA7E4A2527 /* HippyDeepCopyProtocol.h */,
+				E6D0608FCF89809E56CE4DFEDF846232 /* HippyDefines.h */,
+				41D1E5EE111C152B3644DADDED890C6E /* HippyErrorCustomizer.h */,
+				9EC5364451D57C229506658A54D21198 /* HippyErrorInfo.h */,
+				0CD6F5873C2DF7DF5E37F41AA747D93F /* HippyErrorInfo.m */,
+				CD9C970E9E965010B97D5DBAF530C00B /* HippyLog.h */,
+				DBC93E3394C09FA35CA84BDC7886DA01 /* HippyLog.mm */,
+				D53516EC658D46C273A3688B28D72F4B /* HippyNullability.h */,
+				A9231A7510DB3F74B792695BFEA25BB1 /* HippyParserUtils.h */,
+				6EA765515AF9BF82F2792455DB16972B /* HippyParserUtils.m */,
+				721E4743DD441DA1698344FB5DA60F1A /* HippyUtils.h */,
+				D7DFC2593E9979F4FF2C1C9F3263D587 /* HippyUtils.m */,
+				2F25A9306E4CEF07FBED75C8232AE566 /* NSArray+HippyArrayDeepCopy.h */,
+				574C6B65A8D0AB8F380BA318524171E9 /* NSArray+HippyArrayDeepCopy.m */,
+				C9CC264088F9A9E89F76AE72CE5394CC /* NSDictionary+HippyDictionaryDeepCopy.h */,
+				ECAA4551290848C5C78D7A09B703807A /* NSDictionary+HippyDictionaryDeepCopy.m */,
+				298E8EA6BF4D6C97827DD32B7BC9B1CA /* NSNumber+HippyNumberDeepCopy.h */,
+				A5A78BD2B4C7F7435FFDE915C25D8C9D /* NSNumber+HippyNumberDeepCopy.m */,
+			);
+			name = utils;
+			path = utils;
+			sourceTree = "<group>";
+		};
+		4924996979D16804106E7A5D31E1162D /* exception */ = {
+			isa = PBXGroup;
+			children = (
+				D81450EFEEEC7A2801625C23D93301D6 /* HippyExceptionModule.h */,
+				62E17FD435D82B65320C421FB1ADE6DA /* HippyExceptionModule.m */,
+			);
+			name = exception;
+			path = exception;
+			sourceTree = "<group>";
+		};
+		53A04599F23B5CB5383AFD0458720CA1 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				259A1CC8E6D2404376A9D1C08FA465E2 /* HippyAnimatedImage.h */,
+				E25CE6C391F879FBA3993322C8D57504 /* HippyAnimatedImage.m */,
+				2039CCB4B9B307100B173D553B005746 /* HippyAnimatedImageView.h */,
+				4FF62F5CE62EBAFF991AB6650B768FCF /* HippyAnimatedImageView.m */,
+				2552A4DAA65A49C726195CDF27B7AFBD /* HippyImageCache.h */,
+				0D8E962E6903B54ED85509E8CADEF3B3 /* HippyImageCache.m */,
+				E2A4E8CB3604E5E5139703547BC896A4 /* HippyImageView.h */,
+				712CB08EF3D3C0F6D23E01AD302AD0B7 /* HippyImageView.m */,
+				3B51DB421A39A076325CF1134F513ACE /* HippyImageViewCustomLoader.h */,
+				0C12E52E6EDA43B07AB9DF88A4AC12EF /* HippyImageViewManager.h */,
+				DC9F7B7EC981745F4CD436E2BD1E1030 /* HippyImageViewManager.m */,
+				B291B8B2470651B81233CC9225D53A1F /* NSData+Format.h */,
+				956C349F14032D9FFE3636389CBDD98E /* NSData+Format.m */,
+				5501785BAEE04F0D8BD6578FAD844E96 /* UIImageView+React.h */,
+				0D0D73F7AFD67C8E0495E4270F5DD14E /* UIImageView+React.m */,
+			);
+			name = image;
+			path = image;
+			sourceTree = "<group>";
+		};
+		54A0ED339EAEF831ECE72AABCC34161E /* sdk */ = {
+			isa = PBXGroup;
+			children = (
+				56BA2A721B0015A4A97756F1262B3B28 /* base */,
+				1AE71D4D322DB235D93A33CDDB7724B7 /* component */,
+				6370A93AC2262788E5EF0BEAB949ECFB /* debug */,
+				E1AF2D47AD73A10813319DF72A11226A /* handler */,
+				5AFCB1B13CF23FB724458F2F61DC3CA6 /* layout */,
+				C96426653FE96431D4077B30891FA095 /* module */,
+				46ABB3A0EBEA82B97B38A4FCF5C800AE /* utils */,
+			);
+			name = sdk;
+			path = sdk;
+			sourceTree = "<group>";
+		};
+		56BA2A721B0015A4A97756F1262B3B28 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				28B395B39123E44583808997254D272E /* HippyAnimationType.h */,
+				75BEE478FC5F9184769F24F637C6766B /* HippyAutoInsetsProtocol.h */,
+				60DB2AB90C23536A76EF580430A86718 /* HippyBatchedBridge.mm */,
+				EE0041E8B44FF8E12E8F0963DFFB1D14 /* HippyBridge.h */,
+				F27100DA250C4BFD160E4757B09F5A53 /* HippyBridge.mm */,
+				1023D39D195D6F108D547A05DA130520 /* HippyBridge+LocalFileSource.h */,
+				BDCD0EB4205D111938E208A14ED2ACD6 /* HippyBridge+LocalFileSource.m */,
+				D13D59B81C65CA8535D4F77572DD9877 /* HippyBridge+Mtt.h */,
+				0075EA2DE7924B98DCAC40E229793508 /* HippyBridge+Mtt.mm */,
+				5698AC8DAB5963F4E318CEEA90E8F9A1 /* HippyBridge+Private.h */,
+				DC4BE9AE84C3F0E27FCCEE7D842598AE /* HippyBridgeDelegate.h */,
+				3A223A707BBE5DDA202A7CE4531FE9AD /* HippyBridgeMethod.h */,
+				6FF0F84F343153C1DCC6AA10ECE5EC20 /* HippyBridgeModule.h */,
+				66249707C2A085BCA2462C09621CD747 /* HippyBundleURLProvider.h */,
+				ADD453BA4BFD6A5C6827C65AAC65F701 /* HippyBundleURLProvider.m */,
+				EC824E687D18FD8E7838B26054DC90BB /* HippyComponent.h */,
+				973272C1D9A26A033F15955C9ED326C9 /* HippyComponentData.h */,
+				8EE05793E325F1905AB2DB0C49146855 /* HippyComponentData.mm */,
+				1F6B9D44B44D2B191F6E54244480DB55 /* HippyDisplayLink.h */,
+				6F6FC900D543A857DCD0D7A8551823A6 /* HippyDisplayLink.m */,
+				8190E7703ADFB90B4137F70538367A39 /* HippyEventDispatcher.h */,
+				D05CCD6348EFBB40FE579F6324B36B1D /* HippyEventDispatcher.m */,
+				9BC538CCF7CA5D1E7B65E9446F96E9AE /* HippyFont.h */,
+				D11E6038FE6727768C1EAB3E12E21E1A /* HippyFont.mm */,
+				6501BBED06626EEAD9E01C4B18A8A2EB /* HippyFrameUpdate.h */,
+				0DC0676A478A524527F5FA30DBDCE967 /* HippyFrameUpdate.m */,
+				6030B1DA2C06B7B43403C1F6ADED3FF4 /* HippyInvalidating.h */,
+				D51FC386EC1EA0A1EED52AD5F31AEF12 /* HippyJavaScriptExecutor.h */,
+				B661EA2367754091BF41C8C23C8921CC /* HippyJavaScriptLoader.h */,
+				FFC97E40B483AED306830E77FDB6E13B /* HippyJavaScriptLoader.mm */,
+				FE480114BFFD8AF2C7694576AEAA8196 /* HippyJSStackFrame.h */,
+				DDEBB3D38BBFEAB5D364840BED02ACE2 /* HippyJSStackFrame.m */,
+				05BC2C99A45A9ED078B62EABCA96E931 /* HippyKeyCommands.h */,
+				226BEEE8433916C7F1B97E77BEB002DB /* HippyKeyCommands.m */,
+				0F64A8D3D5C2EFA0D6463EC5F2D5DCA5 /* HippyMemoryOpt.h */,
+				7381DBFDFEC6D71968D9B3C998D6CC0A /* HippyModuleData.h */,
+				977C3BE182711E32CC35CE83F8C2F9E6 /* HippyModuleData.mm */,
+				FA7211DD7A057D58FF60498F4ACB3806 /* HippyModuleMethod.h */,
+				45B328A34F7AD5138621DDF5E2E6712E /* HippyModuleMethod.mm */,
+				24D2699CD3318B7A63A6BEA1994E5A3B /* HippyPerformanceLogger.h */,
+				E9AFA1D4B1549405D6DA95668FA6F083 /* HippyPerformanceLogger.m */,
+				4BDC0EC91686260FF5E75C4085347996 /* HippyRootShadowView.h */,
+				3340F7A9FDC93365883F1977D1A1D133 /* HippyRootShadowView.mm */,
+				5492910D93CEB9CF1710280227682C8D /* HippyRootView.h */,
+				283ED9651E4244E9250AE4C84C1A36C7 /* HippyRootView.mm */,
+				DF7EF4499739C8E39C8D73389ED5F542 /* HippyRootViewDelegate.h */,
+				A39E769E28447678C228491D98E2C983 /* HippyRootViewInternal.h */,
+				981554BC0343E9CCBB4DA9839385F4E7 /* HippyScrollProtocol.h */,
+				0AE8B64996F05B03D47139232F11DB93 /* HippyTouchHandler.h */,
+				B977BB5A9376F2C60E3463BBC887E3D5 /* HippyTouchHandler.m */,
+				DB7B346C0F84BBCE3D8ED430E8EA34C8 /* executors */,
+				1CF2E56B7DC526F08A5EFD8434C21F7A /* virtualNode */,
+			);
+			name = base;
+			path = base;
+			sourceTree = "<group>";
+		};
+		5A98994593568A3DD5EE71EC24696193 /* task */ = {
+			isa = PBXGroup;
+			children = (
+				7F8B72F99ABD324A7D9D4A5DDF2A2478 /* javascript-task.cc */,
+				6D28A83AA99A3B62442AEDF18F87DEDD /* javascript-task.h */,
+				FD1734A592E5919B38DD9CE42A104F47 /* javascript-task-runner.cc */,
+				58F4F0C9A286EF089A284884E4F56B5E /* javascript-task-runner.h */,
+			);
+			name = task;
+			path = task;
+			sourceTree = "<group>";
+		};
+		5AFCB1B13CF23FB724458F2F61DC3CA6 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				401064E1603FFD3CE702379B7FEC38D9 /* MTTFlex.h */,
+				F02378AAE7D639DD42E9AB9F59EC5180 /* MTTFlexLine.cpp */,
+				2C9EDF71C6FE760558276C258AD3F8D0 /* MTTFlexLine.h */,
+				DC6D67685F883D4F61717EEDF63A329E /* MTTLayout.cpp */,
+				F9E865F90140A20354BBC0DEFD777BA9 /* MTTLayout.h */,
+				CD8CBB3A823C3FCF6E0704BC4B785F4E /* MTTLayoutCache.cpp */,
+				FE35FCDFA7A608F54DA16641A8D0880B /* MTTLayoutCache.h */,
+				F5642C81CE10BD1EEEAF23F1D07E9597 /* MTTNode.cpp */,
+				380BAC858B095B60CDF647E393A4DCF1 /* MTTNode.h */,
+				19C48AEFB871F986289BE8A4EAA54591 /* MTTTStyle.cpp */,
+				E6610960AC4FE4410C381FBC25B1B55E /* MTTTStyle.h */,
+				890121E688750CE6ABBF34A907F634CB /* MTTUtil.cpp */,
+				05BCB36915956E5454B04A6EA8A1B95E /* MTTUtil.h */,
+				44AAAC0707555C3579CC728DFA736A58 /* x5LayoutUtil.h */,
+				3A14296AB80C53B0C2700A911F7B1BB3 /* x5LayoutUtil.m */,
+			);
+			name = layout;
+			path = layout;
+			sourceTree = "<group>";
+		};
+		5C3AE4BB7715749D260D549F941DDDD8 /* image loader */ = {
+			isa = PBXGroup;
+			children = (
+				95D587C75E7BE55F46CCF914F61938AC /* HippyImageCacheManager.h */,
+				DCA989843EE02DA9DD41FE050573AB1F /* HippyImageCacheManager.m */,
+				D222BB6B7DD51D59367DB61FFAC0032A /* HippyImageLoaderModule.h */,
+				475A1069D72E5C8F7613E53B00B69504 /* HippyImageLoaderModule.m */,
+			);
+			name = "image loader";
+			path = "image loader";
+			sourceTree = "<group>";
+		};
+		6199C0EAC5315B4BE79A2F996215179D /* refreshview */ = {
+			isa = PBXGroup;
+			children = (
+				DED240D851863C8101C0BA59F07F0B90 /* HippyRefreshWrapper.h */,
+				0BE4DE878B33A6119720068C9C23127D /* HippyRefreshWrapper.m */,
+				BD8CF3AD93AF5C7F8464B0C9B19CC608 /* HippyRefreshWrapperItemView.h */,
+				99C7B4CC14B73445A16A3CE526860D87 /* HippyRefreshWrapperItemView.m */,
+				AEE50910CA44295D2A6D2461B4DB5D31 /* HippyRefreshWrapperItemViewManager.h */,
+				A3E134CBA40A923781A533D22C2B7519 /* HippyRefreshWrapperItemViewManager.m */,
+				DFE6819719EE9B4708FD3F803D47A6E7 /* HippyRefreshWrapperViewManager.h */,
+				100E735F0C03EC3384A9B07FA10118AF /* HippyRefreshWrapperViewManager.m */,
+			);
+			name = refreshview;
+			path = refreshview;
+			sourceTree = "<group>";
+		};
+		6370A93AC2262788E5EF0BEAB949ECFB /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				81182DF2CFA78DD2B1960852659839E8 /* websocket */,
+			);
+			name = debug;
+			path = debug;
+			sourceTree = "<group>";
+		};
+		6419352CB25E0C659F471407A0674CB7 /* timing */ = {
+			isa = PBXGroup;
+			children = (
+				A79F6E25F0CF7AEE55F97195CC08557D /* HippyTiming.h */,
+				4DFEF4DF0EB2AAF9428A07AFD96A12B2 /* HippyTiming.mm */,
+			);
+			name = timing;
+			path = timing;
+			sourceTree = "<group>";
+		};
+		6BE5E3A0613CA5B70C01DBBD79817707 /* netinfo */ = {
+			isa = PBXGroup;
+			children = (
+				1B768B9AC6D4ABF55B1D3A1BA7CA3998 /* HippyNetInfo.h */,
+				5C9A330784D9CDC7238DA4E32983F741 /* HippyNetInfo.m */,
+			);
+			name = netinfo;
+			path = netinfo;
+			sourceTree = "<group>";
+		};
+		756F0FE26E328EBE1AA99415BFB4AB33 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				BB1D79C047154B008314B28F436466C7 /* HippyModalCustomAnimationTransition.h */,
+				A3BBCF40AFA84251F6C7FDEFA09AED46 /* HippyModalCustomAnimationTransition.m */,
+				80FDA7017BD2D8CB0BA9FBEDDA747F83 /* HippyModalCustomPresentationController.h */,
+				7E84DA95C35A1857E4F39BFB4E5A7C52 /* HippyModalCustomPresentationController.m */,
+				B26CB9D6FE2A96841632EC0A61938A76 /* HippyModalHostView.h */,
+				98A74D6BBA4B1E9014E6764BA7674134 /* HippyModalHostView.m */,
+				A3743D5AB060797F25868BFA9687DCFE /* HippyModalHostViewController.h */,
+				51D9B319FA0CB1456CA7CA9678C922C7 /* HippyModalHostViewController.m */,
+				43BC2C166D307592FC3242212FF10C5C /* HippyModalHostViewManager.h */,
+				9626863D6AF41140CD7FA185939714B4 /* HippyModalHostViewManager.mm */,
+			);
+			name = modal;
+			path = modal;
+			sourceTree = "<group>";
+		};
+		7FCDDC3A03C5456F85B4C02B2B32D697 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				2BCF173888A242F6A522D7E7B53A9806 /* common.h */,
+				C151B8FC1B9486E056CE725B7E3AE3CD /* copyable-lambda.h */,
+				137630D1037F944CA3983FF998CF9491 /* lock-queue.h */,
+				38100DEFE83FABC63667594B82D2DD08 /* logging.cc */,
+				36CF4747E9360CA1B3B891D7702AA248 /* logging.h */,
+				D086901EC08D1F3B2AFDDD4124937B8B /* macros.h */,
+				28BFCB97EF48FB88B2C3404D5DF0FE73 /* task.cc */,
+				F53BE5E8BD58E8B4C8F9C7BEF2A742AB /* task.h */,
+				0E1D6A1ED74E8DDA93E8AC4309016AEE /* task-runner.cc */,
+				ED788E2623F9ECFB53ED2E7BB37C4629 /* task-runner.h */,
+				15EE7F31C9E420F1C823669028844A6F /* thread.cc */,
+				9BAD596B8064675FFCBE3DB64B69F1EB /* thread.h */,
+				8B1DF53BD9C2C6617993DD936DB1A8E1 /* thread-id.cc */,
+				61FFF73742FAD53B2FD3365DC868BBC2 /* thread-id.h */,
+			);
+			name = base;
+			path = base;
+			sourceTree = "<group>";
+		};
+		81182DF2CFA78DD2B1960852659839E8 /* websocket */ = {
+			isa = PBXGroup;
+			children = (
+				4293640A947F6CD18DBDA961A42061F5 /* HippySRWebSocket.h */,
+				EEEDB3C38A9EC2D301B10B60770079C4 /* HippySRWebSocket.m */,
+				8E0EF9D88ED969A51822516508080F06 /* HippyWebSocketExecutor.h */,
+				62411D8E22CD96D9EB3A27349474D970 /* HippyWebSocketExecutor.mm */,
+				84CF6BF3CBFD68798DD8D38F6521F8E8 /* HippyWebSocketManager.h */,
+				AC345B332B9961D651D7A7CB1DCB8436 /* HippyWebSocketManager.m */,
+				FA936AED76D70972C8BF3640D5834AC5 /* HippyWebSocketProxy.h */,
+				1C320A03061425C41467A765C324C182 /* HippyWebSocketProxyDelegate.h */,
+			);
+			name = websocket;
+			path = websocket;
+			sourceTree = "<group>";
+		};
+		8196B99FE811B2B532CFC286F9EEE679 /* listview */ = {
+			isa = PBXGroup;
+			children = (
+				D5804D88E6AD5298FF4EBC06C5355559 /* HippyBaseListItemView.h */,
+				8E045FC4AF9E30A9FC2AC5DB00343F8D /* HippyBaseListItemView.m */,
+				416BF29DBF819EEFCE7FE3AC8C82480B /* HippyBaseListItemViewManager.h */,
+				D90A4E52743276C50B9BB47453F0D654 /* HippyBaseListItemViewManager.m */,
+				E6634DBF2E1BD152C54FD89EC8CB13DD /* HippyBaseListView.h */,
+				4021157FC18935D75CF239A9A92129DA /* HippyBaseListView.m */,
+				FC8D2B6B4A4E8045552D2C8DA28A9F82 /* HippyBaseListViewDataSource.h */,
+				30EFB28D6896DEF2CAAC60BDA242DC2C /* HippyBaseListViewDataSource.m */,
+				388D6D66DE85BE1116CEAA12EFF7CCFE /* HippyBaseListViewManager.h */,
+				0D4FEEDEA5A6D64604C70ABB0F89B86F /* HippyBaseListViewManager.m */,
+				504924A3B5314FC791B344832BE96AB7 /* HippyBaseListViewProtocol.h */,
+			);
+			name = listview;
+			path = listview;
+			sourceTree = "<group>";
+		};
+		8D12624AE62E28F6393AF4948435F1CC /* localstorage */ = {
+			isa = PBXGroup;
+			children = (
+				BC85AD25D16C42D5BF66ACF246BCD232 /* HippyAsyncLocalStorage.h */,
+				8E4E53C3ABF3A7CAE9E6EAB99144D282 /* HippyAsyncLocalStorage.m */,
+			);
+			name = localstorage;
+			path = localstorage;
+			sourceTree = "<group>";
+		};
+		9EE149C899DBFBC78973829A1863F9AC /* jsc */ = {
+			isa = PBXGroup;
+			children = (
+				8B2E4D672C50574702EC22216F03A27E /* js-native-api-jsc.cc */,
+				1303C01FD9C53A9B6F71037AF596A41A /* js-native-api-jsc.h */,
+				76BC5C8547F8464060627C76F8D7AC15 /* js-native-api-value-jsc.cc */,
+				96BEAF1D4A6B0C1A44DCC4DF65C705CC /* js-native-jsc-helper.cc */,
+				30E134D3137E571EB2091C950B6E28BB /* js-native-jsc-helper.h */,
+				6C4C85DE70EC35202D6C81A4C094F615 /* native-source-code-ios.cc */,
+			);
+			name = jsc;
+			path = jsc;
+			sourceTree = "<group>";
+		};
+		9EF5C851BB9A50E4E88493E39E1942D8 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				660E391561B01D9AECCC098EE9C24896 /* HippyFetchInfo.h */,
+				34AABCDB21A186595E8288E69E26AE89 /* HippyFetchInfo.m */,
+				64E445561478301565B40A24111AE40A /* HippyNetWork.h */,
+				0979868A34214A77314A8F5E31B6D5FC /* HippyNetWork.m */,
+			);
+			name = network;
+			path = network;
+			sourceTree = "<group>";
+		};
+		A63CF1D6BFE43B8B799CB33CC0006CA3 /* napi */ = {
+			isa = PBXGroup;
+			children = (
+				90CE84B4379CE7FDB1F25DAE99113E66 /* callback-info.cc */,
+				B63869FE2EC17FAB4B36334F0C64756C /* callback-info.h */,
+				F3783DB6BE28DF8EEBDA70AA5F9CB9DE /* js-native-api.h */,
+				E0C4FD329AD7A8BAD6AFE4976F38073F /* js-native-api-types.h */,
+				0F418329294972F376DB81D55DEA605E /* native-source-code.h */,
+				9EE149C899DBFBC78973829A1863F9AC /* jsc */,
+			);
+			name = napi;
+			path = napi;
+			sourceTree = "<group>";
+		};
+		AEBCDE0C2079C4A228641AB6F879C73D /* dev */ = {
+			isa = PBXGroup;
+			children = (
+				517CB765CA4385E6E902AAE1D3A58EBE /* HippyDevLoadingView.h */,
+				7BCB20538AB224CB58258A9C424CF02B /* HippyDevLoadingView.m */,
+				869EC6E63E88B8451547B51D6C1B7D57 /* HippyDevMenu.h */,
+				E3FEE21D2002F9F73B306D6DA2062948 /* HippyDevMenu.mm */,
+				B44C1664BF40E776A774F9D5981AC707 /* HippyRedBox.h */,
+				65C5A5ADB8D6E85E35949302BBA96C62 /* HippyRedBox.m */,
+			);
+			name = dev;
+			path = dev;
+			sourceTree = "<group>";
+		};
+		AEC911E67A3A6A5D34C6F10219F12185 /* Pods-hippyDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1E2540C148E864FC1B54EFBA5889C426 /* Pods-hippyDemo-acknowledgements.markdown */,
+				D5ED92FB27C903931BF5C4D96FD19D34 /* Pods-hippyDemo-acknowledgements.plist */,
+				E21031CA48B3A9479AB790434B4376EA /* Pods-hippyDemo-dummy.m */,
+				40DAE617448871584A69502231DA2120 /* Pods-hippyDemo.debug.xcconfig */,
+				16D21645753CFDB52C175CA6CD2F7349 /* Pods-hippyDemo.release.xcconfig */,
+			);
+			name = "Pods-hippyDemo";
+			path = "Target Support Files/Pods-hippyDemo";
+			sourceTree = "<group>";
+		};
+		B181F3D48CD90466AC45A98F02706BFA /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				C497C91373F65F45498F4B9CF5FBD961 /* console-module.cc */,
+				801D1E55716FF192EEE9C2F8A1AA1F51 /* console-module.h */,
+				872DE9041315D1CA5CEC3AFBC249BCE2 /* contextify-module.cc */,
+				05C07D9BA0A2544E065A5E38ED01521A /* contextify-module.h */,
+				34A16EE6D7C87507A4A84F84048A4D21 /* js-value-helper.h */,
+				4D47607B138FCDB61A2F08BD1419211F /* module-base.h */,
+				EBD8B6580F0365D13D7F6CB022FC542F /* module-register.cc */,
+				6506EFB14CEF4F358B3F175F7546376C /* module-register.h */,
+				37661AA932EECAA2D23733C198A1DB3B /* timer-module.cc */,
+				9EBA2C74654F82A7C68B479B0218F9E4 /* timer-module.h */,
+			);
+			name = modules;
+			path = modules;
+			sourceTree = "<group>";
+		};
+		B8FFC000F5E3DEC3B11CB6AB41121387 /* platform */ = {
+			isa = PBXGroup;
+			children = (
+				D25CAE3CB90A46B49909031BF4FCFA64 /* logging-impl.cc */,
+				8FF919FC570F61E167A0B617103031B3 /* logging-impl.h */,
+			);
+			name = platform;
+			path = platform;
+			sourceTree = "<group>";
+		};
+		C40788B7F9CE83756BB2330F90FC320F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BD4EC8B9760C5769FAAD371831B03977 /* HippyBackgroundImageCacheManager.h */,
+				6DF015B925A401C1C63C0B9F2BE4D59E /* HippyBackgroundImageCacheManager.m */,
+				756DF6B6E12C4873CC3FC054779099E6 /* HippyBorderDrawing.h */,
+				AD2A605C6FFB86D30129CBA320DBBA8C /* HippyBorderDrawing.m */,
+				54348092740680A8E51429E6AA8C1522 /* HippyBorderStyle.h */,
+				E7024EFECAD61D2CF520D2783E2F9BE2 /* HippyPointerEvents.h */,
+				14C7ABF2DE8BA2BEA2C06F6014173F8C /* HippyShadowView.h */,
+				93082BEF6EFEEECF4AE76E37BFF2ECC3 /* HippyShadowView.mm */,
+				2F4CEF79FE52B7511413EA98FBD44228 /* HippyView.h */,
+				FAE67B903D5597B5EA30096FDCA9D85F /* HippyView.m */,
+				996CED98697A6049A45390BBAA6C9EBC /* HippyViewEventProtocol.h */,
+				F75B0D61C4D1DD5AA7B8C68043EC97FD /* HippyViewManager.h */,
+				4533A92F73C04CA561375016C43F0FA9 /* HippyViewManager.mm */,
+				3C708FC21D3ED04B327BC74DB0A0F6C3 /* UIView+Private.h */,
+				2B5B02ADAC22EDCA77FA2E5A7F023343 /* UIView+React.h */,
+				80FFAAC1C4C50750FB5FF320502BBA84 /* UIView+React.mm */,
+			);
+			name = view;
+			path = view;
+			sourceTree = "<group>";
+		};
+		C63F4A67B2D210CE1884EF48429E7F6B /* scrollview */ = {
+			isa = PBXGroup;
+			children = (
+				386D0E479462B237862AF89B80600D0E /* HippyScrollableProtocol.h */,
+				AF6B59C5D725FE5B2DB3C4C8F8075715 /* HippyScrollView.h */,
+				4E9DB3ABB4E045690D30A397C058E6D4 /* HippyScrollView.m */,
+				00EF653BB8BA51778381092629B6455F /* HippyScrollViewManager.h */,
+				4763533104346EF8DB0A0E5FEBE53665 /* HippyScrollViewManager.mm */,
+			);
+			name = scrollview;
+			path = scrollview;
+			sourceTree = "<group>";
+		};
+		C96426653FE96431D4077B30891FA095 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				EDB011CE4C14ABABBC51A5EBD020B816 /* animation */,
+				373A19D3FE3A9FB1571D51B79AFB4627 /* clipboard */,
+				AEBCDE0C2079C4A228641AB6F879C73D /* dev */,
+				0E8C1CAF3D9027E594235AE5A1620491 /* event observer */,
+				4924996979D16804106E7A5D31E1162D /* exception */,
+				5C3AE4BB7715749D260D549F941DDDD8 /* image loader */,
+				8D12624AE62E28F6393AF4948435F1CC /* localstorage */,
+				6BE5E3A0613CA5B70C01DBBD79817707 /* netinfo */,
+				9EF5C851BB9A50E4E88493E39E1942D8 /* network */,
+				6419352CB25E0C659F471407A0674CB7 /* timing */,
+				34221E4462E3749FF8690A30D9E9EFC4 /* uimanager */,
+			);
+			name = module;
+			path = module;
+			sourceTree = "<group>";
+		};
+		CB87F0C6DCA3A241F7BD93D993AA043A /* navigator */ = {
+			isa = PBXGroup;
+			children = (
+				4A7CE97640C0471E117A41FEDBD153CC /* HippyNavigationControllerAnimator.h */,
+				7C1E158097ABB38F33F039D51274FDA4 /* HippyNavigationControllerAnimator.m */,
+				9A5508B68720409773EAE1C696F17207 /* HippyNavigatorHostView.h */,
+				91E9B6BAA319B015C405A1B29D5A9D87 /* HippyNavigatorHostView.mm */,
+				79B26901054B8F6CF6B78F36FE526B55 /* HippyNavigatorItemViewController.h */,
+				CEAC1838AB98234851F474BC89392C6D /* HippyNavigatorItemViewController.m */,
+				5038B626BF91FE126CA254D0604597F5 /* HippyNavigatorRootViewController.h */,
+				EB35C36BDAAFB7A41A0D31355BEF2933 /* HippyNavigatorRootViewController.m */,
+				676058123825F2163AF32CF504AED132 /* HippyNavigatorViewManager.h */,
+				5C5E0B6115FDE5792978D1C5F5884DDC /* HippyNavigatorViewManager.m */,
+			);
+			name = navigator;
+			path = navigator;
+			sourceTree = "<group>";
+		};
+		CE6303DB44FA1961E9B26C389FFF6F73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8024AD90AD1EAF8C0CF7E511E0A7581E /* hippy.xcconfig */,
+				FC9DBEDAD98C05317E1EE495E1920664 /* hippy-dummy.m */,
+				64BA7E4221EC1CEDC17F5D5C4AD61EA6 /* hippy-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/hippy";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				093E4D51834888BA55A72E18828660FA /* Pods */,
+				15BA41AFDAF165CD3980FC86248DA5C0 /* Products */,
+				25FA17291A87403BFD356B184942F137 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D60F3D85CF2AF30234B8AC5C336CD523 /* text */ = {
+			isa = PBXGroup;
+			children = (
+				9A83BFCD9854ABB7C484F89E5A39E746 /* HippyShadowText.h */,
+				6456297CD4ED7DC8A0185F6E450D0737 /* HippyShadowText.mm */,
+				3F27D8B8E2A950886621C5527D2D9DF3 /* HippyText.h */,
+				B3B9E5C10EE6F4A8DB15DA8C5ADE7927 /* HippyText.mm */,
+				A10405B4E6AB414B02EFC7A4CCA1A362 /* HippyTextDecorationLineType.h */,
+				34C6BEDBDF9B30AD628E1FE69DA7FFF5 /* HippyTextManager.h */,
+				9FBA5106A67415053D36F3A89A6C812C /* HippyTextManager.mm */,
+				8B01E2C15252EB3CA88F09AA8CBB9AB6 /* HippyVirtualTextNode.h */,
+				B717634E5672ECC36A86236F0EA1C3D2 /* HippyVirtualTextNode.m */,
+			);
+			name = text;
+			path = text;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB7B346C0F84BBCE3D8ED430E8EA34C8 /* executors */ = {
+			isa = PBXGroup;
+			children = (
+				135D7F5E8CE7808BC1FB314EAB6DCF9E /* HippyJSCErrorHandling.h */,
+				29D1864C06FDCCFF47D782D67E170974 /* HippyJSCErrorHandling.m */,
+				9E5A1F1836DAE2F3532B059F3E78122B /* HippyJSCExecutor.h */,
+				FAEEAEE2BBB109C0BCE6D4A840ADAE02 /* HippyJSCExecutor.mm */,
+				822A929FC3528A0A329ABD2126F68B81 /* HippyJSCWrapper.h */,
+				E7A2093E59A1587E5BEDEFA6ECFF2E0C /* HippyJSCWrapper.mm */,
+			);
+			name = executors;
+			path = executors;
+			sourceTree = "<group>";
+		};
+		E1AF2D47AD73A10813319DF72A11226A /* handler */ = {
+			isa = PBXGroup;
+			children = (
+				9D2746EEE760639E6AB8D9CD236F0F9B /* HippyCustomTouchHandlerProtocol.h */,
+			);
+			name = handler;
+			path = handler;
+			sourceTree = "<group>";
+		};
+		E80049CE323E71E46C90D2CBC5D6CFE9 /* hippy */ = {
+			isa = PBXGroup;
+			children = (
+				2877C8929E73448AEDAF2090F48E7DFE /* core */,
+				F6D60349053B5B572FE2EBE3A87F4F30 /* ios */,
+				CE6303DB44FA1961E9B26C389FFF6F73 /* Support Files */,
+			);
+			name = hippy;
+			path = hippy;
+			sourceTree = "<group>";
+		};
+		EDB011CE4C14ABABBC51A5EBD020B816 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				19A3AB4DE33E1BA0AA913D76D45AD4C4 /* HippyExtAnimation.h */,
+				073297D7A87FA730BB588BB37905BE15 /* HippyExtAnimation.m */,
+				BB94C4035ED1AC01F91223518D4ED54D /* HippyExtAnimation+Group.h */,
+				27E0545D6B575629543EFE1D4BAD3ACB /* HippyExtAnimation+Value.h */,
+				B43658C64DCEFB643313F2FBDC22D2D1 /* HippyExtAnimation+Value.m */,
+				C180DC9F25F913AA0520C196A64B7C9C /* HippyExtAnimationGroup.h */,
+				8CF1A8DA5330ADE7F38F8A5C56A77219 /* HippyExtAnimationGroup.m */,
+				936954E39DF47875233B580A17ED5008 /* HippyExtAnimationModule.h */,
+				8A84BFCE8B844028033152FB587F1353 /* HippyExtAnimationModule.m */,
+				5A82A1F0F19DB419131990FD23656811 /* HippyExtAnimationViewParams.h */,
+				5E5218C15C0784D4360D07B637884864 /* HippyExtAnimationViewParams.m */,
+			);
+			name = animation;
+			path = animation;
+			sourceTree = "<group>";
+		};
+		F6D60349053B5B572FE2EBE3A87F4F30 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				54A0ED339EAEF831ECE72AABCC34161E /* sdk */,
+			);
+			name = ios;
+			path = ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1AC34CA392613EA2B45BB0E57DF5F5D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8FAB30B2464067D1F94599394BC605 /* callback-info.h in Headers */,
+				F43CB4CBB6B21C1D037B0720FB6FE585 /* common.h in Headers */,
+				DA127AE3AF93C52A6076404B3781F962 /* console-module.h in Headers */,
+				EABFEB9001BC3287CB04AF3D5B7D8D83 /* contextify-module.h in Headers */,
+				5B04A81ADD8016AE012D6CF0048D7ABB /* copyable-lambda.h in Headers */,
+				E5A827C11446C52BC02B8AB3A1EDDA7C /* engine-impl.h in Headers */,
+				F5436CE3AB8B7F16FB3176C910A2CA84 /* engine.h in Headers */,
+				3D6D362E7E268CAB6D50169B42EC9352 /* environment.h in Headers */,
+				D04AB3E08DED363697BAD19CD7EFC1B8 /* HippyAnimatedImage.h in Headers */,
+				3CC80ACBDDB9716D2C270E7D34B309D0 /* HippyAnimatedImageView.h in Headers */,
+				A6AC36073CD24C35C817DF012BC9D5E7 /* HippyAnimationType.h in Headers */,
+				EF01C465A5546D70D4C6798321EAC83D /* HippyAssert.h in Headers */,
+				3415076D39E2CCE3AC91BB0CE9CC415D /* HippyAsyncLocalStorage.h in Headers */,
+				CCAA985956ADF351328493966E6BB5D0 /* HippyAutoInsetsProtocol.h in Headers */,
+				831A78D68AB711E4DAF5A87CFB6FFDBF /* HippyBackgroundImageCacheManager.h in Headers */,
+				7D1CF1B38B319D63184EC5030257AA20 /* HippyBaseListItemView.h in Headers */,
+				7B20B8E9972DF2C8139E081090A2ED60 /* HippyBaseListItemViewManager.h in Headers */,
+				60725AF6F65F688A6EF3AD1840F8B961 /* HippyBaseListView.h in Headers */,
+				CA6597C6502807552342A8B764EB104B /* HippyBaseListViewDataSource.h in Headers */,
+				AC94FEB3C43AFBC654A099214A62C3E2 /* HippyBaseListViewManager.h in Headers */,
+				2BE930DF4A088830AE0DAA0EA35E85CF /* HippyBaseListViewProtocol.h in Headers */,
+				415F7B6B5EA8A13BCEF8C99121BABDFE /* HippyBaseTextInput.h in Headers */,
+				A2595AFA5383CC94956C8C32AC9638C8 /* HippyBorderDrawing.h in Headers */,
+				7DDE221F50C3B9D1766FB12A8B0739EB /* HippyBorderStyle.h in Headers */,
+				75F4188F378FE14C3DA84A158AD5C2D1 /* HippyBridge+LocalFileSource.h in Headers */,
+				CE50AFD5DC2461F07B833DE605BC84BC /* HippyBridge+Mtt.h in Headers */,
+				7100D487573DBE0505BF491AD779C358 /* HippyBridge+Private.h in Headers */,
+				B426D77910D335881995FFD0A1949805 /* HippyBridge.h in Headers */,
+				6E8B2F8AFEE79CC03B17C3BBB2D7C706 /* HippyBridgeDelegate.h in Headers */,
+				47EADEAC49E248C4C0C45DD1A94923B5 /* HippyBridgeMethod.h in Headers */,
+				AD0EC3BD7F80F7BC0B26DE7628A15705 /* HippyBridgeModule.h in Headers */,
+				175DCA41C86B1734F304B7E8484FD566 /* HippyBundleURLProvider.h in Headers */,
+				F4985276748F800CB4146582470F8674 /* HippyClipboardModule.h in Headers */,
+				1345C7BE637598645042D9564D28D1AE /* HippyComponent.h in Headers */,
+				225D4EF13CC2F7A327FA340B6D177C1D /* HippyComponentData.h in Headers */,
+				BF479C5A6A0EE1494919B0101B9FCD62 /* HippyConvert+Transform.h in Headers */,
+				EC80575C1B4CC1076F978067A8D5A711 /* HippyConvert.h in Headers */,
+				85CFCF82DC8D9EA3427EC50085E87EFB /* HippyCustomTouchHandlerProtocol.h in Headers */,
+				5C8F336D0857B625E9984A78A1C0F2D5 /* HippyDeepCopyProtocol.h in Headers */,
+				70057E540683CCDC240DE1A742145AC1 /* HippyDefines.h in Headers */,
+				5FF10D9E49C5B9D2922C2C53BB1FEADB /* HippyDevLoadingView.h in Headers */,
+				91C5D87C2B0ECBD34C744BDB272E079A /* HippyDevMenu.h in Headers */,
+				5F40841A3E02E06A01E41B1D1C643613 /* HippyDisplayLink.h in Headers */,
+				F8AE53DB78A11C3DB937DEAD28B29F2A /* HippyErrorCustomizer.h in Headers */,
+				C514098E5495BF334EB6733B02A6ADC8 /* HippyErrorInfo.h in Headers */,
+				4119B354C9DFF74654C73961448737CC /* HippyEventDispatcher.h in Headers */,
+				D3450E7A261190F5FD870A4B571F510F /* HippyEventObserverModule.h in Headers */,
+				ADF62F9B427784C64348275CC91E617C /* HippyExceptionModule.h in Headers */,
+				A606C7CC5E1DC5E94E734A9FFC8DF4BA /* HippyExtAnimation+Group.h in Headers */,
+				A047A8C70C746B7C28679EC0BCD7CC46 /* HippyExtAnimation+Value.h in Headers */,
+				6D8C6143C7D8D9614F6255BB0890CC4A /* HippyExtAnimation.h in Headers */,
+				CD5BDEE542DE95D25D4DDC8E1CCB8340 /* HippyExtAnimationGroup.h in Headers */,
+				DD8A7507965ACCD5A7A0C8173E2C2929 /* HippyExtAnimationModule.h in Headers */,
+				11CE7DDDBE7EB5047CB2941E838D67DF /* HippyExtAnimationViewParams.h in Headers */,
+				C646A636EED05E861ADB89F1AA58D23A /* HippyFetchInfo.h in Headers */,
+				508F19264B757B2385DAC9CB129A6ABE /* HippyFont.h in Headers */,
+				4889F6A949611B2DA393D3697A103DFB /* HippyFrameUpdate.h in Headers */,
+				CA7D138794415F26429A90324B310D72 /* HippyImageCache.h in Headers */,
+				9AE0471347471911FC167A00E6D22B08 /* HippyImageCacheManager.h in Headers */,
+				1C905BCEB8C706F49068032151F2DDBB /* HippyImageLoaderModule.h in Headers */,
+				8D570797486D9BD8A870941A8DF02710 /* HippyImageView.h in Headers */,
+				985CBF0261B5E6C539CBB69E2BED6E7A /* HippyImageViewCustomLoader.h in Headers */,
+				5C6E687EE22736E283F6DA16706FE882 /* HippyImageViewManager.h in Headers */,
+				3586A0B661EA6D0B7D9AF8FAB1DA2359 /* HippyInvalidating.h in Headers */,
+				91E40AEE15F33EA3F952A9EC44CE1E0B /* HippyJavaScriptExecutor.h in Headers */,
+				DF0E6D1773CA2CD0F7BE760E904EC893 /* HippyJavaScriptLoader.h in Headers */,
+				BF5472AC7D6E6F96A14B4934143FA6E7 /* HippyJSCErrorHandling.h in Headers */,
+				2A9CFD37CA342EACF10D7BA3B05D1EEB /* HippyJSCExecutor.h in Headers */,
+				DA502F51CE0DC03AC19B964F57829FEE /* HippyJSCWrapper.h in Headers */,
+				A5157990108E5FDAF215C878F2E4E3DA /* HippyJSStackFrame.h in Headers */,
+				AA1F53C2946C631E39FC2C5EAD636495 /* HippyKeyCommands.h in Headers */,
+				C6F9F3DEDB5E1E3D77B84B8DD9D45D33 /* HippyLog.h in Headers */,
+				45F84BF015C0F6B429750F51303AAC1B /* HippyMemoryOpt.h in Headers */,
+				8FE31BBF4DD03C8D6953E5E9843FD13A /* HippyModalCustomAnimationTransition.h in Headers */,
+				BCFF4236F39B6392CB767964AB0AE59A /* HippyModalCustomPresentationController.h in Headers */,
+				4D09B39591D3F0E28256CD7937F16208 /* HippyModalHostView.h in Headers */,
+				66F29B841E3973008139D7661BAB84C1 /* HippyModalHostViewController.h in Headers */,
+				FAB996DAE7E709F123C52FF06EFD6577 /* HippyModalHostViewManager.h in Headers */,
+				C0A443A31EB0403E832C25708393D582 /* HippyModuleData.h in Headers */,
+				F333E793A1403338187F5BB674C3F674 /* HippyModuleMethod.h in Headers */,
+				AF632ECE6BC8966646DB44806902A1DF /* HippyMyEventModule.h in Headers */,
+				3743C2E7162AD6ADF5898591E9D00ED6 /* HippyNavigationControllerAnimator.h in Headers */,
+				B8B23DCCB401949AC589BB6C077502C5 /* HippyNavigatorHostView.h in Headers */,
+				E971F65C7A0856BE3079B37C6F82F308 /* HippyNavigatorItemViewController.h in Headers */,
+				7B69662CD9E8CB4C12BBC9BD5F410A72 /* HippyNavigatorRootViewController.h in Headers */,
+				CF2613B4238C61500052FA26BD03B118 /* HippyNavigatorViewManager.h in Headers */,
+				80B257EEAAC92F75F8D35BD22856C3D6 /* HippyNetInfo.h in Headers */,
+				4A95A29BD95EA78D6819A1191D2678F8 /* HippyNetWork.h in Headers */,
+				BE73FD51368037387689629C9791DE91 /* HippyNullability.h in Headers */,
+				9FF3FBFFA2EB06C60F63A957780C4CEE /* HippyParserUtils.h in Headers */,
+				3574B3AB4BA36BA3CAA5E98095162994 /* HippyPerformanceLogger.h in Headers */,
+				1675B29E4F9DBE04DC5DAF363B51BEB1 /* HippyPointerEvents.h in Headers */,
+				481B0468CFF1CDDD7E98C8D6E047F95A /* HippyRedBox.h in Headers */,
+				C2E46C4604A6F7940FB42FD3756198A5 /* HippyRefreshWrapper.h in Headers */,
+				8DC563D088075CAFAD59CA85B1684D34 /* HippyRefreshWrapperItemView.h in Headers */,
+				CCCF0A66C56EEB5BD2BA8DD571D53C84 /* HippyRefreshWrapperItemViewManager.h in Headers */,
+				A37BD99F1C32BDE303C9DA87C2E908D8 /* HippyRefreshWrapperViewManager.h in Headers */,
+				5F7C87283B6A9B21C64381E4943FFA0F /* HippyRootShadowView.h in Headers */,
+				3D87D16D5DBC4223066E217FE0E9B119 /* HippyRootView.h in Headers */,
+				180BF9CEA3AD5A5C40EB8353421B47A5 /* HippyRootViewDelegate.h in Headers */,
+				72429D3568D71A3B8E086A71E4E692D6 /* HippyRootViewInternal.h in Headers */,
+				430DD0DCB18C999CF93B0DE2D1A5099C /* HippyScrollableProtocol.h in Headers */,
+				B7DE9F6213D4AD035024DE2390BE46B3 /* HippyScrollProtocol.h in Headers */,
+				D1BADD27DA302DB1A21FAE1DE17A5BAC /* HippyScrollView.h in Headers */,
+				BEBABCBF73F80F2547E4ABD3A68C387A /* HippyScrollViewManager.h in Headers */,
+				749E67B99BDF769DD41D59D21433E289 /* HippyShadowText.h in Headers */,
+				2FFA65CDA302CF2DDE43B715EF95C7F8 /* HippyShadowTextView.h in Headers */,
+				F588C3016132ECEC1031C9BE2489C9F5 /* HippyShadowView.h in Headers */,
+				B5DF221AC3BD7049F8046FFFFE9EBB94 /* HippySimpleWebView.h in Headers */,
+				5D5BF45941DAC9D03FEBB4795B5D1DBE /* HippySimpleWebViewManager.h in Headers */,
+				8FAC7D7BE26A0BBA5AE191F5AE52B848 /* HippySRWebSocket.h in Headers */,
+				83BA8915C6698A27E7F1A613BE3F2E17 /* HippyText.h in Headers */,
+				329E937400CF3C8E6D54A59C686F4605 /* HippyTextDecorationLineType.h in Headers */,
+				7A658AF04F0D88D8DAF2A1678F486C49 /* HippyTextField.h in Headers */,
+				A857EF31469571A6BFFD28BA614D65EA /* HippyTextManager.h in Headers */,
+				E11DCEAB916B7C5199515EAA90147C92 /* HippyTextSelection.h in Headers */,
+				368B707345AA32F0CC5667C91D9B1B5F /* HippyTextView.h in Headers */,
+				3F40E97F7098D0AD26488E1F6962743A /* HippyTextViewManager.h in Headers */,
+				1EE4938AF282374F73EFB0A245DD094D /* HippyTiming.h in Headers */,
+				30D202F6DC73DCE6CF08C8A77C742A46 /* HippyTouchHandler.h in Headers */,
+				E37CD0324F8E0ACAA0A86BC727485FAE /* HippyUIManager.h in Headers */,
+				2135DA9412E0860A14C86D4161E1A84D /* HippyUtils.h in Headers */,
+				FF52F5C4859B000972FF11C4D271317B /* HippyVideoPlayer.h in Headers */,
+				423728FB073D62F60533DD32A596D7AB /* HippyVideoPlayerManager.h in Headers */,
+				75F0A28DA0B7B2535725F886F8B1EC9C /* HippyView.h in Headers */,
+				66ADA641EC8D54F57761FE1C0490A07B /* HippyViewEventProtocol.h in Headers */,
+				5B0B741226E6886291D825566A99C4EE /* HippyViewManager.h in Headers */,
+				9F8455C9971E8D07E6CF4F8720ABD6F1 /* HippyViewPager.h in Headers */,
+				5737F083D4CFC913D2F80120E76CBC29 /* HippyViewPagerItem.h in Headers */,
+				9E6DDBF1F6DE1F17E7178218B2E00421 /* HippyViewPagerItemManager.h in Headers */,
+				E79AE8A3CA397F18EEDB3C05821C7E0A /* HippyViewPagerManager.h in Headers */,
+				4DDFCC7B099F6DB05E8B736BE9609BD3 /* HippyVirtualNode.h in Headers */,
+				F508DF6D5FAD7E697835F17E226FEBB1 /* HippyVirtualTextNode.h in Headers */,
+				791D2F89BCD30B069C3FF4D4D644B2C3 /* HippyWebSocketExecutor.h in Headers */,
+				2D5EAE803B1036E376868165ED09E711 /* HippyWebSocketManager.h in Headers */,
+				FF9D4AB8FFD567F88EDD391870B8000D /* HippyWebSocketProxy.h in Headers */,
+				638FBBE86EDAA84651F84D489BD99563 /* HippyWebSocketProxyDelegate.h in Headers */,
+				F5A111813EDE29106BC79F9D3B4E5BB7 /* javascript-loader.h in Headers */,
+				68AFEBFCCA1224404161B0CCEA50C6E0 /* javascript-task-runner.h in Headers */,
+				883A6CDD6F3E9774841B287EE489F01C /* javascript-task.h in Headers */,
+				D38770205F9BC9F1F6DFA1F930861325 /* js-native-api-jsc.h in Headers */,
+				D9E4A173C7B60D2BAC2DC56C9F2EC5E6 /* js-native-api-types.h in Headers */,
+				AE2C4FC7BD894D73FB03693A79C61D70 /* js-native-api.h in Headers */,
+				65EB3983E81C2BD6A895A4F7CBEC90A8 /* js-native-jsc-helper.h in Headers */,
+				1A26D498B19FE9988F0F19258BE16CE8 /* js-value-helper.h in Headers */,
+				4447D19CE8FA080B237F01102093DA47 /* lock-queue.h in Headers */,
+				028116ED59391A700789F3A488125D87 /* logging-impl.h in Headers */,
+				0668E0D7AECA6CD7ACE4ACB621EFA81E /* logging.h in Headers */,
+				10C0C9C020159F4BC3A7B480ED0D3053 /* macros.h in Headers */,
+				7B7CA45F70B3C3B739D95433962C11D9 /* module-base.h in Headers */,
+				1D730AEE02D74BFB2F612799B1321F22 /* module-register.h in Headers */,
+				3E7E9448BBE1001ABECF4AD2C76229BB /* MTTFlex.h in Headers */,
+				C89B8CDD269BC8C85CCD95B40C99DBEE /* MTTFlexLine.h in Headers */,
+				D1A6F62CAE335D5AFD12D7DA69B1EFED /* MTTLayout.h in Headers */,
+				C2F2CC210BF62D3FE3AD7553423E3192 /* MTTLayoutCache.h in Headers */,
+				BE35B0F7CCCC9623640BD6B220B79CB6 /* MTTNode.h in Headers */,
+				B751613D5F983C16513D8BD0780B7EC5 /* MTTTStyle.h in Headers */,
+				FD51990D0593B26A8CEFF2F99556533D /* MTTUtil.h in Headers */,
+				E8D7C808156D1BBA94FA2D7317C723BD /* native-source-code.h in Headers */,
+				8EF18340F5E0779B462A0267748E517A /* NSArray+HippyArrayDeepCopy.h in Headers */,
+				4CAC882A5BDB133F87CE9F2E49424B1D /* NSData+Format.h in Headers */,
+				6D728FE006E8AC83B2DB2F0FF303A415 /* NSDictionary+HippyDictionaryDeepCopy.h in Headers */,
+				8EB43EF97EA798EFC333133E35E81E66 /* NSNumber+HippyNumberDeepCopy.h in Headers */,
+				057B9336430D7C579EF84C22AEB96271 /* task-runner.h in Headers */,
+				6568F13642BE0CC4C06277DD720D6375 /* task.h in Headers */,
+				05487C7600BF3B97485AAFC572BAF44D /* thread-id.h in Headers */,
+				84618E15BFF90D8D6682D74CE423BBFC /* thread.h in Headers */,
+				FE4D7FD0DAD20DC566B5885BED1F0E24 /* timer-module.h in Headers */,
+				282DBA0CE58770C3BF7ABCC626E9C559 /* UIImageView+React.h in Headers */,
+				16D9A33E38BCAE3B9690C1099E0285C2 /* UIView+Private.h in Headers */,
+				EB44A23E0962F4B659F80379F15A9C7B /* UIView+React.h in Headers */,
+				31A85B1E6C895D90535F9F7E4706E743 /* x5LayoutUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3928218DC86D5687E88BBE815190470B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		54BE7B7D1C88E6FD84CFBF7E03BDE2FA /* Pods-hippyDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1C1CA210657948934B55FB44C031345 /* Build configuration list for PBXNativeTarget "Pods-hippyDemo" */;
+			buildPhases = (
+				3928218DC86D5687E88BBE815190470B /* Headers */,
+				875ADF762AC0FEF3D358DE001A0788A5 /* Sources */,
+				0AA3522F722D649674976D781C4FB1B7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5FFEFD4E49A4B9548CFEC3566626B73 /* PBXTargetDependency */,
+			);
+			name = "Pods-hippyDemo";
+			productName = "Pods-hippyDemo";
+			productReference = ABF3CE520AE776DB543F7C37CFA486D1 /* libPods-hippyDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		927329EF8F33B34F7F9A0655F6ABA7C3 /* hippy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FCD0513E94F1ACE63CA5364A7F2B4A2 /* Build configuration list for PBXNativeTarget "hippy" */;
+			buildPhases = (
+				1AC34CA392613EA2B45BB0E57DF5F5D3 /* Headers */,
+				477AD84B47A0A99ECB723BC95B36FF15 /* Sources */,
+				3DF8957A7434BB3E3B19D230B82936DF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hippy;
+			productName = hippy;
+			productReference = EFABD6153EB23DBA8255182961F638B3 /* libhippy.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 15BA41AFDAF165CD3980FC86248DA5C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				927329EF8F33B34F7F9A0655F6ABA7C3 /* hippy */,
+				54BE7B7D1C88E6FD84CFBF7E03BDE2FA /* Pods-hippyDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		477AD84B47A0A99ECB723BC95B36FF15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1686E4C06C8F2D45A07245F3EA24E1F /* callback-info.cc in Sources */,
+				2B5B0D29445F4F7326CF6D17C37CC285 /* console-module.cc in Sources */,
+				782C93FB7CF4151EAC11135949F08D0C /* contextify-module.cc in Sources */,
+				3D793918911147B7C0C94A2D701DAC23 /* engine-impl.cc in Sources */,
+				6522F872B91F66F45A19F083628680C4 /* engine.cc in Sources */,
+				56A5AF5FDCE6AC89F1D5F4D7FF5141DF /* environment.cc in Sources */,
+				1014DFDB8883C68D133774AFEE5A580A /* hippy-dummy.m in Sources */,
+				F673C409B6E61A9723CC74EAFC50B4D2 /* HippyAnimatedImage.m in Sources */,
+				5F3E2389E3EC494CCF6897C3F3374374 /* HippyAnimatedImageView.m in Sources */,
+				F9A81132BB4FF85E12579CFEA0325C82 /* HippyAssert.m in Sources */,
+				BB7F095C0A84B81218639F7BBB0DC98B /* HippyAsyncLocalStorage.m in Sources */,
+				273D3FEFB7C97BFD1A30FE754259C302 /* HippyBackgroundImageCacheManager.m in Sources */,
+				66E30969B32E88135C6ABBB5D657D160 /* HippyBaseListItemView.m in Sources */,
+				762A2FFD162E4341B4F480AD5BABA6C9 /* HippyBaseListItemViewManager.m in Sources */,
+				31CB460E64498368157AC6CF4F10D5F4 /* HippyBaseListView.m in Sources */,
+				22AA130B02831604968335BBD01F09D8 /* HippyBaseListViewDataSource.m in Sources */,
+				69993C6A24E49A42FDCDABB0E450C3F3 /* HippyBaseListViewManager.m in Sources */,
+				D8983E436C5620D575ECE1FE3264BED5 /* HippyBaseTextInput.m in Sources */,
+				679078065DA44F1F8A183EF9777D9B4D /* HippyBatchedBridge.mm in Sources */,
+				020FC8303FE1D415CDFC96E558282326 /* HippyBorderDrawing.m in Sources */,
+				FB211B153493D4EC18D7431C322E9FB3 /* HippyBridge+LocalFileSource.m in Sources */,
+				B594B36782AD5B4684413628F7794AF8 /* HippyBridge+Mtt.mm in Sources */,
+				F8D887F2F9BF2E25479D109742180B5B /* HippyBridge.mm in Sources */,
+				6932C7ED1131AF4C657076D88D1E7233 /* HippyBundleURLProvider.m in Sources */,
+				D6C6B015D4F54BD7C5B42B6D3294F843 /* HippyClipboardModule.m in Sources */,
+				F784EEA5D2EA25981A4AEC256536641F /* HippyComponentData.mm in Sources */,
+				ED3E7B0CF656D092BC0F406716892701 /* HippyConvert+Transform.m in Sources */,
+				CCBFE203DF27EAA074A759BA794E62E3 /* HippyConvert.mm in Sources */,
+				44C9EC242BEF67F53A85E622E72BB562 /* HippyDevLoadingView.m in Sources */,
+				A1177A4E6D2735BE7F69487CA2A200E8 /* HippyDevMenu.mm in Sources */,
+				F77FFDE4CB116E509181D28A12F1F08F /* HippyDisplayLink.m in Sources */,
+				9A31FB25F4B87015777D722BADBDE99B /* HippyErrorInfo.m in Sources */,
+				70EB94E0C092AAD1DB822E459175B269 /* HippyEventDispatcher.m in Sources */,
+				E526005C20859CD5029D3679D93E0109 /* HippyEventObserverModule.m in Sources */,
+				99A76272365A63761C1389B9796CF994 /* HippyExceptionModule.m in Sources */,
+				47902EB2ECE22E456ED821C915CF533A /* HippyExtAnimation+Value.m in Sources */,
+				9290AA28FA887A5876BA2ED968FC4353 /* HippyExtAnimation.m in Sources */,
+				3615E8D96927D765B4511AAD43D13CDA /* HippyExtAnimationGroup.m in Sources */,
+				123E4881187E55D6198509BA4C3DC47E /* HippyExtAnimationModule.m in Sources */,
+				EAB2BD4F5D6429C00E2F3D8C90FAFB16 /* HippyExtAnimationViewParams.m in Sources */,
+				174352CE5715B31A1117B61A1E8D4FE3 /* HippyFetchInfo.m in Sources */,
+				B9657A544AA942D8F8E50E611545DBBB /* HippyFont.mm in Sources */,
+				D6F58479FC7EC03F1AABB94594BCCF4F /* HippyFrameUpdate.m in Sources */,
+				85E8E0B59969B7DC6CF66BEAC3079FDE /* HippyImageCache.m in Sources */,
+				9ACA7FB5E4867D2CA5E19ACC7DC142BB /* HippyImageCacheManager.m in Sources */,
+				EEC05D520915E6CE56AD583CE280DCD2 /* HippyImageLoaderModule.m in Sources */,
+				81DDEC5541AF26AB1A90D47467AD5B88 /* HippyImageView.m in Sources */,
+				E3C732AE1730D896B3D8C1C061128C66 /* HippyImageViewManager.m in Sources */,
+				C7DF773081E922370E233F28D882B5C9 /* HippyJavaScriptLoader.mm in Sources */,
+				A307EC6A3609C20F27345C5BBEF040DB /* HippyJSCErrorHandling.m in Sources */,
+				F1EF4B85C4A0BB88D4C034988F153A3D /* HippyJSCExecutor.mm in Sources */,
+				86E956359DB08063A80652EE6A32B653 /* HippyJSCWrapper.mm in Sources */,
+				2A66177361F74CE4804D95A5E7C0C929 /* HippyJSStackFrame.m in Sources */,
+				39FA601E1900599513BA1487A4F06E99 /* HippyKeyCommands.m in Sources */,
+				411704FE153A221C00E1C1EA50235B2E /* HippyLog.mm in Sources */,
+				44BD29B0D8F5EF78E2F8A4B37C2BECC2 /* HippyModalCustomAnimationTransition.m in Sources */,
+				58D1615A8B1296B8FB44960FC7212A36 /* HippyModalCustomPresentationController.m in Sources */,
+				5768C7DF3754AE4CA8A1A53D0320E5F9 /* HippyModalHostView.m in Sources */,
+				759DA963F7678C90B5E194154ECF223C /* HippyModalHostViewController.m in Sources */,
+				25A8BAEE46D02FE5096027C41819A751 /* HippyModalHostViewManager.mm in Sources */,
+				B116B56ECED5C8328DC120A8AE24E9D9 /* HippyModuleData.mm in Sources */,
+				44959FFBE7331D8E8A2E6CB609436070 /* HippyModuleMethod.mm in Sources */,
+				A541818ED440C3A2F4392A2C3F715A63 /* HippyMyEventModule.m in Sources */,
+				0BF321721EDE4DC457EE3EF49E92A0AD /* HippyNavigationControllerAnimator.m in Sources */,
+				88FA04005E39E39BF3BAB985E54879D8 /* HippyNavigatorHostView.mm in Sources */,
+				95947CFAF362C57256A001E16BA13E16 /* HippyNavigatorItemViewController.m in Sources */,
+				7158E6AACFF2C5F8EF544F351B150EB0 /* HippyNavigatorRootViewController.m in Sources */,
+				1829CE848DB18EB550772161B30F06B4 /* HippyNavigatorViewManager.m in Sources */,
+				CFC36A566A63D54E4F84F120A6FCB9FF /* HippyNetInfo.m in Sources */,
+				0EB81EADD4639E74C29DA1E231BD9FE6 /* HippyNetWork.m in Sources */,
+				19158856BA29E2FC7D1F9D9C91A16230 /* HippyParserUtils.m in Sources */,
+				433BE6A537A79A9054E774C04817E38F /* HippyPerformanceLogger.m in Sources */,
+				B1BD5D01DF98323C91BC00D3A24C3BAB /* HippyRedBox.m in Sources */,
+				2E9433BAD4072A5B9FCDDAE790EB6488 /* HippyRefreshWrapper.m in Sources */,
+				95BC9AFF56DEEF9B810949E8393522AA /* HippyRefreshWrapperItemView.m in Sources */,
+				C546DAC5334C82E845C9CEF466A11C40 /* HippyRefreshWrapperItemViewManager.m in Sources */,
+				ECCFBAC84F1DC3E93F6712F3202A516F /* HippyRefreshWrapperViewManager.m in Sources */,
+				7DD5BE4DC1A2CA6BB89AB371254A238C /* HippyRootShadowView.mm in Sources */,
+				E10394A6A965E968B7AFF2F1C191A151 /* HippyRootView.mm in Sources */,
+				FB3B24A2A78720124E3CB4F2CC22C4AF /* HippyScrollView.m in Sources */,
+				0DC2393927CC1AF7A3CD495CB148B413 /* HippyScrollViewManager.mm in Sources */,
+				0FFE4246898BF144BED7AEB37D6D3710 /* HippyShadowText.mm in Sources */,
+				85A6D7633FE218AA7FCA2A650EA6CA8C /* HippyShadowTextView.mm in Sources */,
+				90E77BF2CB45A9A2531652D6212CBC06 /* HippyShadowView.mm in Sources */,
+				B7E4D1169ED07549171A8817E5E1D8E7 /* HippySimpleWebView.m in Sources */,
+				F0E52C34CBA2DF07C3947CC41189AC50 /* HippySimpleWebViewManager.m in Sources */,
+				D7497E454BCB69BF9D1C578807145209 /* HippySRWebSocket.m in Sources */,
+				F7B721E1A9F6D8E59E425AA33C025307 /* HippyText.mm in Sources */,
+				FC129C28F32E72AA8012262F93E0A223 /* HippyTextField.m in Sources */,
+				2BB5E1C602157295B9C5855A73FED648 /* HippyTextManager.mm in Sources */,
+				16B31F39BB1A20BB71C5F01DD96DEFF6 /* HippyTextSelection.m in Sources */,
+				4F9F2E3E537C3D90163920A2AD36177C /* HippyTextView.mm in Sources */,
+				1CC3FFE0DB06E586666178230B1CDF7A /* HippyTextViewManager.mm in Sources */,
+				60A0931BEEF46D9E87E7EBF4BF4FC452 /* HippyTiming.mm in Sources */,
+				D6306E9AE6A7EA64298DCED7FD17447A /* HippyTouchHandler.m in Sources */,
+				087C096764C04E20681DFF1C32B46773 /* HippyUIManager.mm in Sources */,
+				11E52C231034ED12C901943A9F730B01 /* HippyUtils.m in Sources */,
+				05F05A64F4A02B66721B17DC614BD313 /* HippyVideoPlayer.m in Sources */,
+				5FF3BCB1ECA39B4B3B693D5D10A0B9DE /* HippyVideoPlayerManager.m in Sources */,
+				D6CD989F038DA0EA950B2B5572520BBC /* HippyView.m in Sources */,
+				F808996FECFD2F60148A6F3C622F5AC0 /* HippyViewManager.mm in Sources */,
+				01CDF73B40EBFAF97DD81FB74C383224 /* HippyViewPager.m in Sources */,
+				84D8144D1C26E154D1F05EDB6A550329 /* HippyViewPagerItem.m in Sources */,
+				BFAB699AF2A01E8A17D42A1E4102D7C5 /* HippyViewPagerItemManager.m in Sources */,
+				486CBD969D544CF4895FC8A32074A582 /* HippyViewPagerManager.m in Sources */,
+				EDE9CE7E66100921B6EB2024FE930613 /* HippyVirtualNode.m in Sources */,
+				0D4E0366E120C9AF5C766B0AEF955510 /* HippyVirtualTextNode.m in Sources */,
+				5DC93AC8E95B890EC2FA21BD26E1ED78 /* HippyWebSocketExecutor.mm in Sources */,
+				471BABE8FD6BF84EB0BE18E93A6E57F3 /* HippyWebSocketManager.m in Sources */,
+				272B4375BE6505E9CA08C179DACDD379 /* javascript-loader.cc in Sources */,
+				D61E692F6399A8CC7F1FC49CE2C9BB45 /* javascript-task-runner.cc in Sources */,
+				5D4164DAAAD7A0AFA937EED03D373AE7 /* javascript-task.cc in Sources */,
+				D3B1E0119540BA4D1E1373C71A1F283C /* js-native-api-jsc.cc in Sources */,
+				D49BFD2F998DF4CF85E77DA12A550901 /* js-native-api-value-jsc.cc in Sources */,
+				3CBDAE5278E472C04376BE12DE084591 /* js-native-jsc-helper.cc in Sources */,
+				4CCE491DA51AE6BEF0080700FC5BC875 /* logging-impl.cc in Sources */,
+				0EB2979851B6441F23D6FA521096BB5C /* logging.cc in Sources */,
+				EB964A4846916985DABD7BA35A08C9D6 /* module-register.cc in Sources */,
+				7FAFDE7520C0F325A4FF04D120CEF0B1 /* MTTFlexLine.cpp in Sources */,
+				5B64F3E0FE4EACAB644FFCFA10877884 /* MTTLayout.cpp in Sources */,
+				CE9535EBE5BD7FAACC7A3F6244482A2A /* MTTLayoutCache.cpp in Sources */,
+				C4B3A3C41BE6F2013B3E320282068CD1 /* MTTNode.cpp in Sources */,
+				C67E55DDF799C9911339938C822E3855 /* MTTTStyle.cpp in Sources */,
+				218ABACCC4589E5F5D9CE351E81EBA29 /* MTTUtil.cpp in Sources */,
+				0AC235900D73C04636567DC08DFD5BF6 /* native-source-code-ios.cc in Sources */,
+				1A7AEE17DA5BB54E9DE17D6DB5CFF6C7 /* NSArray+HippyArrayDeepCopy.m in Sources */,
+				4D3F2BBE861EE35D50C20AE16DA87CDA /* NSData+Format.m in Sources */,
+				1E1D8F72CA18279F5AB3410E7F85C962 /* NSDictionary+HippyDictionaryDeepCopy.m in Sources */,
+				282393AA2D9DF19E54C5D7AF3294671F /* NSNumber+HippyNumberDeepCopy.m in Sources */,
+				CC8F0654A69A13D33D0CD54218202AA1 /* task-runner.cc in Sources */,
+				41AD2A99A693360B29F31C34CC676AD3 /* task.cc in Sources */,
+				92FFE3339045CF02948969C90B8307FB /* thread-id.cc in Sources */,
+				92367D1C70B3248EFF603D2BFAD50A42 /* thread.cc in Sources */,
+				D57C531F79715369DFB10B3ABA740203 /* timer-module.cc in Sources */,
+				F807AEE7FCAA752FF623EA0F6F5B247D /* UIImageView+React.m in Sources */,
+				985B803819AA22F92CB189DBED7ECFC6 /* UIView+React.mm in Sources */,
+				A5CDCAF42E317A84CF2597685B981EFB /* x5LayoutUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		875ADF762AC0FEF3D358DE001A0788A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D04E785DDBBD3FB6EDC55174389325 /* Pods-hippyDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5FFEFD4E49A4B9548CFEC3566626B73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = hippy;
+			target = 927329EF8F33B34F7F9A0655F6ABA7C3 /* hippy */;
+			targetProxy = 8FC135FB5202FB6D04F9547BF4D1B996 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B24168FBBBADEFE75ECAFC98C0C2F6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8024AD90AD1EAF8C0CF7E511E0A7581E /* hippy.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/hippy/hippy-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = hippy;
+				PRODUCT_NAME = hippy;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8FDE7A0AE066B37439460BBDB02B17D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D21645753CFDB52C175CA6CD2F7349 /* Pods-hippyDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD6732FC14213092DC9394F29202EEB8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8024AD90AD1EAF8C0CF7E511E0A7581E /* hippy.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/hippy/hippy-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = hippy;
+				PRODUCT_NAME = hippy;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE76F6FBA32263E085607EB254FFEBEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40DAE617448871584A69502231DA2120 /* Pods-hippyDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FCD0513E94F1ACE63CA5364A7F2B4A2 /* Build configuration list for PBXNativeTarget "hippy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B24168FBBBADEFE75ECAFC98C0C2F6A /* Debug */,
+				BD6732FC14213092DC9394F29202EEB8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1C1CA210657948934B55FB44C031345 /* Build configuration list for PBXNativeTarget "Pods-hippyDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE76F6FBA32263E085607EB254FFEBEA /* Debug */,
+				8FDE7A0AE066B37439460BBDB02B17D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,5 @@
+install! "cocoapods", :preserve_pod_file_structure => true
+platform :ios, '8.0'
+target 'hippyDemo' do
+    pod 'hippy'
+end

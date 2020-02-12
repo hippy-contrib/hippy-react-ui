@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,
-  View,
-  Text,
+	StyleSheet,
+	View,
 } from 'hippy-react';
 
+import Index from './pages/home/index';
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  }
+	container: {
+		backgroundColor: '#fff',
+		flex: 1,
+	}
 });
 
 export default class App extends Component {
-  constructor(props) {
-    super(props);
+	constructor(props) {
+		super(props);
 
-    this.state = ({
-      pageIndex: 0,
-    });
-  }
+		this.state = ({
+			pageIndex: 0,
+		});
+	}
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Welcome Hippy-react</Text>
-      </View>
-    );
-  }
+	render() {
+		return (
+			<View style={styles.container}>
+				<Index /> 
+			</View>
+		);
+	}
 }

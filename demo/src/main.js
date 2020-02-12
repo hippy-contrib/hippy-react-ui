@@ -1,5 +1,5 @@
 import { Hippy } from 'hippy-react';
-import App from './app';
+import App from './App.jsx';
 // import * as serviceWorker from './serviceWorker';
 
 new Hippy({

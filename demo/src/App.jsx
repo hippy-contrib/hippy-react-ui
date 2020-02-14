@@ -3,8 +3,16 @@ import {
 	StyleSheet,
 	View,
 } from 'hippy-react';
+import {
+	// MemoryRouter as Router,
+	Route,
+} from "react-router-dom";
+import {
+	MemoryRouter as Router,
+} from "../../src/components/Router/react-router-dom";
 
-import Index from './pages/home/index';
+import IconPage from './pages/Icon';
+import Index from './pages/home';
 
 const styles = StyleSheet.create({
 	container: {
@@ -25,7 +33,14 @@ export default class App extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-				<Index /> 
+				<Router>
+					<Route path="/icon">
+						<IconPage />
+					</Route>
+					<Route exact path="/">
+						<Index />
+					</Route>
+				</Router>
 			</View>
 		);
 	}

@@ -1,8 +1,8 @@
 import React from "react";
-import {ListView, View, StyleSheet, Text} from "hippy-react"
-
-import IconPage from '../Icon';
-import Icon from "../../../../src/components/Icons";
+import {ListView, View, StyleSheet} from "hippy-react";
+import PropTypes from 'prop-types';
+// import { withRouter } from 'react-router';
+import { withRouter } from '../../../../src/components/Router/react-router';
 
 // interface ListItem {
 // 	name: string,
@@ -14,14 +14,14 @@ import Icon from "../../../../src/components/Icons";
 // }
 
 const ComponentData = [
-	{ name: 'icon', route: 'icon' },
+	{ name: 'icon1121', route: 'icon' },
 ];
 
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#fff',
+		backgroundColor: 'red',
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginTop: 120,
@@ -36,33 +36,41 @@ const styles = StyleSheet.create({
 
 // class Entry extends React.Component<Object, InitialState> {
 class Entry extends React.Component {
-
+	static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
 	constructor(props) {
 		super(props);
 		this.state = {
 			dataSource: [ ...ComponentData ],
 			route: 'home',
 		}
-		this.setState({ dataSource: ComponentData });
 	}
  	getRenderRow (index) {
 		if (index < 0 || index >= this.state.dataSource.length) return null;
 		const item = this.state.dataSource[index];
-		return (<View style={styles.listItem} onClick={() => this.setState({ route: item.route })}>
-			{ item.name }
-		</View>)
+
+		const { history } = this.props;
+		return (
+			<View style={styles.listItem} onClick={() => { console.log('onClick'); history.push(item.route)}}>
+				{ item.name }
+			</View>
+		);
 	}
 
 	render () {
-		const { dataSource = [], route } = this.state;
-		if (route !== 'home') return <IconPage />
+		console.log('props', this.props);
+		const { dataSource = [] } = this.state;
 		return (
 			<ListView style={[styles.container]}
 				numberOfRows={dataSource.length}
 				renderRow={this.getRenderRow.bind(this)}
 			/>
+			
 		);
 	}
 }
 
-export default Entry;
+export default withRouter(Entry);

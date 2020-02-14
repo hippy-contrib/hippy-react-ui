@@ -24,3 +24,12 @@
 2. xcode中构建，拉起模拟器
 
 *注：ios目前不支持热加载，需要手动reload更新, `cmd+R`*
+
+## 启动web
+
+```shell
+npm run serve
+```
+
+1. 打开浏览器
+2. 输入 `http://localhost:8080/[projectName].html`

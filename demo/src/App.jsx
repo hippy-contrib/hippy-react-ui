@@ -4,12 +4,9 @@ import {
 	View,
 } from 'hippy-react';
 import {
-	// MemoryRouter as Router,
+	MemoryRouter as Router,
 	Route,
 } from "react-router-dom";
-import {
-	MemoryRouter as Router,
-} from "../../src/components/Router/react-router-dom";
 
 import IconPage from './pages/Icon';
 import Index from './pages/home';

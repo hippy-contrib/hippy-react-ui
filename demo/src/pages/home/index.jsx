@@ -1,8 +1,7 @@
 import React from "react";
 import {ListView, View, StyleSheet} from "hippy-react";
 import PropTypes from 'prop-types';
-// import { withRouter } from 'react-router';
-import { withRouter } from '../../../../src/components/Router/react-router';
+import { withRouter } from 'react-router';
 
 // interface ListItem {
 // 	name: string,

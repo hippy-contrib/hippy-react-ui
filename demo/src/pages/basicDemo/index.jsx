@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'hippy-react';
+import { View, StyleSheet } from '@hippy/react';
 
 import PropTypes from 'prop-types';
 

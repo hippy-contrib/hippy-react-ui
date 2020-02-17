@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {
 	StyleSheet,
 	View,
-} from 'hippy-react';
+} from '@hippy/react';
 import {
 	MemoryRouter as Router,
 	Route,

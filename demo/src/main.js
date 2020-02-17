@@ -1,4 +1,4 @@
-import { Hippy } from 'hippy-react';
+import { Hippy } from '@hippy/react';
 import App from './App.jsx';
 // import * as serviceWorker from './serviceWorker';
 

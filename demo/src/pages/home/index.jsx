@@ -1,5 +1,5 @@
 import React from "react";
-import {ListView, View, StyleSheet} from "hippy-react";
+import {ListView, View, StyleSheet} from "@hippy/react";
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 

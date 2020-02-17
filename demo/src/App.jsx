@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import {
 	StyleSheet,
 	View,
+	Platform,
 } from '@hippy/react';
 import {
-	MemoryRouter as Router,
+	MemoryRouter,
+	HashRouter,
 	Route,
 } from "react-router-dom";
 
@@ -28,6 +30,7 @@ export default class App extends Component {
 	}
 
 	render() {
+		const Router = Platform.OS === 'web' ? HashRouter : MemoryRouter;
 		return (
 			<View style={styles.container}>
 				<Router>

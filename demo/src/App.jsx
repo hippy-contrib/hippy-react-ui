@@ -10,13 +10,21 @@ import {
 	Route,
 } from "react-router-dom";
 
-import IconPage from './pages/Icon';
 import Index from './pages/home';
+import IconPage from './pages/Icon';
+import AvatarPage from './pages/Avatar';
+import DividerPage from './pages/Divider';
 
+const pages = [
+	{ path: 'icon', component: IconPage },
+	{ path: 'avatar', component: AvatarPage },
+	{ path: 'divider', component: DividerPage },
+]
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: '#fff',
 		flex: 1,
+		paddingTop: 120,
 	}
 });
 
@@ -34,12 +42,12 @@ export default class App extends Component {
 		return (
 			<View style={styles.container}>
 				<Router>
-					<Route path="/icon">
-						<IconPage />
-					</Route>
 					<Route exact path="/">
 						<Index />
 					</Route>
+					{
+						pages.map(Item => <Route path={`/${Item.path}`}><Item.component /></Route>)
+					}
 				</Router>
 			</View>
 		);

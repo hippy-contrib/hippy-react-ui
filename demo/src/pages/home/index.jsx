@@ -13,23 +13,30 @@ import { withRouter } from 'react-router';
 // }
 
 const ComponentData = [
-	{ name: 'icon1121', route: 'icon' },
+	{ name: 'Icon', route: 'icon' },
+	{ name: 'Avatar', route: 'avatar' },
+	{ name: 'Divider', route: 'divider' },
 ];
 
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
+		// flex: 1,
 		backgroundColor: 'red',
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginTop: 120,
+		justifyContent: 'flex-start',
+		// alignItems: 'flex-start',
+		flexDirection: 'column',
+		// marginTop: 120,
 	},
 	listItem: {
 		height: 56,
-		justifyContent: 'flex-start',
-		alignItems: 'center',
-		backgroundColor: "#afafaf",
+		// flex: 1,
+		paddingLeft: 12,
+		justifyContent: 'center',
+		alignItems: 'flex-start',
+		backgroundColor: "#ffffff",
+		borderBottomWidth: 1,
+		borderBottomColor: '#eeeeee',
 	}
 });
 
@@ -53,18 +60,22 @@ class Entry extends React.Component {
 
 		const { history } = this.props;
 		return (
-			<View style={styles.listItem} onClick={() => { console.log('onClick'); history.push(item.route)}}>
+			<View style={styles.listItem} onClick={() => {history.push(item.route)}}>
 				{ item.name }
 			</View>
 		);
 	}
-
+	getRowKey = (index) => {
+		return this.state.dataSource[index].route;
+	}
 	render () {
 		const { dataSource = [] } = this.state;
 		return (
 			<ListView style={[styles.container]}
 				numberOfRows={dataSource.length}
 				renderRow={this.getRenderRow.bind(this)}
+				getRowKey={this.getRowKey}
+				getRowStyle={() => ({ flex: 1 })}
 			/>
 			
 		);

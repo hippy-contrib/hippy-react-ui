@@ -3,26 +3,27 @@
  * 可以从react-icons中抽离出svg文件
  */
 import React from "react";
-import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 import { View, Image, StyleSheet } from "@hippy/react";
 
-import { IconSizes, iconSizesMap } from '../../utils/iconSize';
+import { propTypes, defaultProps } from '../../types/image';
+
+import { iconSizesMap } from '../../utils/iconSize';
 
 const styles = StyleSheet.create({
   containerStyle: {
-    height: iconSizesMap['md'],
-    width: iconSizesMap['md'],
+    height: iconSizesMap['xs'],
+    width: iconSizesMap['xs'],
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'hidden',
   },
   iconStyle: {
-    height: iconSizesMap['md'],
-    width: iconSizesMap['md'],
+    height: iconSizesMap['xs'],
+    width: iconSizesMap['xs'],
     backgroundColor: 'green',
   }
 })
-class Icon extends React.Component {
+export class Icon extends React.Component {
   getIconSize () {
     const { size } = this.props;
     const iconSize = iconSizesMap[size] || size;
@@ -57,6 +58,12 @@ class Icon extends React.Component {
       disabledStyle = {},
       iconStyle = {},
       resizeMode,
+      onLayout,
+      onLoad,
+      onLoadStart,
+      onLoadEnd,
+      onError,
+      onProgress,
     } = this.props;
 
     const statusStyle = disabled ? disabledStyle : {};
@@ -68,48 +75,20 @@ class Icon extends React.Component {
           style={[styles.iconStyle, this.mergeStyle(iconStyle), statusStyle]}
           source={{ uri: source }}
           resizeMode={resizeMode}
-          onError={(e) => console.log('load img error', e)}
+          onLayout={onLayout}
+          onLoad={onLoad}
+          onLoadStart={onLoadStart}
+          onLoadEnd={onLoadEnd}
+          onError={onError}
+          onProgress={onProgress}
         />
 			</View>
 		)
 	}
 }
 
-Icon.propTypes = {
-  // type: PropTypes.string, // 默认icon集合，暂时不支持
-  // name: PropTypes.string, // icon名字，对应于icon集合 暂时不支持
-  // color: PropTypes.string, // icon 颜色，作用于icon集合
-  // Component: PropTypes.elementType,
-  // underlayColor: PropTypes.string,
-  // reverse: PropTypes.bool,
-  // raised: PropTypes.bool,
-  // reverseColor: PropTypes.string,
-  // solid: PropTypes.bool,
-  // brand: PropTypes.bool,
-  size: PropTypes.oneOfType([PropTypes.oneOf(IconSizes), PropTypes.number]), // icon尺寸
-  containerStyle: stylePropType,
-  iconStyle: stylePropType,
-  onPress: PropTypes.func,
-  disabled: PropTypes.bool,
-  rounded: PropTypes.bool,
-  disabledStyle: stylePropType,
-  source: PropTypes.string.isRequired, // icon资源地址 or base64图片(不支持svg格式)
-  resizeMode: PropTypes.oneOfType(Object.keys(Image.resizeMode)),
-};
+Icon.propTypes = propTypes;
 
-Icon.defaultProps = {
-  // underlayColor: 'transparent',
-  // reverse: false,
-  // raised: false,
-  // color: 'black',
-  // reverseColor: 'white',
-  // type: 'material',
-  // solid: false,
-  // brand: false,
-  size: 'md',
-  disabled: false,
-  rounded: true,
-  resizeMode: 'cover',
-};
+Icon.defaultProps = defaultProps;
 
 export default Icon

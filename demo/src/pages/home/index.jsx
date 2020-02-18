@@ -60,7 +60,6 @@ class Entry extends React.Component {
 	}
 
 	render () {
-		console.log('props', this.props);
 		const { dataSource = [] } = this.state;
 		return (
 			<ListView style={[styles.container]}

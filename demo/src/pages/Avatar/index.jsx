@@ -33,7 +33,7 @@ class AvatarPage extends React.Component {
 					rounded={false}
 					source={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vue.png/215px-Vue.png'}
 					onPress={() => history.push('/')}
-					resizeMode={'cover'}
+					resizeMode={'repeat'}
 				/>
 			</View>
 		);

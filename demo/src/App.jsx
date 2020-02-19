@@ -46,7 +46,7 @@ export default class App extends Component {
 						<Index />
 					</Route>
 					{
-						pages.map(Item => <Route path={`/${Item.path}`}><Item.component /></Route>)
+						pages.map(Item => <Route key={Item.path} path={`/${Item.path}`}><Item.component /></Route>)
 					}
 				</Router>
 			</View>

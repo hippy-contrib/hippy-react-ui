@@ -4,10 +4,12 @@
  */
 import React from "react";
 import { View, Image, StyleSheet } from "@hippy/react";
+import PropTypes from 'prop-types';
+import stylePropType from 'react-style-proptype';
 
-import { propTypes, defaultProps } from '../../types/image';
+import { ImageProps, DefaultImageProps } from '../../types/image';
 
-import { iconSizesMap } from '../../utils/iconSize';
+import { iconSizesMap, IconSizes } from '../../utils/iconSize';
 
 const styles = StyleSheet.create({
   containerStyle: {
@@ -72,9 +74,8 @@ export class Icon extends React.Component {
         style={[styles.containerStyle, this.mergeStyle(containerStyle), statusStyle]}
         onClick={this.handleClick}>
         <Image
-          style={[styles.iconStyle, this.mergeStyle(iconStyle), statusStyle]}
+          style={[styles.iconStyle, this.mergeStyle(iconStyle), statusStyle, { resizeMode }]}
           source={{ uri: source }}
-          resizeMode={resizeMode}
           onLayout={onLayout}
           onLoad={onLoad}
           onLoadStart={onLoadStart}
@@ -87,8 +88,22 @@ export class Icon extends React.Component {
 	}
 }
 
-Icon.propTypes = propTypes;
+export const IconProps = {
+  size: PropTypes.oneOfType([PropTypes.oneOf(IconSizes), PropTypes.number]), // icon尺寸
+  containerStyle: stylePropType,
+  onPress: PropTypes.func,
+  ...ImageProps,
+}
 
-Icon.defaultProps = defaultProps;
+export const DefaultIconProps = {
+  size: 'xs',
+  containerStyle: {},
+  onPress: () => {},
+  ...DefaultImageProps,
+}
+
+Icon.propTypes = IconProps;
+
+Icon.defaultProps = DefaultIconProps;
 
 export default Icon

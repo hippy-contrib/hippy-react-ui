@@ -1,7 +1,6 @@
 import React from 'react';
 
-import Icon from '../Icons';
-import { propTypes, defaultProps } from '../../types/image';
+import Icon, { IconProps, DefaultIconProps } from '../Icons';
 
 export class Avatar extends React.Component {
 	render () {
@@ -12,10 +11,10 @@ export class Avatar extends React.Component {
 	}
 }
 
-Avatar.propTypes = propTypes;
+Avatar.propTypes = IconProps;
 
 Avatar.defaultProps = {
-	...defaultProps,
+	...DefaultIconProps,
 	size: 'md',
 };
 

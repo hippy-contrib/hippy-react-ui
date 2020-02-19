@@ -48,7 +48,7 @@
     "build": "webpack --config ./build/hippy-webpack.web.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "webpack-dev-server --config ./build/hippy-webpack.web.js",
+    "serve": "webpack-dev-server --config ./build/hippy-webpack.web.dev.js",
     "hippy:ios": "node ./build/run-ios.js",
     "hippy:debug": "hippy-debug",
     "hippy:dev": "webpack --config ./build/hippy-webpack.dev.js",

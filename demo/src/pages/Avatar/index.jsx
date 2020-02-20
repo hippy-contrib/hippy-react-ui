@@ -17,14 +17,15 @@ class AvatarPage extends React.Component {
 			<View style={{ flex: 1, paddingLeft: 48, paddingRight: 48, alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row' }}>
 				<Avatar
 					source={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vue.png/215px-Vue.png'}
-					onClick={() => history.push('/')}
+					onClick={() => history.goBack()}
+					onError={(e) => console.log(e)}
 					resizeMode={'cover'}
 				/>
 				<Avatar
 					size={56}
 					rounded={false}
 					source={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vue.png/215px-Vue.png'}
-					onClick={() => history.push('/')}
+					onClick={() => history.goBack()}
 					resizeMode={'cover'}
 				/>
 				<Avatar
@@ -32,7 +33,7 @@ class AvatarPage extends React.Component {
 					containerStyle={{ borderRadius: 28 }}
 					rounded={false}
 					source={'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vue.png/215px-Vue.png'}
-					onClick={() => history.push('/')}
+					onClick={() => history.goBack()}
 					resizeMode={'repeat'}
 				/>
 			</View>

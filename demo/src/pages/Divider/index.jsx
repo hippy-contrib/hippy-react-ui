@@ -14,7 +14,7 @@ class DividerPage extends React.Component {
 	render () {
 		const { history } = this.props;
 		return (
-			<View style={{ flex: 1, paddingLeft: 48, paddingRight: 48, alignItems: 'center', flexDirection: 'column' }} onClick={() => history.push('/')}>
+			<View style={{ flex: 1, paddingLeft: 48, paddingRight: 48, alignItems: 'center', flexDirection: 'column' }} onClick={() => history.goBack()}>
 				<Divider />
 				<Divider style={{ marginTop: 56 }} color="red" />
 				<Divider style={{ marginTop: 56 }} height={8} />

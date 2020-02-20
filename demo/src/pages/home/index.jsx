@@ -3,34 +3,16 @@ import {ListView, View, StyleSheet} from "@hippy/react";
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-// interface ListItem {
-// 	name: string,
-// 	route: string,
-// }
-
-// interface InitialState {
-// 	dataSource: ListItem[],
-// }
-
-const ComponentData = [
-	{ name: 'Icon', route: 'icon' },
-	{ name: 'Avatar', route: 'avatar' },
-	{ name: 'Divider', route: 'divider' },
-];
-
+import pages from '../../route';
 
 const styles = StyleSheet.create({
 	container: {
-		// flex: 1,
 		backgroundColor: 'red',
 		justifyContent: 'flex-start',
-		// alignItems: 'flex-start',
 		flexDirection: 'column',
-		// marginTop: 120,
 	},
 	listItem: {
 		height: 56,
-		// flex: 1,
 		paddingLeft: 12,
 		justifyContent: 'center',
 		alignItems: 'flex-start',
@@ -50,7 +32,7 @@ class Entry extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			dataSource: [ ...ComponentData ],
+			dataSource: pages.map(({ name, path }) => ({ name, path })),
 			route: 'home',
 		}
 	}
@@ -60,13 +42,13 @@ class Entry extends React.Component {
 
 		const { history } = this.props;
 		return (
-			<View style={styles.listItem} onClick={() => {history.push(item.route)}}>
+			<View style={styles.listItem} onClick={() => { history.push(item.path) }}>
 				{ item.name }
 			</View>
 		);
 	}
 	getRowKey = (index) => {
-		return this.state.dataSource[index].route;
+		return this.state.dataSource[index].path;
 	}
 	render () {
 		const { dataSource = [] } = this.state;
@@ -77,7 +59,6 @@ class Entry extends React.Component {
 				getRowKey={this.getRowKey}
 				getRowStyle={() => ({ flex: 1 })}
 			/>
-			
 		);
 	}
 }

@@ -11,15 +11,8 @@ import {
 } from "react-router-dom";
 
 import Index from './pages/home';
-import IconPage from './pages/Icon';
-import AvatarPage from './pages/Avatar';
-import DividerPage from './pages/Divider';
+import pages from './route';
 
-const pages = [
-	{ path: 'icon', component: IconPage },
-	{ path: 'avatar', component: AvatarPage },
-	{ path: 'divider', component: DividerPage },
-]
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: '#fff',

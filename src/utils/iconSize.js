@@ -6,4 +6,4 @@ export const iconSizesMap = {
 	lg: 48,
 };
 
-export const IconSizes = Object.keys(iconSizesMap);
+export const iconSizes = Object.keys(iconSizesMap);

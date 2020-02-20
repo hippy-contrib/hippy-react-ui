@@ -9,7 +9,7 @@ import stylePropType from 'react-style-proptype';
 
 import { ImageProps, DefaultImageProps } from '../../types/image';
 
-import { iconSizesMap, IconSizes } from '../../utils/iconSize';
+import { iconSizesMap, iconSizes } from '../../utils/iconSize';
 
 const styles = StyleSheet.create({
   containerStyle: {
@@ -89,7 +89,7 @@ export class Icon extends React.Component {
 }
 
 export const IconProps = {
-  size: PropTypes.oneOfType([PropTypes.oneOf(IconSizes), PropTypes.number]), // icon尺寸
+  size: PropTypes.oneOfType([PropTypes.oneOf(iconSizes), PropTypes.number]), // icon尺寸
   containerStyle: stylePropType,
   onClick: PropTypes.func,
   ...ImageProps,

@@ -10,6 +10,7 @@
 
 # production
 # /build
+/ios/products
 
 # misc
 .DS_Store

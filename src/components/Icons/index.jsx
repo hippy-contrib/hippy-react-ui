@@ -49,8 +49,8 @@ export class Icon extends React.Component {
     }
   }
   handleClick = (event) => {
-    const { onPress, disabled } = this.props;
-    onPress && !disabled && onPress();
+    const { onClick, disabled } = this.props;
+    onClick && !disabled && onClick();
   }
 	render () {
     const {
@@ -91,14 +91,14 @@ export class Icon extends React.Component {
 export const IconProps = {
   size: PropTypes.oneOfType([PropTypes.oneOf(IconSizes), PropTypes.number]), // icon尺寸
   containerStyle: stylePropType,
-  onPress: PropTypes.func,
+  onClick: PropTypes.func,
   ...ImageProps,
 }
 
 export const DefaultIconProps = {
   size: 'xs',
   containerStyle: {},
-  onPress: () => {},
+  onClick: () => {},
   ...DefaultImageProps,
 }
 

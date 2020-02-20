@@ -17,7 +17,7 @@ class IconPage extends React.Component {
 			<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
 				<Icon
 					source={'http://res.imtt.qq.com/flower-h5/qb_icon_new.png'}
-					onPress={() => history.push('/')}
+					onClick={() => history.push('/')}
 					resizeMode={'cover'}
 				/>
 			</View>

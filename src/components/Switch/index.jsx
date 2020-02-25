@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Animation, Platform } from '@hippy/react';
+import { StyleSheet, View, Animation } from '@hippy/react';
 
+import { ISWEB } from '../../utils';
 import {
 	// StyleProps,
 	// DefaultStyleProps,
@@ -15,7 +16,6 @@ const CHECKEDBGCOLOR = '#4dd865';
 const UNCHECKEDBGCOLOR = '#ffffff';
 const ANDUNCHECKEDBGCOLOR = '#efefef';
 const BORDERCOLOR = '#eeeeee';
-const ISWEB = Platform.OS === 'web';
 
 const SIZE = {
 	android: {
@@ -40,7 +40,7 @@ const iosStyles = StyleSheet.create({
 		borderRadius: 16,
 		backgroundColor: '#fff',
 		borderWidth: 1,
-		left: 0,
+		left: Math.floor(SIZE.ios.container / 2),
 		borderColor: BORDERCOLOR,
 	}
 })
@@ -59,6 +59,7 @@ const andStyles = StyleSheet.create({
 		backgroundColor: '#fff',
 		borderWidth: 1,
 		borderColor: BORDERCOLOR,
+		left: Math.floor(SIZE.android.container / 2),
 	}
 })
 
@@ -122,6 +123,9 @@ export class Switch extends React.Component {
 		this.checkAnimation && this.checkAnimation.destroy();
 		this.unCheckAnimation && this.unCheckAnimation.destroy();
 	}
+	componentWillUnmount () {
+		this.destroyAnimation();
+	}
 	/**
 	 * 根据平台，样式，生成对应的style样式
 	 */
@@ -178,7 +182,6 @@ export class Switch extends React.Component {
 	render () {
 		const { platform, checked } = this.props;
 		const styles = platform === 'android' ? andStyles : iosStyles;
-		const left = checked ? this.getCheckedPosition() : 0;
 		return (
 			<View style={this.getContainerStyle()} onClick={this.handleClick}>
 				<View

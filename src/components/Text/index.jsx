@@ -7,19 +7,13 @@
  * 	1. 强制规避 数字/字符串 跟 Text组件在同一级，同级全部转化为组件
  */
 import React from 'react';
-import { Text as HyText, Platform } from '@hippy/react';
+import { Text as HyText } from '@hippy/react';
 import PropTypes from 'prop-types';
 
 import { LayoutableProps, ClickableProps, DefaultLayoutableProps, DefaultClickableProps } from '../../types/event';
 import { StyleProps, DefaultStyleProps, ellipsizeMode } from '../../types';
 import { fontSizesMap, fontSizes } from '../../utils/fontSize';
-
-// hippy-react-web 中 Text组件使用了getChildContext，却没有声明childContextTypes
-if (Platform.OS === 'web') {
-	HyText.childContextTypes = {
-		isInAParentText: PropTypes.bool,
-	}
-}
+import { ISWEB } from '../../utils';
 
 /**
  * 解决react-web中Text的嵌套问题
@@ -27,7 +21,14 @@ if (Platform.OS === 'web') {
  * 否则使用的div标签，换行
  */
 const TextContext = React.createContext({ isInAParentText: false, textDepth: 0 });
-HyText.contextType = TextContext;
+
+// hippy-react-web 中 Text组件使用了getChildContext，却没有声明childContextTypes
+if (ISWEB) {
+	HyText.childContextTypes = {
+		isInAParentText: PropTypes.bool,
+	}
+	HyText.contextType = TextContext;
+}
 export class Text extends React.Component {
 	getStyle () {
 		const { size, height, lineHeight } = this.props;
@@ -40,13 +41,14 @@ export class Text extends React.Component {
 	render () {
 		const { onLayout, onClick, style, opacity, children, numberOfLines, ellipsizeMode } = this.props;
 		const { textDepth } = this.context;
+		const customStyle = !Array.isArray(style) ? [ style ] : style;
 		return (
 			<TextContext.Provider value={{ textDepth: textDepth + 1, isInAParentText: textDepth > 0 }} >
 				<HyText
 					onLayout={onLayout}
 					onClick={onClick}
 					opacity={opacity}
-					style={[ this.getStyle(), style ]}
+					style={[ this.getStyle(), ...customStyle ]}
 					numberOfLines={numberOfLines}
 					ellipsizeMode={ellipsizeMode}
 				>
@@ -78,6 +80,7 @@ Text.defaultProps = {
 	...DefaultStyleProps,
 	size: 'sm',
 	opacity: 1,
+	ellipsizeMode: 'head',
 }
 
 export default Text;

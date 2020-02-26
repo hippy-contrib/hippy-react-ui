@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
 import { Tabs } from '../../../../src/components/Tabs';
+import Text from '../../../../src/components/Text';
+
+const Item = (props) => <Text color={props.selected ? 'red' : 'green'}>2lksd</Text>;
 
 class TabsPage extends React.Component {
 	static propTypes = {
@@ -42,12 +45,15 @@ class TabsPage extends React.Component {
 					<View key="t5">content5</View>
 				</Tabs>
 				<Tabs tabs={[
-					{ key: 't1', title: 't1' },
+					{ key: 't1', title:  <Item />},
 					{ key: 't2', title: 't2' },
 					{ key: 't3', title: 't3' },
 					{ key: 't4', title: 't4' },
 					{ key: 't5', title: 't5' },
 				]} initalPage={'t2'}
+					tabBarPosition='bottom'
+					onChange={page => console.log('onChange', page)}
+					onTabClick={() => console.log('onTabClick')}
 				>
 					<View style={{ backgroundColor: 'red', flex: 1, display: 'flex' }} key="t1">content1<View key="t2">content2</View></View>
 					<View key="t2">content2</View>

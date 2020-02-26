@@ -31,11 +31,12 @@ if (ISWEB) {
 }
 export class Text extends React.Component {
 	getStyle () {
-		const { size, height, lineHeight } = this.props;
+		const { size, height, lineHeight, color } = this.props;
 		let fontSize = fontSizesMap[size] || size || fontSizesMap['sm'];
 		let style = { fontSize, isInAParentText: true };
 		height && (style = { ...style, height });
 		lineHeight && (style = { ...style, lineHeight });
+		color && (style = { ...style, color });
 		return style;
 	}
 	render () {
@@ -71,6 +72,7 @@ Text.propTypes = {
 	size: PropTypes.oneOfType([PropTypes.oneOf(fontSizes), PropTypes.number]),
 	opacity: PropTypes.number,
 	style: StyleProps,
+	color: PropTypes.string,
 	// children: PropTypes.any,
 }
 
@@ -81,6 +83,7 @@ Text.defaultProps = {
 	size: 'sm',
 	opacity: 1,
 	ellipsizeMode: 'head',
+	color: '#afafaf',
 }
 
 export default Text;

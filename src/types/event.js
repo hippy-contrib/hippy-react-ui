@@ -20,7 +20,7 @@ export const LayoutableProps = {
 }
 
 export const DefaultLayoutableProps = {
-	onLayout: () => {},
+	onLayout: () => false,
 }
 
 
@@ -37,8 +37,8 @@ export const ClickableProps = {
 }
 
 export const DefaultClickableProps = {
-	onClick: () => {},
-	onLongClick: () => {}
+	onClick: () => false, // 默认支持冒泡
+	onLongClick: () => false // 默认支持冒泡
 }
 
 export const TouchableProps = {
@@ -80,11 +80,12 @@ export const TouchableProps = {
   onTouchCancel: PropTypes.func,
 }
 
+// 默认支持冒泡
 export const DefaultTouchableProps = {
-	onTouchDown: () => {},
-	onTouchMove: () => {},
-	onTouchEnd: () => {},
-	onTouchCancel: () => {},
+	onTouchDown: () => false,
+	onTouchMove: () => false,
+	onTouchEnd: () => false,
+	onTouchCancel: () => false,
 }
 
 export const DefaultEventProps = {

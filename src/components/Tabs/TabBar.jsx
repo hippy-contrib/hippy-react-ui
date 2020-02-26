@@ -2,7 +2,6 @@ import React from 'react';
 import { View, StyleSheet, Animation } from '@hippy/react';
 import PropTypes from 'prop-types';
 
-import Text from '../Text';
 import { tabPageProps, tabsProps } from './props';
 import { StyleProps } from '../../types';
 import {
@@ -12,14 +11,8 @@ import {
 	DefaultClickableProps,
 } from '../../types';
 import { ISWEB } from '../../utils';
-
-// const defaultSelectedColor = '#108ee9';
-const COLOR = {
-	selectedTextColor: '#108ee9',
-	textColor: '#afafaf',
-	divider: '#ddd',
-	backgroundColor: '#fff'
-}
+import { COLOR } from './props';
+import TabBarItem from './TabBarItem';
 
 const DIVIDERHEIGHT = 1;
 
@@ -55,23 +48,6 @@ const styles = StyleSheet.create({
 		left: 0,
 	}
 })
-
-const BarItem = ({
-	title,
-	color,
-	onClick = (() => {}),
-	onLayout= (() => {}),
-}) => {
-	return (
-		<Text
-			style={{ ...styles.item, color }}
-			onClick={onClick}
-			onLayout={onLayout}
-		>
-			{title}
-		</Text>
-	);
-} 
 
 export class TabBar extends React.Component {
 
@@ -157,9 +133,10 @@ export class TabBar extends React.Component {
 			<View style={[styles.container, ...propsStyle]} onLayout={() => this.onLayout()}>
 				<View style={[ styles.tabContainer, { borderColor: dividerColor }, dividerStyle ]}>
 					{
-						tabs.map(item => <BarItem
+						tabs.map(item => <TabBarItem
 							key={item.key}
 							color={ selected === item.key ? selectedColor : color }
+							selected={ selected === item.key }
 							title={item.title}
 							onClick={event => this.onClick(event, item)}
 							onLayout={event => this.handleTabItemLayout(event, item)}
@@ -192,7 +169,7 @@ TabBar.defaultProps = {
 	dividerColor: COLOR.divider,
 	tabBarPosition: 'top',
 	style: {},
-	showUnderLine: false,
+	showUnderLine: true,
 }
 
 export default TabBar;

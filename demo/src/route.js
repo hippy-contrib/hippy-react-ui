@@ -4,6 +4,7 @@ import DividerPage from './pages/Divider';
 import TextPage from './pages/Text';
 import SwitchPage from './pages/Switch';
 import TabsPage from './pages/Tabs';
+import ModalPage from './pages/Modal';
 
 export const pages = [
 	{
@@ -30,6 +31,10 @@ export const pages = [
 		name: 'Tabs',
 		path: 'tabs',
 		component: TabsPage,
+	},{
+		name: 'Modal',
+		path: 'modal',
+		component: ModalPage,
 	}
 ];
 

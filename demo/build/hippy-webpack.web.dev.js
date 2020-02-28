@@ -77,8 +77,8 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     modules: [path.resolve(__dirname, '../node_modules')],
     alias: {
-      // '@hippy/react': '/Users/kiddxu/Desktop/github/Hippy/packages/hippy-react-web/dist/index.js',
-      '@hippy/react': '@hippy/react-web',
+      '@hippy/react': '/Users/kiddxu/Desktop/github/Hippy/packages/hippy-react-web/dist/index.js',
+      // '@hippy/react': '@hippy/react-web',
     },
   },
 };

@@ -3,8 +3,6 @@ import { View, StyleSheet } from '@hippy/react';
 import stylePropType from 'react-style-proptype';
 import PropTypes from 'prop-types';
 
-export { Divider as VerticalDivider } from './Vertical';
-
 const styles = StyleSheet.create({
 	divider: {
 		alignSelf: 'stretch'
@@ -12,22 +10,22 @@ const styles = StyleSheet.create({
 })
 export class Divider extends React.Component {
 	render () {
-		const { height, color, style = {} } = this.props;
+		const { width, color, style = {} } = this.props;
 		return (
-			<View style={[styles.divider, { height, backgroundColor: color }, style ]} />
+			<View style={[styles.divider, { width, backgroundColor: color }, style ]} />
 		);
 	}
 }
 
 Divider.propTypes = {
 	color: PropTypes.string,
-	height: PropTypes.number,
+	width: PropTypes.number,
 	style: stylePropType,
 };
 
 Divider.defaultProps = {
 	color: '#ddd',
-	height: 1,
+	width: 1,
 	style: {},
 };
 export default Divider;

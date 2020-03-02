@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 	},
 	small: {
 		height: 30,
-		fontSize: fontSizesMap['xxs'],
+		fontSize: fontSizesMap['xs'],
 	}
 })
 export class Button extends React.Component {
@@ -91,8 +91,13 @@ export class Button extends React.Component {
 		!disabled && this.setState({ isActive });
 	}
 	renderChildren () {
-		const { title, children, type } = this.props;
-		return <Text style={styles[type] || styles['primary']}>{ children || title }</Text>
+		const { title, children, type, size } = this.props;
+		return (
+			<Text style={styles[type] || styles['primary']} size={size === 'large' ? 'md' : 'xs'}>
+				{ children || title }
+			</Text>
+		);
+
 	}
 	render () {
 		return (

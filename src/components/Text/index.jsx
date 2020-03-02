@@ -33,7 +33,7 @@ export class Text extends React.Component {
 	getStyle (props = this.props) {
 		const { size, height, opacity, lineHeight, color } = props;
 		let style = { isInAParentText: true };
-		size && (style = { ...style, size: fontSizesMap[size] || size || fontSizesMap['sm'] });
+		size && (style = { ...style, fontSize: fontSizesMap[size] || size || fontSizesMap['sm'] });
 		height && (style = { ...style, height });
 		lineHeight && (style = { ...style, lineHeight });
 		color && (style = { ...style, color });

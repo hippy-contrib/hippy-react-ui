@@ -6,6 +6,7 @@ import SwitchPage from './pages/Switch';
 import TabsPage from './pages/Tabs';
 import ModalPage from './pages/Modal';
 import ButtonPage from './pages/Button';
+import CardPage from './pages/Card';
 
 export const pages = [
 	{
@@ -40,6 +41,10 @@ export const pages = [
 		name: 'Button',
 		path: 'button',
 		component: ButtonPage,
+	},{
+		name: 'Card',
+		path: 'card',
+		component: CardPage,
 	}
 ];
 

@@ -3,11 +3,13 @@ import { View, StyleSheet } from '@hippy/react';
 import stylePropType from 'react-style-proptype';
 import PropTypes from 'prop-types';
 
+import { hairlineWidth } from '../../utils';
 export { Divider as VerticalDivider } from './Vertical';
 
 const styles = StyleSheet.create({
 	divider: {
-		alignSelf: 'stretch'
+		alignSelf: 'stretch',
+		// transform: [{ scaleY: 0.5 }],
 	}
 })
 export class Divider extends React.Component {
@@ -25,9 +27,10 @@ Divider.propTypes = {
 	style: stylePropType,
 };
 
+
 Divider.defaultProps = {
 	color: '#ddd',
-	height: 1,
+	height: hairlineWidth,
 	style: {},
 };
 export default Divider;

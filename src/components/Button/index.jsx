@@ -31,20 +31,29 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		height: 44,
 		paddingHorizontal: 12,
+		borderRadius: 4,
 	},
-	primary: {
+	primaryContainer: {
 		color: '#fff',
 		backgroundColor: '#108ee9',
 	},
-	ghost: {
+	primaryText: {
+		color: '#fff',
+	},
+	ghostContainer: {
 		backgroundColor: '#fff',
+		color: '#108ee9',
+		borderWidth: 0.5,
+		borderColor: '#dddddd'
+	},
+	ghostText: {
 		color: '#108ee9',
 	},
 	activating: {
-		opacity: 0.6,
+		opacity: 0.7,
 	},
 	disabled: {
-		opacity: 0.4,
+		opacity: 0.6,
 	},
 	large: {
 		fontSize: fontSizesMap['md'],
@@ -77,7 +86,7 @@ export class Button extends React.Component {
 			styles.container,
 			style,
 			size === 'small' ? small : large,
-			styles[type] || styles['primary']
+			styles[`${type}Container`] || styles['primaryContainer']
 		];
 		disabled && containerStyle.push(styles.disabled);
 		isActive && containerStyle.push(activating, activeStyle);
@@ -91,7 +100,7 @@ export class Button extends React.Component {
 	renderChildren () {
 		const { title, children, type, size, titleStyle } = this.props;
 		return (
-			<Text style={[ styles[type] || styles['primary'], titleStyle ]} size={size === 'large' ? 'md' : 'xs'}>
+			<Text style={[ styles[`${type}Text`] || styles['primaryText'], titleStyle ]} size={size === 'large' ? 'md' : 'xs'}>
 				{ children || title }
 			</Text>
 		);

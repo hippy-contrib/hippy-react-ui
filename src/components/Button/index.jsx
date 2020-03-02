@@ -66,10 +66,8 @@ export class Button extends React.Component {
 
 	handleClick = (event) => {
 		const { onClick, disabled } = this.props;
-		console.log('onClick');
 		!disabled && onClick(event);
-		stopPropagation();
-		return stopPropagation();
+		return stopPropagation(event);
 	}
 	getStyle () {
 		const { style, disabled, size, activeStyle, type } = this.props;
@@ -91,9 +89,9 @@ export class Button extends React.Component {
 		!disabled && this.setState({ isActive });
 	}
 	renderChildren () {
-		const { title, children, type, size } = this.props;
+		const { title, children, type, size, titleStyle } = this.props;
 		return (
-			<Text style={styles[type] || styles['primary']} size={size === 'large' ? 'md' : 'xs'}>
+			<Text style={[ styles[type] || styles['primary'], titleStyle ]} size={size === 'large' ? 'md' : 'xs'}>
 				{ children || title }
 			</Text>
 		);
@@ -121,6 +119,7 @@ Button.propTypes = {
 	type: PropTypes.oneOf(['primary', 'ghost']),
 	size: PropTypes.oneOf(['small', 'large']),
 	activeStyle: StyleProps,
+	titleStyle: StyleProps, // 文字样式，作用在text的
 	style: StyleProps,
 	title: ChildrenProps,
 }
@@ -132,6 +131,7 @@ Button.defaultProps = {
 	type: 'primary',
 	size: 'large',
 	activeStyle: {},
+	titleStyle: {},
 	style: {},
 	title: '',
 }

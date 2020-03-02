@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 export * from './event';
 export * from './image';
 
-// export const StyleProps = stylePropType;
-export const StyleProps = PropTypes.oneOfType([stylePropType, PropTypes.arrayOf(stylePropType)]);
+export const StyleProps = PropTypes.oneOfType([PropTypes.arrayOf(stylePropType), stylePropType]);
 
 export const DefaultStyleProps = { style: {} };
 

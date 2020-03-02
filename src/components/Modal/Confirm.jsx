@@ -3,7 +3,6 @@ import { StyleSheet, View } from '@hippy/react';
 
 import Modal from './Modal';
 import Button from '../Button';
-import Text from '../Text';
 import Divider, { VerticalDivider } from '../Divider';
 import { stopPropagation } from '../../utils/event';
 
@@ -13,21 +12,9 @@ export const COLOR = {
 	divider: '#ddd',
 	backgroundColor: '#fff'
 }
-/**
- * containerStyle: StyleProps,
-	title: ChildrenProps,
-	footer: ChildrenProps,
-	okText:PropTypes.string,
-	cancelText: PropTypes.string,
-	onOk: PropTypes.func,
-	onCancel: PropTypes.func,
-	titleStyle: StyleProps,
-	bodyStyle: StyleProps,
-	footerStyle: StyleProps,
- */
+
 const styles = StyleSheet.create({
 	container: {
-		// flex: 3,
 		transform: [{ translateY: -50 }],
 		borderColor: '#dddddd',
 		borderWidth: 1,
@@ -67,9 +54,9 @@ export class Confirm extends React.Component {
 		if (footer) return footer;
 		return (
 			<View style={styles.footer}>
-				<Button style={{ flex: 1 }} onClick={onCancel}>{cancelText}<Text color="red" style={{ color: 'green' }}>{cancelText}</Text></Button>
+				<Button type='ghost' style={{ flex: 1, borderWidth: 0, borderRadius: 0 }} onClick={onCancel}>{cancelText}</Button>
 				<VerticalDivider />
-				<Button style={{ flex: 1, color: '#108ee9' }} onClick={onOk}>{okText}</Button>
+				<Button type='ghost' style={{ flex: 1, borderWidth: 0, borderRadius: 0 }} onClick={onOk}>{okText}</Button>
 			</View>
 		);
 	}

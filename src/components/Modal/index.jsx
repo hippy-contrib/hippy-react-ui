@@ -13,5 +13,6 @@ import HyModal from './Modal';
 
 
 export * from './Confirm';
+export * from './Popup';
 
 export default HyModal;

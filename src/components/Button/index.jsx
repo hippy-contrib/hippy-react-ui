@@ -84,9 +84,9 @@ export class Button extends React.Component {
 		const { large, small, activating } = styles;
 		const containerStyle = [
 			styles.container,
-			style,
 			size === 'small' ? small : large,
-			styles[`${type}Container`] || styles['primaryContainer']
+			styles[`${type}Container`] || styles['primaryContainer'],
+			style,
 		];
 		disabled && containerStyle.push(styles.disabled);
 		isActive && containerStyle.push(activating, activeStyle);

@@ -5,6 +5,7 @@ import React from 'react';
 import { Modal, View } from '@hippy/react';
 
 import { modalPropTypes, modalDefaultProps } from './props';
+import { stopPropagation } from '../../utils/event';
 import { styles } from './styles';
 /**
  * visible: PropTypes.bool,
@@ -27,14 +28,23 @@ import { styles } from './styles';
 
 
 export class HippyModal extends React.Component {
+	constructor(props) {
+		super(props);
 
+		this.handleMaskClick = this.handleMaskClick.bind(this);
+	}
+	handleMaskClick (event) {
+		const { onMaskClick } = this.props;
+		onMaskClick(event);
+		return stopPropagation(event);
+	}
 	render () {
 		const {
 			children,
 			animation,
-			onMaskClick,
 			transparent,
 			maskStyle,
+			style,
 			...otherProps
 		} = this.props;
 		return (
@@ -44,8 +54,8 @@ export class HippyModal extends React.Component {
 				animationType={animation}
 			>
 				<View
-					style={[ styles.mask, transparent ? { backgroundColor: 'transparent' } : {}, maskStyle ]}
-					onClick={onMaskClick}
+					style={[ styles.mask, transparent ? { backgroundColor: 'transparent' } : {}, maskStyle, style ]}
+					onClick={this.handleMaskClick}
 				>
 						{ children }
 				</View>

@@ -31,7 +31,7 @@ if (ISWEB) {
 }
 export class Text extends React.Component {
 	getStyle () {
-		const { size, height, lineHeight, color } = this.props;
+		const { size = 'sm', height, lineHeight, color = '#afafaf' } = this.props;
 		let fontSize = fontSizesMap[size] || size || fontSizesMap['sm'];
 		let style = { fontSize, isInAParentText: true };
 		height && (style = { ...style, height });
@@ -39,8 +39,31 @@ export class Text extends React.Component {
 		color && (style = { ...style, color });
 		return style;
 	}
+	/**
+	 * 解决text嵌套问题
+	 * 如果子节点不是数组，且不是组件，则直接渲染
+	 * 如果子节点是组件，则直接渲染
+	 * 如果子节点是数组，则遍历每个节点
+	 * 	若是组件，直接渲染
+	 * 	否认递归使用Text组件
+	 * 		样式进行传递
+	 */
+	renderChildren () {
+		const { children, opacity = 1, style = {}, color = '#afafaf' } = this.props;
+		if (!Array.isArray(children)) return children;
+		const customStyle = !Array.isArray(style) ? [ style ] : style;
+
+		return children.map(child => {
+			if (React.isValidElement(child)) {
+				return <child.type opacity={opacity} color={color}  style={[ this.getStyle(), ...customStyle ]}  { ...child.props } />;
+			}
+			else {
+				return <Text opacity={opacity} style={[ this.getStyle(), ...customStyle ]}>{child}</Text>
+			}
+		});
+	}
 	render () {
-		const { onLayout, onClick, style, opacity, children, numberOfLines, ellipsizeMode } = this.props;
+		const { onLayout, onClick, style = {}, opacity = 1, numberOfLines, ellipsizeMode = 'head' } = this.props;
 		const { textDepth } = this.context;
 		const customStyle = !Array.isArray(style) ? [ style ] : style;
 		return (
@@ -53,7 +76,9 @@ export class Text extends React.Component {
 					numberOfLines={numberOfLines}
 					ellipsizeMode={ellipsizeMode}
 				>
-					{children}
+					{
+						this.renderChildren()
+					}
 				</HyText>
 			</TextContext.Provider>
 		);
@@ -76,14 +101,17 @@ Text.propTypes = {
 	// children: PropTypes.any,
 }
 
+/**
+ * 去除默认的props，用于嵌套使用组件
+ */
 Text.defaultProps = {
 	...DefaultLayoutableProps,
 	...DefaultClickableProps,
-	...DefaultStyleProps,
-	size: 'sm',
-	opacity: 1,
-	ellipsizeMode: 'head',
-	color: '#afafaf',
+	// ...DefaultStyleProps,
+	// size: 'sm',
+	// opacity: 1,
+	// ellipsizeMode: 'head',
+	// color: '#afafaf',
 }
 
 export default Text;

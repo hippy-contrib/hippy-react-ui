@@ -3,6 +3,7 @@ import { StyleSheet, View } from '@hippy/react';
 
 import Modal from './Modal';
 import Button from '../Button';
+import Text from '../Text';
 import Divider, { VerticalDivider } from '../Divider';
 import { stopPropagation } from '../../utils/event';
 
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
 		borderRadius: 8,
 		display: 'flex',
 		flexDirection: 'column',
+		overflow: 'hidden',
 	},
 	header: {
 		paddingHorizontal: 12,
@@ -65,18 +67,11 @@ export class Confirm extends React.Component {
 		if (footer) return footer;
 		return (
 			<View style={styles.footer}>
-				<Button style={{ flex: 1 }} onClick={onOk}>{okText}</Button>
+				<Button style={{ flex: 1 }} onClick={onCancel}>{cancelText},{cancelText}<Text>{cancelText}</Text></Button>
 				<VerticalDivider />
-				<Button style={{ flex: 1 }} onClick={onCancel}>{cancelText}</Button>
+				<Button style={{ flex: 1, color: '#108ee9' }} onClick={onOk}>{okText}</Button>
 			</View>
 		);
-	}
-	// 禁止冒泡
-	static stopPropagation = (event) => {
-		console.log('fuck', event);
-		event && event.preventDefault && event.preventDefault();
-		event && event.stopPropagation && event.stopPropagation();
-		return false;
 	}
 	render () {
 		const {
@@ -88,7 +83,7 @@ export class Confirm extends React.Component {
 		return (
 			<Modal { ...otherProps }>
 				<View style={[styles.container, ]} onClick={stopPropagation}>
-					<View style={styles.header} onClick={() => { }}>
+					<View style={styles.header} onClick={stopPropagation}>
 						{title}
 					</View>
 					<View style={styles.body} onClick={stopPropagation}>

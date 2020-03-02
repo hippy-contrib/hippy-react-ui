@@ -67,7 +67,7 @@ export class Confirm extends React.Component {
 		if (footer) return footer;
 		return (
 			<View style={styles.footer}>
-				<Button style={{ flex: 1 }} onClick={onCancel}>{cancelText},{cancelText}<Text>{cancelText}</Text></Button>
+				<Button style={{ flex: 1 }} onClick={onCancel}>{cancelText}<Text color="red" style={{ color: 'green' }}>{cancelText}</Text></Button>
 				<VerticalDivider />
 				<Button style={{ flex: 1, color: '#108ee9' }} onClick={onOk}>{okText}</Button>
 			</View>

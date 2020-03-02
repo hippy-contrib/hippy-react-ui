@@ -2,8 +2,6 @@ import React from 'react';
 import { StyleSheet, View } from '@hippy/react';
 
 import Modal from './Modal';
-import Button from '../Button';
-import Divider, { VerticalDivider } from '../Divider';
 import { stopPropagation } from '../../utils/event';
 
 export const COLOR = {

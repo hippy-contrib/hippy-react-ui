@@ -42,6 +42,7 @@ export class HippyModal extends React.Component {
 		const {
 			children,
 			animation,
+			animated,
 			transparent,
 			maskStyle,
 			style,
@@ -51,7 +52,8 @@ export class HippyModal extends React.Component {
 			<Modal
 				{ ...otherProps }
 				transparent
-				animationType={animation}
+				animated={animated}
+				animationType={animated ? animation : 'none'}
 			>
 				<View
 					style={[ styles.mask, transparent ? { backgroundColor: 'transparent' } : {}, maskStyle, style ]}

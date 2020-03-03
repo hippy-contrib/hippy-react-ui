@@ -8,12 +8,17 @@ import ModalPage from './pages/Modal';
 import ButtonPage from './pages/Button';
 import CardPage from './pages/Card';
 import BadgePage from './pages/Badge';
+import ToastPage from './pages/Toast';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Toast',
+		path: 'toast',
+		component: ToastPage,
 	},{
 		name: 'Avatar',
 		path: 'avatar',

@@ -3,6 +3,7 @@ import { StyleSheet, View } from '@hippy/react';
 
 import Modal from './Modal';
 import { stopPropagation } from '../../utils/event';
+import { hairlineWidth } from '../../utils';
 
 export const COLOR = {
 	selectedTextColor: '#108ee9',
@@ -15,7 +16,7 @@ const styles = StyleSheet.create({
 	container: {
 		// transform: [{ translateY: -50 }],
 		borderColor: '#dddddd',
-		borderWidth: 1,
+		borderWidth: hairlineWidth,
 		backgroundColor: '#ffffff',
 		flex: 1,
 		minHeight: 60,

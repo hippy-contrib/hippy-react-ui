@@ -7,6 +7,7 @@ import TabsPage from './pages/Tabs';
 import ModalPage from './pages/Modal';
 import ButtonPage from './pages/Button';
 import CardPage from './pages/Card';
+import BadgePage from './pages/Badge';
 
 export const pages = [
 	{
@@ -45,6 +46,10 @@ export const pages = [
 		name: 'Card',
 		path: 'card',
 		component: CardPage,
+	},{
+		name: 'Badge',
+		path: 'badge',
+		component: BadgePage,
 	}
 ];
 

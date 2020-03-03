@@ -5,6 +5,7 @@ import Modal from './Modal';
 import Button from '../Button';
 import Divider, { VerticalDivider } from '../Divider';
 import { stopPropagation } from '../../utils/event';
+import { hairlineWidth } from '../../utils';
 
 export const COLOR = {
 	selectedTextColor: '#108ee9',
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
 	container: {
 		transform: [{ translateY: -50 }],
 		borderColor: '#dddddd',
-		borderWidth: 1,
+		borderWidth: hairlineWidth,
 		backgroundColor: '#ffffff',
 		width: 270,
 		paddingTop: 16,

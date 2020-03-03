@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 	ghostContainer: {
 		backgroundColor: '#fff',
 		color: '#108ee9',
-		borderWidth: 0.5,
+		borderWidth: 1,
 		borderColor: '#dddddd'
 	},
 	ghostText: {

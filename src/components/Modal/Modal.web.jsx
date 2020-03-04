@@ -9,7 +9,6 @@ import { stopPropagation } from '../../utils/event';
 
 // 根据平台动态加载，否则在hippy里面直接引入css文件，会报错
 if (ISWEB) require('rodal/lib/rodal.css');
-ISWEB && document.createElement("div");
 
 const animationTypeMap = {
 	slide: 'slideUp',

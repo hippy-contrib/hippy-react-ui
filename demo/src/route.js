@@ -9,12 +9,17 @@ import ButtonPage from './pages/Button';
 import CardPage from './pages/Card';
 import BadgePage from './pages/Badge';
 import ToastPage from './pages/Toast';
+import InputPage from './pages/Input';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Input',
+		path: 'input',
+		component: InputPage,
 	},{
 		name: 'Toast',
 		path: 'toast',

@@ -1,0 +1,15 @@
+input, select, textarea{
+	color: #ff0000;
+}
+
+input, select, textarea{
+    color: #ff0000;
+}
+
+textarea:focus, input:focus {
+	color: #ff0000;
+}
+
+input::placeholder {
+	color: greenyellow
+}

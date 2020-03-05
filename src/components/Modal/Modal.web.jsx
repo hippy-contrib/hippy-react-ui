@@ -8,6 +8,7 @@ import { styles } from './styles';
 import { stopPropagation } from '../../utils/event';
 
 // 根据平台动态加载，否则在hippy里面直接引入css文件，会报错
+// TODO 做成配置，webpack配置，或者统一入口
 if (ISWEB) require('rodal/lib/rodal.css');
 
 const animationTypeMap = {

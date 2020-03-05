@@ -3,76 +3,144 @@ import { TextInput, StyleSheet, View } from '@hippy/react';
 
 import { stopPropagation } from '../../utils/event';
 import { setStyle, removeStyle } from '../../utils/css';
+import { InputPropTypes, InputDefaultPropTypes } from './props';
+import { flattenStyle, ISWEB } from '../../utils';
+import { fontSizesMap } from '../../utils/fontSize';
+
 // import './index.css';
 /**
  * hippy 当前版本需要给定width和height，否则会crash
+ * hippy-react-web placeholderTextColor不生效
+ * hippy-react value 不起作用，只有在初始化的时候有作用
+ * hippy-react style 中 padding 不起作用
+ * hippy-react style 中 fontWeight 是小数
  */
 
-export const getStyleId = id => `hy-comp-input-${id}`;
+ // 禁止web input 默认样式
+if (ISWEB) {
+	setStyle('hy-comp-input', {
+		'[data-hy-comp-id=input]': `outline: none; -webkit-appearance: none;` }
+	);
+}
+export const getStyleId = id => `hy-comp-input-style-${id}`;
+export const getInputId = id => `hy-comp-input-${id}`;
 
 const styles = StyleSheet.create({
 	container: {
-		height: 34,
-		lineHeight: 34,
-		width: 200,
-		flex: 1,
+		minHeight: 32,
 		display: 'flex',
-		flexDirection: 'row',
-		// justifyContent: 'flex-start',
-		alignItems: 'center',
-		backgroundColor: '#eeeeee',
 		fontSize: 14,
-		paddingLeft: 12,
-		textAlign: 'center',
-		color: 'red',
-		placeholderTextColor: 'greenyellow', // hippy 生效，web不生效
-		placeholderTextColors: 'greenyellow',
-	},
-	border: {
-		// borderWidth: 1,
-		// borderColor: '#dddddd',
-	},
-	placeholder: {
-		placeholderTextColor: 'green',
-
+		textAlign: 'left',
+		color: '#333333',
+		borderWidth: 0,
 	}
 })
 export class Input extends React.Component {
 	
+	static getDerivedStateFromProps(nextProps, prevState) {
+		if (nextProps.hasOwnProperty('value') && nextProps.value !== prevState.value) {
+			return { value: nextProps.value }
+		}
+    return null;
+	}
 	constructor(props) {
 		super(props);
 
 		this.handleClick = this.handleClick.bind(this);
-		this.styleId = getStyleId(Math.random());
+		this.handleOnChange = this.handleOnChange.bind(this);
+
+		const { defaultValue, value } = props;
+		this.state = {
+			value: defaultValue || value || ''
+		}
+		const { placeholderTextColor } = props;
+
+		this.styleId = getStyleId(`${Math.random()}`.replace(/^0\./, ''));
+		this.inputId = getInputId(`${Math.random()}`.replace(/^0\./, ''));
+
+		this.setWebPlaceholderColor(placeholderTextColor);
 	}
 	handleClick (event) {
-
 		return stopPropagation(event);
 	}
+	handleOnChange (value) {
+		const { onChange } = this.props;
+		onChange(value);
+		this.setState({ value });
+	}
+	setWebPlaceholderColor (color) {
+		const key = `#${this.inputId}::placeholder`;
+		setStyle(this.styleId, { [key] : `color: ${color};` });
+	}
+	getStyle () {
+		const { placeholderTextColor, style, size } = this.props;
+		const styleList = [ styles.container, style ];
+		
+		styleList.push({
+			placeholderTextColor,
+			fontSize: fontSizesMap[size] || size || fontSizesMap['xs']
+		});
+		return flattenStyle(styleList);
+	}
 	componentDidMount () {
-		console.log('sdfsdf');
-		setStyle(this.styleId, { '#input::placeholder': 'color: #ff0000;' });
 	}
 	componentWillUnmount() {
 		removeStyle(this.styleId);
 	}
-	componentW
+	shouldComponentUpdate (nextProps, nextState) {
+		const { placeholderTextColor } = this.props;
+		if (placeholderTextColor !== nextProps.placeholderTextColor) {
+			this.setWebPlaceholderColor(nextProps.placeholderTextColor);
+		}
+		return true;
+	}
+	componentDidUpdate(prevProps, prevState, snapshot) {
+		// hippy 动态设置value的值，用于兼容外部直接设置value
+		this.inputRef && this.inputRef.setValue &&  this.inputRef.setValue(this.state.value || '');
+	}
 	render () {
+		const {
+			keyboardType,
+			returnKeyType,
+			onBlur,
+			autoFocus,
+			editable,
+			placeholder,
+			onKeyboardWillShow,
+			onSelectionChange,
+			maxLength,
+		} = this.props;
+		const { value } = this.state;
 		return (
 			<View style={{ display: 'flex' }}>
 				<TextInput
-					id={'input'}
-					onClick={this.handleClick}
-					style={[ styles.container ]}
-					placeholder={"sdfsdf"}
+					data-hy-comp-id="input"
+					ref={ref => this.inputRef = ref}
+					id={this.inputId}
 					multiline={false}
-					placeholderTextColor={'greenyellow'}
-					placeholderTextColors={'greenyellow'}
-					// value={'10'}
+					numberOfLines={1}
+					maxLength={maxLength}
+					style={this.getStyle()}
+					autoFocus={autoFocus}
+					placeholder={placeholder}
+					editable={editable}
+					readOnly={!editable}
+					onChangeText={this.handleOnChange}
+					keyboardType={keyboardType}
+					onBlur={onBlur}
+					onClick={this.handleClick}
+					returnKeyType={returnKeyType}
+					onKeyboardWillShow={onKeyboardWillShow}
+					onSelectionChange={onSelectionChange}
+					contentInset={0}
+					value={value}
 				/>
 			</View>
 		);
 	}
 }
+
+Input.propTypes = InputPropTypes;
+Input.defaultProps = InputDefaultPropTypes;
 
 export default Input;

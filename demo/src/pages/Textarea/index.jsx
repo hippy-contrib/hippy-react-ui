@@ -3,9 +3,9 @@ import { View } from '@hippy/react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import Input from '../../../../src/components/Input';
+import Textarea from '../../../../src/components/Textarea';
 
-class InputPage extends React.Component {
+class TextAreaPage extends React.Component {
 	static propTypes = {
     match: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
@@ -26,21 +26,24 @@ class InputPage extends React.Component {
 		const { history } = this.props;
 		return (
 			<View style={{ flex: 1 }} onClick={() => console.log('fuck')}>
-				<Input
+				<Textarea
 					value={this.state.firstValue}
+					defaultValue={'sdf'}
 					// placeholderTextColor={this.state.placeholderTextColor}
 					placeholder={'Please'}
 					onChange={(firstValue) => this.setState({ firstValue })}
 				/>
-				<Input
-					style={{ marginTop: 12, backgroundColor: '#efefef', height: 44 }}
+				<Textarea
+					style={{ marginTop: 12, backgroundColor: '#efefef' }}
 					placeholderTextColor={'#888888'}
 					placeholder={'Please'}
-					// onChange={(firstValue) => this.setState({ firstValue })}
+					numberOfLines={2}
+					size={'xs'}
+					// onChange={(firstValue) => console.log(firstValue)}
 				/>
 			</View>
 		);
 	}
 }
 
-export default withRouter(InputPage);
+export default withRouter(TextAreaPage);

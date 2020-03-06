@@ -7,6 +7,9 @@ import { InputPropTypes, InputDefaultPropTypes } from './props';
 import { flattenStyle, ISWEB } from '../../utils';
 import { fontSizesMap } from '../../utils/fontSize';
 
+import WebInput from './Input.web';
+
+const InputComp = ISWEB ? WebInput : TextInput;
 // import './index.css';
 /**
  * hippy 当前版本需要给定width和height，否则会crash
@@ -112,30 +115,28 @@ export class Input extends React.Component {
 		} = this.props;
 		const { value } = this.state;
 		return (
-			<View style={{ display: 'flex' }}>
-				<TextInput
-					data-hy-comp-id="input"
-					ref={ref => this.inputRef = ref}
-					id={this.inputId}
-					multiline={false}
-					numberOfLines={1}
-					maxLength={maxLength}
-					style={this.getStyle()}
-					autoFocus={autoFocus}
-					placeholder={placeholder}
-					editable={editable}
-					readOnly={!editable}
-					onChangeText={this.handleOnChange}
-					keyboardType={keyboardType}
-					onBlur={onBlur}
-					onClick={this.handleClick}
-					returnKeyType={returnKeyType}
-					onKeyboardWillShow={onKeyboardWillShow}
-					onSelectionChange={onSelectionChange}
-					contentInset={0}
-					value={value}
-				/>
-			</View>
+			<InputComp
+				data-hy-comp-id="input"
+				ref={ref => this.inputRef = ref}
+				id={this.inputId}
+				multiline={false}
+				numberOfLines={1}
+				maxLength={maxLength}
+				style={this.getStyle()}
+				autoFocus={autoFocus}
+				placeholder={placeholder}
+				editable={editable}
+				readOnly={!editable}
+				onChangeText={this.handleOnChange}
+				keyboardType={keyboardType}
+				onBlur={onBlur}
+				onClick={this.handleClick}
+				returnKeyType={returnKeyType}
+				onKeyboardWillShow={onKeyboardWillShow}
+				onSelectionChange={onSelectionChange}
+				contentInset={0}
+				value={value}
+			/>
 		);
 	}
 }

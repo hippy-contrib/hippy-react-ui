@@ -119,32 +119,30 @@ export class Textarea extends React.Component {
 			maxLength,
 		} = this.props;
 		return (
-			<View style={{ display: 'flex' }}>
-				<TextareaInput
-					data-hy-comp-id="textarea"
-					ref={ref => this.inputRef = ref}
-					id={this.inputId}
-					defaultValue={defaultValue}
-					multiline={true}
-					numberOfLines={numberOfLines}
-					rows={numberOfLines}
-					maxLength={maxLength}
-					style={this.getStyle()}
-					autoFocus={autoFocus}
-					placeholder={placeholder}
-					editable={editable}
-					readOnly={!editable}
-					onChangeText={this.handleOnChange}
-					keyboardType={keyboardType}
-					onBlur={onBlur}
-					onClick={this.handleClick}
-					returnKeyType={returnKeyType}
-					onKeyboardWillShow={onKeyboardWillShow}
-					onSelectionChange={onSelectionChange}
-					contentInset={0}
-					// value={value}
-				/>
-			</View>
+			<TextareaInput
+				data-hy-comp-id="textarea"
+				ref={ref => this.inputRef = ref}
+				id={this.inputId}
+				defaultValue={defaultValue}
+				multiline={true}
+				numberOfLines={numberOfLines}
+				rows={numberOfLines}
+				maxLength={maxLength}
+				style={this.getStyle()}
+				autoFocus={autoFocus}
+				placeholder={placeholder}
+				editable={editable}
+				readOnly={!editable}
+				onChangeText={this.handleOnChange}
+				keyboardType={keyboardType}
+				onBlur={onBlur}
+				onClick={this.handleClick}
+				returnKeyType={returnKeyType}
+				onKeyboardWillShow={onKeyboardWillShow}
+				onSelectionChange={onSelectionChange}
+				contentInset={0}
+				// value={value}
+			/>
 		);
 	}
 }

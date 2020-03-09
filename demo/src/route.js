@@ -11,12 +11,17 @@ import BadgePage from './pages/Badge';
 import ToastPage from './pages/Toast';
 import InputPage from './pages/Input';
 import TextareaPage from './pages/Textarea';
+import SearchPage from './pages/Search';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Search',
+		path: 'Search',
+		component: SearchPage,
 	},{
 		name: 'Textarea',
 		path: 'textarea',

@@ -112,30 +112,28 @@ export class Input extends React.Component {
 		} = this.props;
 		const { value } = this.state;
 		return (
-			<View style={{ display: 'flex' }}>
-				<TextInput
-					data-hy-comp-id="input"
-					ref={ref => this.inputRef = ref}
-					id={this.inputId}
-					multiline={false}
-					numberOfLines={1}
-					maxLength={maxLength}
-					style={this.getStyle()}
-					autoFocus={autoFocus}
-					placeholder={placeholder}
-					editable={editable}
-					readOnly={!editable}
-					onChangeText={this.handleOnChange}
-					keyboardType={keyboardType}
-					onBlur={onBlur}
-					onClick={this.handleClick}
-					returnKeyType={returnKeyType}
-					onKeyboardWillShow={onKeyboardWillShow}
-					onSelectionChange={onSelectionChange}
-					contentInset={0}
-					value={value}
-				/>
-			</View>
+			<TextInput
+				data-hy-comp-id="input"
+				ref={ref => this.inputRef = ref}
+				id={this.inputId}
+				multiline={false}
+				numberOfLines={1}
+				maxLength={maxLength}
+				style={this.getStyle()}
+				autoFocus={autoFocus}
+				placeholder={placeholder}
+				editable={editable}
+				readOnly={!editable}
+				onChangeText={this.handleOnChange}
+				keyboardType={keyboardType}
+				onBlur={onBlur}
+				onClick={this.handleClick}
+				returnKeyType={returnKeyType}
+				onKeyboardWillShow={onKeyboardWillShow}
+				onSelectionChange={onSelectionChange}
+				contentInset={0}
+				value={value}
+			/>
 		);
 	}
 }

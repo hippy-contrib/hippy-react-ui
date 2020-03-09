@@ -15,7 +15,9 @@ export const InputPropTypes = {
 	placeholder: PropTypes.string,
 	style: StyleProps,
 	onBlur: PropTypes.func,
+	onFocus: PropTypes.func,
 	onChange: PropTypes.func,
+	onEndEditing: PropTypes.func,
 	onKeyboardWillShow: PropTypes.func, // ios下键盘的高度
 	onSelectionChange: PropTypes.func, // 选择输入框中的位置，在web下暂时没有应用场景，只做透传
 	value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
@@ -23,7 +25,7 @@ export const InputPropTypes = {
 }
 
 export const InputDefaultPropTypes = {
-	placeholderTextColor: 'red',
+	placeholderTextColor: '#aaaaaa',
 	defaultValue: '',
 	editable: true,
 	keyboardType: 'default',
@@ -34,9 +36,11 @@ export const InputDefaultPropTypes = {
 	placeholder: '',
 	style: {},
 	onBlur: () => false,
+	onFocus: () => false,
 	onChange: ({ text }) => false,
 	// onContentSizeChange: () => false,
 	onKeyboardWillShow: ({ keyboardHeight }) => false,
 	onSelectionChange: ({ selection: { start, end } }) => false,
+	onEndEditing: () => false,
 	size: 'xs',
 }

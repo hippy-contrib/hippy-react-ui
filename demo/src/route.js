@@ -12,6 +12,7 @@ import ToastPage from './pages/Toast';
 import InputPage from './pages/Input';
 import TextareaPage from './pages/Textarea';
 import NoticeBarPage from './pages/NoticeBar';
+import SearchPage from './pages/Search';
 
 export const pages = [
 	{
@@ -22,6 +23,10 @@ export const pages = [
 		name: 'NoticeBar',
 		path: 'noticeBar',
 		component: NoticeBarPage,
+	},{
+		name: 'Search',
+		path: 'Search',
+		component: SearchPage,
 	},{
 		name: 'Textarea',
 		path: 'textarea',

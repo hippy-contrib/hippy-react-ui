@@ -37,7 +37,6 @@ export class NoticeBar extends React.Component {
 	}
 	render () {
 		const { children } = this.props;
-		console.log(require('./notice.png'));
 		return (
 			<View style={styles.container} >
 				<Icon

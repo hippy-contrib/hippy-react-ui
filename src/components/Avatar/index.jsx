@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon, { IconProps, DefaultIconProps } from '../Icons';
+import Icon, { IconProps, DefaultIconProps } from '../Icon';
 
 export class Avatar extends React.Component {
 	render () {

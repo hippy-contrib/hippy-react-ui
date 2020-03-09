@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, StyleSheet, View } from '@hippy/react';
+import { TextInput, StyleSheet } from '@hippy/react';
 
 import { stopPropagation } from '../../utils/event';
 import { setStyle, removeStyle } from '../../utils/css';
@@ -51,6 +51,7 @@ export class Input extends React.Component {
 
 		this.handleClick = this.handleClick.bind(this);
 		this.handleOnChange = this.handleOnChange.bind(this);
+		this.handleOnEndEditing = this.handleOnEndEditing.bind(this);
 
 		const { defaultValue, value } = props;
 		this.state = {
@@ -70,6 +71,14 @@ export class Input extends React.Component {
 		const { onChange } = this.props;
 		onChange(value);
 		this.setState({ value });
+	}
+	handleOnEndEditing (event) {
+		if (event.key === 'enter' || event.key === 'Enter') {
+			// console.log('dddddd', this, this.inputRef.getWrappedInstance);
+			console.log('dddddd', this.inputRef);
+			this.inputRef && this.inputRef.blur();
+			this.props.onEndEditing(event);
+		}
 	}
 	setWebPlaceholderColor (color) {
 		const key = `#${this.inputId}::placeholder`;
@@ -112,8 +121,10 @@ export class Input extends React.Component {
 			onKeyboardWillShow,
 			onSelectionChange,
 			maxLength,
+			onFocus,
 		} = this.props;
 		const { value } = this.state;
+		console.log('render', this.inputRef);
 		return (
 			<InputComp
 				data-hy-comp-id="input"
@@ -124,6 +135,7 @@ export class Input extends React.Component {
 				maxLength={maxLength}
 				style={this.getStyle()}
 				autoFocus={autoFocus}
+				onFocus={onFocus}
 				placeholder={placeholder}
 				editable={editable}
 				readOnly={!editable}
@@ -135,6 +147,7 @@ export class Input extends React.Component {
 				onKeyboardWillShow={onKeyboardWillShow}
 				onSelectionChange={onSelectionChange}
 				contentInset={0}
+				onKeyPress={this.handleOnEndEditing}
 				value={value}
 			/>
 		);

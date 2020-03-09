@@ -11,11 +11,31 @@ class SearchPage extends React.Component {
     location: PropTypes.object.isRequired,
     history: PropTypes.object.isRequired
 	};
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			firstValue: '',
+		}
+	}
 	render () {
 		const { history } = this.props;
 		return (
 			<View style={{ flex: 1 }} onClick={() => history.goBack()}>
-				<Search></Search>
+				<Search
+					placeholder='请输入'
+					defaultValue=''
+					value={this.state.firstValue}
+					showCancelButton
+					disabled={false}
+					cancelText={'关闭'}
+					onSubmit={(value) => console.log('onSubmit', value)}
+					onChange={(value) => this.setState({ firstValue: value })}
+					onFocus={() => console.log('onFocus')}
+					onBlur={(value) => console.log('onBlur')}
+					onCancel={() => console.log('onCancel')}
+					onClear={() => console.log('onClear')}
+				/>
 			</View>
 		);
 	}

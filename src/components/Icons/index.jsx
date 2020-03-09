@@ -50,7 +50,7 @@ export class Icon extends React.Component {
   }
   handleClick = (event) => {
     const { onClick, disabled } = this.props;
-    onClick && !disabled && onClick();
+    onClick && !disabled && onClick(event);
   }
 	render () {
     const {

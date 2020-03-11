@@ -1,9 +1,15 @@
 import React from 'react';
 import { ScrollView, StyleSheet, View } from '@hippy/react';
 
+import { NoticeBarPropTypes, NoticeBarDefaultPropTypes } from './props'
+
 import Text from '../Text';
-import Icon from '../Icon'
+import Icon from '../Icon';
+import Marquee from './marquee';
+
 import Notice from './notice.png';
+import Cancel from './nb-cancel.png';
+import Right from './right.png';
 
 const styles = StyleSheet.create({
 	container: {
@@ -35,32 +41,29 @@ export class NoticeBar extends React.Component {
 		this.bodyRef && this.bodyRef.scrollToWithDuration && this.bodyRef.scrollToWithDuration(0, 999999, 1000)
 	}
 	render () {
-		const { children } = this.props;
+		const { children, marqueeProps } = this.props;
 		return (
 			<View style={styles.container} >
 				<Icon
 					containerStyle={styles.leftIcon}
 					style={{ height: 18, width: 18 }}
 					source={Notice}
-					onError={(e) => console.log(e)}
 				/>
-				<ScrollView
-					ref={ref => this.bodyRef = ref}
-					horizontal
-					contentContainerStyle={styles.body}
-					showsHorizontalScrollIndicator={false}
-				>
-					<Text height={34} lineHeight={34} color="#f76a24" style={{ flex: 1 }} numberOfLines={1}>{children}</Text>
-				</ScrollView>
+				<Marquee { ...marqueeProps } >
+					{children}
+				</Marquee>
 				<Icon
 					containerStyle={styles.rightIcon}
 					style={{ height: 18, width: 18 }}
-					source={Notice}
-					onError={(e) => console.log(e)}
+					source={Right}
 				/>
 			</View>
 		)
 	}
 }
+
+
+NoticeBar.propTypes = NoticeBarPropTypes;
+NoticeBar.defaultProps = NoticeBarDefaultPropTypes;
 
 export default NoticeBar;

@@ -27,7 +27,6 @@ const styles = StyleSheet.create({
 		lineHeight: 34,
 	},
 	rightIcon: {
-
 	}
 })
 export class NoticeBar extends React.Component {

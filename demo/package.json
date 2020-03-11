@@ -45,15 +45,17 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "webpack --config ./build/hippy-webpack.web.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "dev": "npm run hippy:dev & npm run hippy:debug & npm run hippy:ios",
     "serve": "webpack-dev-server --config ./build/hippy-webpack.web.dev.js",
     "hippy:ios": "node ./build/run-ios.js",
     "hippy:debug": "hippy-debug",
     "hippy:dev": "webpack --config ./build/hippy-webpack.dev.js",
     "hippy:vendor": "webpack --config ./build/hippy-webpack.ios-vendor.js --config ./build/hippy-webpack.android-vendor.js",
-    "hippy:build": "webpack --config ./build/hippy-webpack.ios.js --config ./build/hippy-webpack.android.js"
+    "hippy:build": "webpack --config ./build/hippy-webpack.ios.js --config ./build/hippy-webpack.android.js",
+    "build:web": "webpack --config ./build/hippy-webpack.web.js",
+    "build:hippy": "npm run hippy:vendor && npm run hippy:build"
   },
   "eslintConfig": {
     "extends": "react-app"

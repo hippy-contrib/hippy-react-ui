@@ -68,11 +68,12 @@ export class Marquee extends React.Component {
 	 * 使用destroy，或者setState 都没法奏效
 	 */
 	resetAnimation () {
-		if (ISWEB) {
-			this.scrollAnimation.renderStyleAttribute(0); // web生效
-		} else {
-			this.setState({ textMarginLeft: 0 }); // hippy 生效
-		}
+		this.scrollAnimation.updateAnimation({ startValue: 0 })
+		// if (ISWEB) {
+		// 	this.scrollAnimation.renderStyleAttribute(0); // web生效
+		// } else {
+		// 	this.setState({ textMarginLeft: 0 }); // hippy 生效
+		// }
 	}
 	/**
 	 * @description 启动动画

@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { StyleProps } from '../../types';
 
-export const MarqueeProps = {
+export const Props = {
 	style: StyleProps,
 }
 
-export const MarqueeDefaultProps = {
+export const DefaultProps = {
 	style: {},
 }

@@ -13,12 +13,17 @@ import InputPage from './pages/Input';
 import TextareaPage from './pages/Textarea';
 import NoticeBarPage from './pages/NoticeBar';
 import SearchPage from './pages/Search';
+import ProgressPage from './pages/Progress';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Progress',
+		path: 'progress',
+		component: ProgressPage,
 	},{
 		name: 'NoticeBar',
 		path: 'noticeBar',

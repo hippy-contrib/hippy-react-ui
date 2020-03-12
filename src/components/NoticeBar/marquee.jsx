@@ -65,10 +65,11 @@ export class Marquee extends React.Component {
 	}
 	/**
 	 * 充值初始化状态
-	 * 使用destroy，或者setState 都没法奏效
+	 * 使用destroy，或者setState 都没法奏效, 没有触发renderStyleAttribute
+	 * 另外updateAnimation 对值的判断是if (startValue) 导致了无法将数值更新为0，可以考虑 用字符串 `0`，已经提pr
 	 */
 	resetAnimation () {
-		this.scrollAnimation.updateAnimation({ startValue: 0 })
+		this.scrollAnimation.updateAnimation({ startValue: '0' })
 		// if (ISWEB) {
 		// 	this.scrollAnimation.renderStyleAttribute(0); // web生效
 		// } else {

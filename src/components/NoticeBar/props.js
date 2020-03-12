@@ -12,7 +12,7 @@ export const MarqueeProps = {
 export const MarqueeDefaultProps = {
 	loop: false,
 	leading: 500,
-	trailing: 2000,
+	trailing: 800,
 	speed: 50,
 	style: {},
 }

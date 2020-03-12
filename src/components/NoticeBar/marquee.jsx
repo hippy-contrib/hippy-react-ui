@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { ScrollView, StyleSheet, View, Animation, UIManagerModule } from '@hippy/react';
+import { ScrollView, StyleSheet, Animation, UIManagerModule } from '@hippy/react';
 
 import { MarqueeProps, MarqueeDefaultProps } from './props';
 import Text from '../Text';

@@ -38,16 +38,16 @@ export class Progress extends React.Component {
 	}
 	startAnimate ({ layout: { width } }) {
 		const containerWidth = width;
-		const { animated, type } = this.props;
+		const { animated, ease_bezier } = this.props;
 		const barWidth = Math.floor(containerWidth / 100 * this.getPercent());
 
 		this.scrollAnimation = new Animation({
 			duration: animated ? 5000 : 0,   //动画持续时长
 			startValue: 0,
 			toValue: barWidth,
-			delay: 10000,     //至动画真正开始的延迟时间
+			delay: 0,     //至动画真正开始的延迟时间
 			mode: "timing",  //动画模式，现在只支持timing
-			timingFunction: type || "linear",  //动画缓动函数
+			timingFunction: ease_bezier,  //动画缓动函数
 		});
 		this.setState({ barWidth, containerWidth }, () => {
 			if (this.barref && this.scrollAnimation) {
@@ -59,26 +59,22 @@ export class Progress extends React.Component {
 	componentWillUnmount () {
 		this.scrollAnimation && this.scrollAnimation.destory();
 	}
-	componentDidMount () {
-		// if (this.barref && this.scrollAnimation) {
-		// 	ISWEB && this.scrollAnimation.setRef(this.barref); // web情况下需要绑定在ref上
-		// 	this.scrollAnimation.start();
-		// }
-	}
 	render () {
 		const { style, barStyle, unfilled } = this.props;
 		const { containerWidth } = this.state;
 		const fillStyle = unfilled ? {} : { backgroundColor: 'transparent' };
-		console.log('render');
 		return (
 			<View
 				style={[styles.container, fillStyle, style]}
 				onLayout={this.startAnimate}
 			>
-				{containerWidth && <View
-					ref={ref => this.barref = ref}
-					style={[styles.barStyle, barStyle, { width: this.scrollAnimation || 0 }]}
-				/>}
+				{
+					containerWidth &&
+					<View
+						ref={ref => this.barref = ref}
+						style={[styles.barStyle, barStyle, { width: this.scrollAnimation || 0 }]}
+					/>
+				}
 			</View>
 		)
 	}

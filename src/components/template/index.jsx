@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from '@hippy/react';
 
-import { NoticeBarPropTypes, NoticeBarDefaultPropTypes } from './props'
+import { Props, DefaultProps } from './props'
 
 
 const styles = StyleSheet.create({
@@ -30,7 +30,7 @@ export class NoticeBar extends React.Component {
 }
 
 
-NoticeBar.propTypes = NoticeBarPropTypes;
-NoticeBar.defaultProps = NoticeBarDefaultPropTypes;
+NoticeBar.propTypes = Props;
+NoticeBar.defaultProps = DefaultProps;
 
 export default NoticeBar;

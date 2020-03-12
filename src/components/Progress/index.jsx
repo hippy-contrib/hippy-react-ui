@@ -57,7 +57,7 @@ export class Progress extends React.Component {
 		})
 	}
 	componentWillUnmount () {
-		this.scrollAnimation && this.scrollAnimation.destory();
+		this.scrollAnimation && this.scrollAnimation.destroy();
 	}
 	render () {
 		const { style, barStyle, unfilled } = this.props;

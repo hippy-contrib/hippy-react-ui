@@ -9,3 +9,9 @@ export const fontSizesMap = {
 };
 
 export const fontSizes = Object.keys(fontSizesMap);
+
+/**
+ * 
+ * @param {String | Number} size 字体大小
+ */
+export const getFontSize = size => fontSizesMap[size] || size || fontSizesMap['sm'];

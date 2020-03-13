@@ -43,7 +43,7 @@ class Entry extends React.Component {
 		const { history } = this.props;
 		return (
 			<View style={styles.listItem} onClick={() => { history.push(item.path) }}>
-				{ item.name }
+				{ index + 1 }. { item.name }
 			</View>
 		);
 	}

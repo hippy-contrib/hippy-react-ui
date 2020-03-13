@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Animation } from '@hippy/react';
 
-import { ProgressPropTypes, ProgressDefaultProps } from './props'
+import { ProgressProps, ProgressDefaultProps } from './props'
 import { ISWEB } from '../../utils';
 
 const styles = StyleSheet.create({
@@ -81,7 +81,7 @@ export class Progress extends React.Component {
 }
 
 
-Progress.propTypes = ProgressPropTypes;
+Progress.propTypes = ProgressProps;
 Progress.defaultProps = ProgressDefaultProps;
 
 export default Progress;

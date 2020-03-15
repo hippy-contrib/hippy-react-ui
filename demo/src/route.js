@@ -15,12 +15,17 @@ import NoticeBarPage from './pages/NoticeBar';
 import SearchPage from './pages/Search';
 import ProgressPage from './pages/Progress';
 import RatingPage from './pages/Rating';
+import PickerPage from './pages/Picker';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Picker',
+		path: 'picker',
+		component: PickerPage,
 	},{
 		name: 'Rating',
 		path: 'rating',

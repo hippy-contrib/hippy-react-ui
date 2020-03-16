@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
 		height: 56,
 		paddingLeft: 12,
 		justifyContent: 'center',
-		alignItems: 'flex-start',
+		alignItems: 'center',
 		backgroundColor: "#ffffff",
 		borderBottomWidth: 1,
 		borderBottomColor: '#eeeeee',
@@ -34,6 +34,7 @@ class Entry extends React.Component {
 			dataSource: Object.keys(Array.from({length: 100})).map((item, index) => {
         return {
 					name: 'item' + index,
+					color: this.getRandomColor(),
 					hide: false
         }
       }),
@@ -43,7 +44,10 @@ class Entry extends React.Component {
 		this.setRef = (index, element) => {
 			this.listItem = this.listItem || []
 			this.listItem[index] = ReactDOM.findDOMNode(element);
-    };
+		};
+		this.toggleItem = this.toggleItem.bind(this)
+		this.getRenderRow = this.getRenderRow.bind(this)
+		this.setRef = this.setRef.bind(this)
 	}
  	getRenderRow (index) {
 		if (index < 0 || index >= this.state.dataSource.length) return null;
@@ -60,9 +64,9 @@ class Entry extends React.Component {
 			// </View>)
 			<View style={{
         ...styles.listItem,
-				backgroundColor: color,
-				display: item.hide ? 'none' : 'block'
-      }} ref={this.setRef.bind(this, index)}>
+				backgroundColor: item.color,
+				display: item.hide ? 'none' : 'flex'
+      }} ref={this.setRef.bind(this, index)} key={item.name}>
 				{ item.name }
 			</View>
 		);
@@ -73,18 +77,15 @@ class Entry extends React.Component {
 	getRowKey = (index) => {
 		return this.state.dataSource[index].path;
 	}
-	scroll (event) {
-		console.log(event)
-	}
 	render () {
 		const { dataSource = [] } = this.state;
 		return (
 			<ListView style={[styles.container, {
 				paddingTop: this.state.offsetTop
 			}]}
+				showScrollIndicator={false}
 				numberOfRows={dataSource.length}
-				onScroll={this.scroll.bind(this)}
-				renderRow={this.getRenderRow.bind(this)}
+				renderRow={this.getRenderRow}
 				getRowKey={this.getRowKey}
 				getRowStyle={() => ({ flex: 1 })}
 			/>
@@ -92,31 +93,34 @@ class Entry extends React.Component {
 	}
 	componentDidMount () {
 		this.toggleItem()
-		window.onscroll = () => {
-			this.timer && clearTimeout(this.timer)
-			this.timer = setTimeout(() => {
-				console.log('timout')
-				this.toggleItem()
-			}, 300);
-		}
+		window.onscroll = this.throttle(this.toggleItem, 100)
 	}
 	toggleItem () {
 		let { height } = Dimensions.get('window');
 		let dataSource = this.state.dataSource
-		let offsetTop = this.state.offsetTop
+		let offsetTop = 0
 		this.listItem.forEach((item, index) => {
 			let node = item.parentNode
+			this.state.dataSource[index].clientHeight = this.state.dataSource[index].clientHeight || node.clientHeight
 			let isHide = (node.getBoundingClientRect().top <= -height || node.getBoundingClientRect().top >= 2 * height)
 			let isTopHide = node.getBoundingClientRect().top <= -height
 			dataSource[index].hide = isHide
-			console.log(node.clientHeight)
-			offsetTop = offsetTop + (isTopHide ? node.clientHeight : 0)
+			offsetTop = offsetTop + (isTopHide ? this.state.dataSource[index].clientHeight : 0)
 		})
-		console.log(offsetTop)
 		this.setState({
 			dataSource,
 			offsetTop
 		})
+	}
+	throttle (cb, time) {
+		let _lastTime = null;
+		return function () {
+			let _nowTime = +new Date()
+			if (_nowTime - _lastTime > time || !_lastTime) {
+				cb();
+				_lastTime = _nowTime
+			}
+		}
 	}
 }
 

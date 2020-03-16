@@ -3,7 +3,7 @@ import { View } from '@hippy/react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import Icon from '../../../../src/components/Icons';
+import Icon from '../../../../src/components/Icon';
 
 class IconPage extends React.Component {
 	static propTypes = {

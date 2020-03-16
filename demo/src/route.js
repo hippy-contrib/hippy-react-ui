@@ -6,12 +6,55 @@ import SwitchPage from './pages/Switch';
 import TabsPage from './pages/Tabs';
 import ModalPage from './pages/Modal';
 import ListPage from './pages/List';
+import ButtonPage from './pages/Button';
+import CardPage from './pages/Card';
+import BadgePage from './pages/Badge';
+import ToastPage from './pages/Toast';
+import InputPage from './pages/Input';
+import TextareaPage from './pages/Textarea';
+import NoticeBarPage from './pages/NoticeBar';
+import SearchPage from './pages/Search';
+import ProgressPage from './pages/Progress';
+import RatingPage from './pages/Rating';
+import PickerPage from './pages/Picker';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Picker',
+		path: 'picker',
+		component: PickerPage,
+	},{
+		name: 'Rating',
+		path: 'rating',
+		component: RatingPage,
+	},{
+		name: 'Progress',
+		path: 'progress',
+		component: ProgressPage,
+	},{
+		name: 'NoticeBar',
+		path: 'noticeBar',
+		component: NoticeBarPage,
+	},{
+		name: 'Search',
+		path: 'Search',
+		component: SearchPage,
+	},{
+		name: 'Textarea',
+		path: 'textarea',
+		component: TextareaPage,
+	},{
+		name: 'Input',
+		path: 'input',
+		component: InputPage,
+	},{
+		name: 'Toast',
+		path: 'toast',
+		component: ToastPage,
 	},{
 		name: 'Avatar',
 		path: 'avatar',
@@ -40,6 +83,18 @@ export const pages = [
 		name: 'List',
 		path: 'list',
 		component: ListPage,
+	},{
+		name: 'Button',
+		path: 'button',
+		component: ButtonPage,
+	},{
+		name: 'Card',
+		path: 'card',
+		component: CardPage,
+	},{
+		name: 'Badge',
+		path: 'badge',
+		component: BadgePage,
 	}
 ];
 

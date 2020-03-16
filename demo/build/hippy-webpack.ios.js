@@ -61,12 +61,16 @@ module.exports = {
       {
         test: /\.(png|jpg|gif)$/,
         use: [{
-          loader: 'file-loader',
+          loader: 'url-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'assets/',
           },
         }],
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

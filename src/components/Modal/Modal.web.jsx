@@ -5,10 +5,11 @@ import { View } from '@hippy/react';
 import { ISWEB } from '../../utils';
 import { modalPropTypes, modalDefaultProps } from './props';
 import { styles } from './styles';
+import { stopPropagation } from '../../utils/event';
 
 // 根据平台动态加载，否则在hippy里面直接引入css文件，会报错
+// TODO 做成配置，webpack配置，或者统一入口
 if (ISWEB) require('rodal/lib/rodal.css');
-ISWEB && document.createElement("div");
 
 const animationTypeMap = {
 	slide: 'slideUp',
@@ -19,7 +20,16 @@ const animationTypeMap = {
  * click mask 通过onClose来执行，有一定风险，rodal监听到键盘也会调用onclose
  */
 export class Modal extends React.Component {
+	constructor(props) {
+		super(props);
 
+		this.handleMaskClick = this.handleMaskClick.bind(this);
+	}
+	handleMaskClick (event) {
+		const { onMaskClick } = this.props;
+		onMaskClick(event);
+		return stopPropagation(event);
+	}
 	render () {
 		const {
 			children,
@@ -27,8 +37,8 @@ export class Modal extends React.Component {
 			transparent,
 			animated,
 			animation,
-			onMaskClick,
 			maskStyle,
+			style,
 		} = this.props;
 		return (
 			<Rodal
@@ -43,10 +53,11 @@ export class Modal extends React.Component {
 				duration={animated ? 300 : 0}
 				closeMaskOnClick={false}
 				animation={animationTypeMap[animation] || 'fade'}
+				onClose={() => {}}
 			>
 				<View
-					style={[ styles.mask, transparent ? { backgroundColor: 'transparent' } : {}, maskStyle ]}
-					onClick={onMaskClick}
+					style={[ styles.mask, transparent ? { backgroundColor: 'transparent' } : {}, maskStyle, style ]}
+					onClick={this.handleMaskClick}
 				>
 						{ children }
 				</View>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Platform } from '@hippy/react';
+import { View } from '@hippy/react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import Modal, { Confirm } from '../../../../src/components/Modal';
+import Modal, { Confirm, Popup } from '../../../../src/components/Modal';
 import Text from '../../../../src/components/Text';
+import Button from '../../../../src/components/Button';
 
-const Item = (props) => <Text color={props.selected ? 'red' : 'green'}>2lksd</Text>;
 
 class ModalPage extends React.Component {
 	static propTypes = {
@@ -22,7 +22,10 @@ class ModalPage extends React.Component {
 				visible: false,
 			},
 			confirm: {
-				visible: true,
+				visible: false,
+			},
+			popup: {
+				visible: false,
 			}
 		};
 	}
@@ -33,11 +36,12 @@ class ModalPage extends React.Component {
 	}
 	render () {
 		const { history } = this.props;
-		const { modal, confirm } = this.state;
+		const { modal, confirm, popup } = this.state;
 		return (
-			<View style={{ flex: 1, padding: 12 }}>
-				<View onClick={() => this.doAction('modal', true)}>open modal</View>
-				<View onClick={() => this.doAction('confirm', true)}>open confirm</View>
+			<View style={{ flex: 1, padding: 12 }} onClick={() => history.goBack()}>
+				<Button onClick={() => this.doAction('modal', true)}>open modal</Button>
+				<Button style={{ marginTop: 24 }} onClick={() => this.doAction('confirm', true)}>open confirm</Button>
+				<Button style={{ marginTop: 24 }} onClick={() => this.doAction('popup', true)}>open popup</Button>
 
 				<Modal
 					visible={modal.visible}
@@ -68,6 +72,22 @@ class ModalPage extends React.Component {
 				>
 					<Text>confirm</Text>
 				</Confirm>
+				<Popup
+					visible={popup.visible}
+					transparent={false}
+					darkStatusBarText={true}
+					animated={true}
+					animation={'fade'}
+					animationDuration={300}
+					onMaskClick={() => this.doAction('popup', false)}
+					title={'popup'}
+					okText={'ok'}
+					cancelText={'cancel'}
+					onOk={() => this.doAction('popup', false)}
+					onCancel={() => this.doAction('popup', false)}
+				>
+					<Text>confirm</Text>
+				</Popup>
 			</View>
 		);
 	}

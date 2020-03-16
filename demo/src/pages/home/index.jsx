@@ -1,19 +1,25 @@
 import React from "react";
-import {ListView, View, StyleSheet} from "@hippy/react";
+import {ListView, View, StyleSheet, ScrollView} from "@hippy/react";
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
+
+import Text from '../../../../src/components/Text';
 
 import pages from '../../route';
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: 'red',
-		justifyContent: 'flex-start',
-		flexDirection: 'column',
+		// backgroundColor: 'red',
+		// justifyContent: 'flex-start',
+		// flexDirection: 'column',
 	},
 	listItem: {
 		height: 56,
+		lineHeight: 56,
 		paddingLeft: 12,
+		display: 'flex',
+		flex: 1,
+		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'flex-start',
 		backgroundColor: "#ffffff",
@@ -42,14 +48,28 @@ class Entry extends React.Component {
 
 		const { history } = this.props;
 		return (
-			<View style={styles.listItem} onClick={() => { history.push(item.path) }}>
-				{ item.name }
+			<View key={`${index}`} style={styles.listItem}  onClick={() => { history.push(item.path) }}>
+				<Text>
+					{`${index + 1}. ${item.name}` }
+				</Text>
 			</View>
 		);
 	}
 	getRowKey = (index) => {
 		return this.state.dataSource[index].path;
 	}
+	// render () {
+	// 	const { dataSource = [] } = this.state;
+	// 	return (
+	// 		<ScrollView>
+	// 			<View style={{ flex: 1 }}>
+	// 				{
+	// 					dataSource.map((item, index) => this.getRenderRow(index))
+	// 				}
+	// 			</View>
+	// 		</ScrollView>
+	// 	);
+	// }
 	render () {
 		const { dataSource = [] } = this.state;
 		return (

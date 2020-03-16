@@ -5,10 +5,9 @@
 import React from "react";
 import { View, Image, StyleSheet } from "@hippy/react";
 import PropTypes from 'prop-types';
-import stylePropType from 'react-style-proptype';
 
 import { ImageProps, DefaultImageProps } from '../../types/image';
-
+import { StyleProps } from '../../types';
 import { iconSizesMap, iconSizes } from '../../utils/iconSize';
 
 const styles = StyleSheet.create({
@@ -22,7 +21,7 @@ const styles = StyleSheet.create({
   iconStyle: {
     height: iconSizesMap['xs'],
     width: iconSizesMap['xs'],
-    backgroundColor: 'green',
+    backgroundColor: 'transparent',
   }
 })
 export class Icon extends React.Component {
@@ -50,7 +49,7 @@ export class Icon extends React.Component {
   }
   handleClick = (event) => {
     const { onClick, disabled } = this.props;
-    onClick && !disabled && onClick();
+    onClick && !disabled && onClick(event);
   }
 	render () {
     const {
@@ -66,6 +65,7 @@ export class Icon extends React.Component {
       onLoadEnd,
       onError,
       onProgress,
+      style,
     } = this.props;
 
     const statusStyle = disabled ? disabledStyle : {};
@@ -74,8 +74,8 @@ export class Icon extends React.Component {
         style={[styles.containerStyle, this.mergeStyle(containerStyle), statusStyle]}
         onClick={this.handleClick}>
         <Image
-          style={[styles.iconStyle, this.mergeStyle(iconStyle), statusStyle, { resizeMode }]}
-          source={{ uri: source }}
+          style={[styles.iconStyle, this.mergeStyle(iconStyle), statusStyle, { resizeMode }, style]}
+          source={{ uri: source && source.default ? source.default : source }}
           onLayout={onLayout}
           onLoad={onLoad}
           onLoadStart={onLoadStart}
@@ -90,8 +90,9 @@ export class Icon extends React.Component {
 
 export const IconProps = {
   size: PropTypes.oneOfType([PropTypes.oneOf(iconSizes), PropTypes.number]), // icon尺寸
-  containerStyle: stylePropType,
+  containerStyle: StyleProps,
   onClick: PropTypes.func,
+  style: StyleProps,
   ...ImageProps,
 }
 
@@ -100,6 +101,7 @@ export const DefaultIconProps = {
   containerStyle: {},
   onClick: () => {},
   ...DefaultImageProps,
+  style: {},
 }
 
 Icon.propTypes = IconProps;

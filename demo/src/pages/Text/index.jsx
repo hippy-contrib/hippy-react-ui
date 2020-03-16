@@ -27,7 +27,7 @@ class TextPage extends React.Component {
 					<Text>3333</Text>
 					<Text>
 						我说嘿嘿，你说嘿嘿。我说嘿嘿，你说嘿嘿。我说嘿嘿，你说嘿嘿。我说嘿嘿，你说嘿嘿。我说嘿嘿，你说嘿嘿。我说嘿嘿，你说嘿嘿。我说嘿嘿，你说嘿嘿。
-						<Text>sdfsdfsd</Text>
+						<Text color='red'>sdfsdfsd</Text>
 					</Text>
 					555555
 					<Text>sdfsdfsd</Text>

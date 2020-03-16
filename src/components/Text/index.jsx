@@ -11,7 +11,7 @@ import { Text as HyText } from '@hippy/react';
 import PropTypes from 'prop-types';
 
 import { LayoutableProps, ClickableProps, DefaultLayoutableProps, DefaultClickableProps } from '../../types/event';
-import { StyleProps, DefaultStyleProps, ellipsizeMode } from '../../types';
+import { StyleProps, ellipsizeMode } from '../../types';
 import { fontSizesMap, fontSizes } from '../../utils/fontSize';
 import { ISWEB } from '../../utils';
 
@@ -20,7 +20,7 @@ import { ISWEB } from '../../utils';
  * 当父节点有Text组件时，使用的是span标签，不换行
  * 否则使用的div标签，换行
  */
-const TextContext = React.createContext({ isInAParentText: false, textDepth: 0 });
+const TextContext = React.createContext({ isInAParentText: false, textDepth: 0, parentStyle: {} });
 
 // hippy-react-web 中 Text组件使用了getChildContext，却没有声明childContextTypes
 if (ISWEB) {
@@ -30,30 +30,62 @@ if (ISWEB) {
 	HyText.contextType = TextContext;
 }
 export class Text extends React.Component {
-	getStyle () {
-		const { size, height, lineHeight, color } = this.props;
-		let fontSize = fontSizesMap[size] || size || fontSizesMap['sm'];
-		let style = { fontSize, isInAParentText: true };
+	getStyle (props = this.props) {
+		const { size, height, opacity, lineHeight, color } = props;
+		let style = { isInAParentText: true };
+		size && (style = { ...style, fontSize: fontSizesMap[size] || size || fontSizesMap['sm'] });
 		height && (style = { ...style, height });
 		lineHeight && (style = { ...style, lineHeight });
 		color && (style = { ...style, color });
+		opacity && (style = { ...style, opacity });
 		return style;
 	}
+	/**
+	 * 解决text嵌套问题
+	 * 如果子节点不是数组，且不是组件，则直接渲染
+	 * 如果子节点是组件，则直接渲染
+	 * 如果子节点是数组，则遍历每个节点
+	 * 	若是组件，直接渲染
+	 * 	否认递归使用Text组件
+	 * 		样式进行传递
+	 */
+	renderChildren () {
+		const { children, ...otherProps } = this.props;
+		if (!Array.isArray(children)) return children;
+		return children.map((child, index) => {
+			if (React.isValidElement(child)) {
+				return <child.type key={`${child.type}_${index}`} { ...child.props } />;
+			}
+			else {
+				return <Text key={`${child.type}_${index}`} { ...otherProps }>{child}</Text>
+			}
+		});
+	}
 	render () {
-		const { onLayout, onClick, style, opacity, children, numberOfLines, ellipsizeMode } = this.props;
-		const { textDepth } = this.context;
-		const customStyle = !Array.isArray(style) ? [ style ] : style;
+		const { onLayout, onClick, style = {}, opacity = 1, numberOfLines, ellipsizeMode = 'head' } = this.props;
+		const { textDepth, parentStyle } = this.context;
+		let customStyle = !Array.isArray(style) ? [ style ] : style;
+		let pStyle = Array.isArray(parentStyle) ? parentStyle : [ parentStyle ];
+		customStyle = [
+			...pStyle,
+			this.getStyle(),
+			...customStyle
+		];
 		return (
-			<TextContext.Provider value={{ textDepth: textDepth + 1, isInAParentText: textDepth > 0 }} >
+			<TextContext.Provider
+				value={{ textDepth: textDepth + 1, isInAParentText: textDepth > 0, parentStyle: customStyle }}
+			>
 				<HyText
 					onLayout={onLayout}
 					onClick={onClick}
 					opacity={opacity}
-					style={[ this.getStyle(), ...customStyle ]}
+					style={customStyle}
 					numberOfLines={numberOfLines}
 					ellipsizeMode={ellipsizeMode}
 				>
-					{children}
+					{
+						this.renderChildren()
+					}
 				</HyText>
 			</TextContext.Provider>
 		);
@@ -76,14 +108,17 @@ Text.propTypes = {
 	// children: PropTypes.any,
 }
 
+/**
+ * 去除默认的props，用于嵌套使用组件
+ */
 Text.defaultProps = {
 	...DefaultLayoutableProps,
 	...DefaultClickableProps,
-	...DefaultStyleProps,
-	size: 'sm',
-	opacity: 1,
-	ellipsizeMode: 'head',
-	color: '#afafaf',
+	// ...DefaultStyleProps,
+	// size: 'sm',
+	// opacity: 1,
+	// ellipsizeMode: 'head',
+	// color: '#afafaf',
 }
 
 export default Text;

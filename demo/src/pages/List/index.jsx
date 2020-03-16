@@ -1,5 +1,5 @@
 import React from "react";
-import {ListView, View, StyleSheet, Dimensions} from "@hippy/react";
+import {ListView, View, StyleSheet, Dimensions, Platform} from "@hippy/react";
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
@@ -39,12 +39,14 @@ class Entry extends React.Component {
         }
       }),
 			route: 'home',
-			offsetTop: 0
+			offsetTop: 0,
+			cacheNodeList: []
 		}
 		this.setRef = (index, element) => {
 			this.listItem = this.listItem || []
-			this.listItem[index] = ReactDOM.findDOMNode(element);
-		};
+			this.listItem[index] = ReactDOM.findDOMNode(element)
+		}
+		this.listRef = React.createRef()
 		this.toggleItem = this.toggleItem.bind(this)
 		this.getRenderRow = this.getRenderRow.bind(this)
 		this.setRef = this.setRef.bind(this)
@@ -52,23 +54,14 @@ class Entry extends React.Component {
  	getRenderRow (index) {
 		if (index < 0 || index >= this.state.dataSource.length) return null;
 		const item = this.state.dataSource[index];
-		const color = this.getRandomColor()
-		console.log('getrenderrow')
 		return (
-			// item.hide ? '' : (
-			// <View style={{
-      //   ...styles.listItem,
-			// 	backgroundColor: color
-      // }} ref={this.setRef.bind(this, index)}>
-			// 	{ item.name }
-			// </View>)
+			item.hide ? null : (
 			<View style={{
         ...styles.listItem,
-				backgroundColor: item.color,
-				display: item.hide ? 'none' : 'flex'
-      }} ref={this.setRef.bind(this, index)} key={item.name}>
+				backgroundColor: item.color
+      }} ref={this.setRef.bind(this, index)}>
 				{ item.name }
-			</View>
+			</View>)
 		);
   }
   getRandomColor = function () {
@@ -83,6 +76,7 @@ class Entry extends React.Component {
 			<ListView style={[styles.container, {
 				paddingTop: this.state.offsetTop
 			}]}
+				ref={this.listRef}
 				showScrollIndicator={false}
 				numberOfRows={dataSource.length}
 				renderRow={this.getRenderRow}
@@ -91,21 +85,44 @@ class Entry extends React.Component {
 			/>
 		);
 	}
+	initNodeCache () {
+		let cacheNodeList = []
+		this.listItem.forEach((item, index) => {
+			let node = item.parentNode
+			let cacheNode = {}
+			cacheNode.clientHeight = cacheNode.clientHeight || node.clientHeight
+			cacheNode.offsetTop = cacheNode.offsetTop || node.offsetTop
+			cacheNode.node = item
+			cacheNodeList[index] = cacheNode
+		})
+		this.setState({
+			cacheNodeList
+		})
+	}
 	componentDidMount () {
-		this.toggleItem()
-		window.onscroll = this.throttle(this.toggleItem, 100)
+		if (Platform.OS === 'web') {
+			this.initNodeCache()
+			setTimeout(this.toggleItem, 0)
+			this.scrollCb = this.throttle(this.toggleItem, 100)
+			window.addEventListener('scroll', this.scrollCb)
+		}
+	}
+	componentWillUnmount () {
+		if (Platform.OS === 'web') {
+			window.removeEventListener('scroll', this.scrollCb)
+		}
 	}
 	toggleItem () {
 		let { height } = Dimensions.get('window');
-		let dataSource = this.state.dataSource
+		let {dataSource, cacheNodeList} = this.state
 		let offsetTop = 0
-		this.listItem.forEach((item, index) => {
-			let node = item.parentNode
-			this.state.dataSource[index].clientHeight = this.state.dataSource[index].clientHeight || node.clientHeight
-			let isHide = (node.getBoundingClientRect().top <= -height || node.getBoundingClientRect().top >= 2 * height)
-			let isTopHide = node.getBoundingClientRect().top <= -height
+		let scrollTop = document.documentElement.scrollTop
+		dataSource.forEach((item, index) => {
+			let top = cacheNodeList[index].offsetTop - scrollTop
+			let isHide = (top <= -height || top >= 2 * height)
+			let isTopHide = top <= -height
 			dataSource[index].hide = isHide
-			offsetTop = offsetTop + (isTopHide ? this.state.dataSource[index].clientHeight : 0)
+			offsetTop = offsetTop + (isTopHide ? cacheNodeList[index].clientHeight : 0)
 		})
 		this.setState({
 			dataSource,

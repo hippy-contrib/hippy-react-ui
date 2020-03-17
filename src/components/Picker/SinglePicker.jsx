@@ -11,7 +11,7 @@ import { ScrollView, View, StyleSheet } from '@hippy/react';
 import SelectWrapper from './SelectWrapper';
 import { CascaderPickerPropTypes, CascaderPickerDefaultProps } from './props';
 import Text from '../Text';
-import { flattenStyle, ISWEB, hairlineWidth } from '../../utils';
+import { flattenStyle, hairlineWidth, ISWEB } from '../../utils';
 
 const ITEMHEIGHT = 34;
 
@@ -105,16 +105,15 @@ export class Picker extends React.Component {
 
 	scrollTo = y => {
 		if (this.scrollerRef) {
-			this.scrollerRef.scrollTo(0, y, false);
+			ISWEB ?
+				this.scrollerRef.scrollTo(0, y, true) :
+				this.scrollerRef.scrollTo({  y, animated: false })
 		}
 	}
 
 	fireValueChange = selectedValue => {
-		if (
-			this.props.selectedValue !== selectedValue &&
-			this.props.onValueChange
-		) {
-			this.props.select(selectedValue);
+		if (this.props.onValueChange) {
+			this.props.select(selectedValue, this.itemHeight, this.scrollTo);
 			this.props.onValueChange(selectedValue);
 		}
 	}
@@ -125,7 +124,7 @@ export class Picker extends React.Component {
 		this.scrollBuffer = setTimeout(() => {
 			this.clearScrollBuffer();
 			this.props.doScrollingComplete(y, this.itemHeight, this.fireValueChange);
-		}, 80);
+		}, 100);
 	}
 	/**
 	 * @description 渲染每一个选型
@@ -158,8 +157,8 @@ export class Picker extends React.Component {
 		const items = React.Children.map(children, (item, index) => this.renderItem(item, index));
 
 		// 兼容web和hippy，web没有onScrollEndDrag，所以只能在onScroll事件中做处理
-		// const funcName = ISWEB ? 'onScroll' : 'onScrollEndDrag';
-		const onScrollProps = { onScroll: this.onScroll}
+		const funcName = ISWEB ? 'onScroll' : 'onScrollEndDrag';
+		const onScrollProps = { [funcName]: this.onScroll}
 
 		// scroll web scrollEnabled 需要做兼容
 		return (
@@ -176,7 +175,7 @@ export class Picker extends React.Component {
 				>
 					<View style={{ flex: 1 }} ref={el => (this.contentRef = el)}>{items}</View>
 				</ScrollView>
-
+				
 			</View>
 		);
 	}

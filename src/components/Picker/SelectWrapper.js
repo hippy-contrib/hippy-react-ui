@@ -26,7 +26,7 @@ export default function(ComposedComponent) {
 
     computeChildIndex(top, itemHeight, childrenLength) {
       const index = Math.round(top / itemHeight);
-      return Math.min(index, childrenLength - 1);
+      return Math.max(Math.min(index, childrenLength - 1), 0);
     }
 
     doScrollingComplete = (top, itemHeight, fireValueChange) => {
@@ -36,7 +36,7 @@ export default function(ComposedComponent) {
       if (child) {
         fireValueChange(child.props.value);
       } else if (console.warn) {
-        console.warn('child not found', children, index);
+        console.warn('child not found', index);
       }
     }
 

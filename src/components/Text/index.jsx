@@ -61,6 +61,9 @@ export class Text extends React.Component {
 			}
 		});
 	}
+	componentDidMount () {
+		console.log('Text componentDidMount');
+	}
 	render () {
 		const { onLayout, onClick, style = {}, opacity = 1, numberOfLines, ellipsizeMode = 'head' } = this.props;
 		const { textDepth, parentStyle } = this.context;

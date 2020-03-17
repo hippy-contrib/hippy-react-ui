@@ -6,7 +6,7 @@ import { ScrollView, View, StyleSheet } from '@hippy/react';
 
 import { CascaderPickerPropTypes, CascaderPickerDefaultProps } from './props';
 import SinglePicker from './SinglePicker.jsx';
-import { isDef } from '../../utils';
+import { isDef, ISWEB } from '../../utils';
 
 export class CascaderPicker extends React.Component {
 
@@ -29,6 +29,13 @@ export class CascaderPicker extends React.Component {
       }
     }
     return value;
+	}
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			width: 0,
+		}
 	}
 	/**
 	 * @description 获取第n级基础数据，可以做个缓存优化
@@ -77,17 +84,21 @@ export class CascaderPicker extends React.Component {
 		onChange(newValues);
 	}
 	renderSingle (index) {
-		const { value } = this.props;
+		const { value, cols } = this.props;
+		const { width } = this.state;
 		const nodes = this.getCol(index);
 		const key = value.slice(0, index).join('_');
 		// 是否可以选择，出于非第一个，并且上一级的值为空，则不能编辑
 		const disabled = index !== 0 && (isDef(value[index - 1]) || value[index - 1] === '');
+
+		const style = width ? { width: width / cols } : { flex: 1 };
 		return (
 			<SinglePicker
 				key={`cascader_${index}_${key}`}
+				index={index}
 				selectedValue={value[index]}
 				onValueChange={selectedValue => this.handleOnChange(index, selectedValue)}
-				style={{ flex: 1 }}
+				style={style}
 				disabled={disabled}
 			>
 				{
@@ -99,7 +110,9 @@ export class CascaderPicker extends React.Component {
 	render () {
 		const { cols } = this.props;
 		return (
-			<View style={{ flexDirection: 'row' }}>
+			<View
+				style={{ flexDirection: 'row' }}
+				onLayout={({ layout: { width }}) => !this.state.width && this.setState({ width })}>
 			{
 				Array.from(Array(cols)).map((item, index) => this.renderSingle(index))
 			}

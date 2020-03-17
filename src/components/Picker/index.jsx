@@ -138,6 +138,7 @@ export class Picker extends React.Component {
 		} = this.props;
 		const { values } = this.state;
 		const Comp = cascade ? CascaderPicker : MultiPicker;
+		if (!visible) return null;
 		return (
 			<Modal
 				transparent={false}

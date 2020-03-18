@@ -6,9 +6,9 @@ import { NoticeBarPropTypes, NoticeBarDefaultPropTypes } from './props'
 import Icon from '../Icon';
 import Marquee from './marquee';
 
-import Notice from './notice.png';
+import Notice from '../../../assets/notice.png';
 // import Cancel from './nb-cancel.png';
-import Right from './right.png';
+import Right from '../../../assets/right.png';
 
 const styles = StyleSheet.create({
 	container: {

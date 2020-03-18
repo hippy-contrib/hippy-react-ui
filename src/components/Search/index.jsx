@@ -9,8 +9,8 @@ import { SearchProps, SearchDefaultProps } from './props';
 import { stopPropagation } from '../../utils/event';
 
 
-import SearchIcon from './ios-search.png';
-import CancelIcon from './cancel.png';
+import SearchIcon from '../../../assets/ios-search.png';
+import CancelIcon from '../../../assets/cancel.png';
 
 const styles = StyleSheet.create({
 	container: {

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { StyleProps } from '../../types';
 
 export const Props = {

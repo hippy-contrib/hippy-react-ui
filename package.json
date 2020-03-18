@@ -2,6 +2,7 @@
   "name": "hippy-react-components",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/index.js",
   "dependencies": {
     "@hippy/react": "^2.0.1",
     "@hippy/react-web": "^2.0.1",

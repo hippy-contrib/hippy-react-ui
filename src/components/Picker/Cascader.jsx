@@ -2,11 +2,11 @@
  * 级联选择器
  */
 import React from 'react';
-import { ScrollView, View, StyleSheet } from '@hippy/react';
+import { View } from '@hippy/react';
 
 import { CascaderPickerPropTypes, CascaderPickerDefaultProps } from './props';
 import SinglePicker from './SinglePicker.jsx';
-import { isDef, ISWEB } from '../../utils';
+import { isDef } from '../../utils';
 
 export class CascaderPicker extends React.Component {
 

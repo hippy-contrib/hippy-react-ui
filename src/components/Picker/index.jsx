@@ -6,7 +6,6 @@ import SinglePicker from './SinglePicker';
 import MultiPicker from './MultiPicker';
 import CascaderPicker from './Cascader';
 import { PickerPropTypes, PickerDefaultProps } from './props';
-import { stopPropagation } from '../../utils/event';
 import { hairlineWidth, arrayCompare } from '../../utils';
 import Header from './Header';
 

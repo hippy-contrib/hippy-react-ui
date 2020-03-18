@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, StyleSheet, View } from '@hippy/react';
+import { TextInput, StyleSheet } from '@hippy/react';
 
 import { stopPropagation } from '../../utils/event';
 import { setStyle, removeStyle } from '../../utils/css';

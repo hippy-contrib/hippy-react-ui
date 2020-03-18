@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { ScrollView, View, StyleSheet } from '@hippy/react';
+import { View } from '@hippy/react';
 
 import { MultiPickerPropTypes, MultiPickerDefaultProps } from './props';
 import SinglePicker from './SinglePicker';

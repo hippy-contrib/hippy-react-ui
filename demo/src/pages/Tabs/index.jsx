@@ -3,7 +3,7 @@ import { View } from '@hippy/react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import { Tabs } from '../../../../src/components/Tabs';
+import Tabs from '../../../../src/components/Tabs';
 import Text from '../../../../src/components/Text';
 
 const Item = (props) => <Text color={props.selected ? 'red' : 'green'}>2lksd</Text>;

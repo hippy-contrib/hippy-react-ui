@@ -12,7 +12,7 @@ import TabBar from './TabBar';
 import TabPanel from './TabPanel';
 import { tabPageProps, tabsProps } from './props';
 import { ISWEB } from '../../utils';
-import { StyleProps } from '../../types';
+// import { StyleProps } from '../../types';
 
 import { COLOR } from './props';
 

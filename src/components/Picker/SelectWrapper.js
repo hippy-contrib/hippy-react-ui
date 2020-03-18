@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ItemProps } from './props';
+// import { ItemProps } from './props';
 
 const Item = ({ value, label }) => <></>;
 

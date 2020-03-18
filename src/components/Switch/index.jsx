@@ -180,7 +180,7 @@ export class Switch extends React.Component {
     }
   }
 	render () {
-		const { platform, checked } = this.props;
+		const { platform } = this.props;
 		const styles = platform === 'android' ? andStyles : iosStyles;
 		return (
 			<View style={this.getContainerStyle()} onClick={this.handleClick}>

@@ -5,7 +5,7 @@ import React from 'react';
 import { View } from '@hippy/react';
 
 import { CascaderPickerPropTypes, CascaderPickerDefaultProps } from './props';
-import SinglePicker from './SinglePicker.js';
+import SinglePicker from './SinglePicker';
 import { isDef } from '../../utils';
 
 export class CascaderPicker extends React.Component {

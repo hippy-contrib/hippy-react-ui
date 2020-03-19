@@ -61,7 +61,7 @@ export class Navigator extends React.Component {
 		const { back, leftContent } = this.props;
 		const backContent = <Icon size='xs' onClick={event => this.handleLeftClick(event)} source={BlueBack} />
 
-		const body = React.isValidElement(leftContent) ? leftContent : <Text size='s' >{ leftContent }</Text>;
+		const body = React.isValidElement(leftContent) ? leftContent : <Text size='sm' >{ leftContent }</Text>;
 
 		return (
 			<View style={styles.leftContainer}>
@@ -77,7 +77,7 @@ export class Navigator extends React.Component {
 		return (
 			<View style={styles.rightContainer}>
 				{
-					React.isValidElement(rightContent) ? rightContent : <Text size='s' >{ rightContent }</Text>
+					React.isValidElement(rightContent) ? rightContent : <Text size='sm' >{ rightContent }</Text>
 				}
 			</View>
 		);

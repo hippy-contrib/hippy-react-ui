@@ -108,7 +108,7 @@ export class Navigator extends React.Component {
 		)
 	}
 	render () {
-		const { containerStyle, transparent, rightContent } = this.props;
+		const { containerStyle, transparent } = this.props;
 		return (
 			<StatusBarWrapper>
 				<View style={[ styles.container, transparent ? { backgroundColor: 'transparent' } : {}, flattenStyle(containerStyle)]}>

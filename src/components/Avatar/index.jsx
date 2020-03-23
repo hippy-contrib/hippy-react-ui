@@ -4,9 +4,8 @@ import Icon, { IconProps, DefaultIconProps } from '../Icon';
 
 export class Avatar extends React.Component {
 	render () {
-		const { ...props } = this.props;
 		return (
-			<Icon { ...props } />
+			<Icon { ...this.props } />
 		);
 	}
 }

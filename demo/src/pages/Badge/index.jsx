@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
 import Badge from '../../../../src/components/Badge';
+import Icon from '../../../../src/components/Icon';
 
 class BadgePage extends React.Component {
 	static propTypes = {
@@ -18,7 +19,7 @@ class BadgePage extends React.Component {
 				
 				<View style={{ height: 32, width: 64, backgroundColor: 'green', }}>
 					normal
-					<Badge text="8" corner />
+					<Badge fontSize={10} text="8" corner />
 				</View>
 				<View style={{ marginTop: 36, height: 32, width: 64, backgroundColor: 'deepskyblue', }}>
 					max value
@@ -32,6 +33,14 @@ class BadgePage extends React.Component {
 					custom Style
 					<Badge text={100} dot corner={false} style={{ position: 'relative'}} />
 				</View>
+				<Icon
+					source={'http://res.imtt.qq.com/flower-h5/qb_icon_new.png'}
+					onClick={() => history.goBack()}
+					resizeMode={'cover'}
+					containerStyle={{ marginTop: 36, overflow: 'auto'}}
+				>
+					<Badge text={100} corner={true} style={{ zIndex: 99 }} />
+				</Icon>
 			</View>
 		);
 	}

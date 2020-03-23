@@ -3,7 +3,7 @@ import { View } from '@hippy/react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import Button from '../../../../src/components/Button';
+import Button from '../../../../lib/components/Button';
 
 class ButtonPage extends React.Component {
 	static propTypes = {

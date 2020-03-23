@@ -5,13 +5,6 @@ import Modal from './Modal';
 import { stopPropagation } from '../../utils/event';
 import { hairlineWidth } from '../../utils';
 
-export const COLOR = {
-	selectedTextColor: '#108ee9',
-	textColor: '#afafaf',
-	divider: '#ddd',
-	backgroundColor: '#fff'
-}
-
 const styles = StyleSheet.create({
 	container: {
 		// transform: [{ translateY: -50 }],

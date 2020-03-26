@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import Text from '../Text';
 import { StyleProps } from '../../types';
+import { fontSizes, getFontSize } from '../../utils/fontSize';
+import { flattenStyle } from '../../utils';
 
 const styles = StyleSheet.create({
 	container: {
@@ -68,33 +70,34 @@ export class Badge extends React.Component {
 		return containerStyle;
 	}
 	render () {
-		const { size, dot } = this.props;
-		const fontSize = size === 'large' ? 'md' : 'xs';
+		const { dot, fontStyle, fontSize } = this.props;
 		const word = this.getText();
 		return (
 			<View style={this.getContainerStyle()}>
-				{ !dot && <Text color="#ffffff" size={fontSize} style={[styles.badge]} >{word}</Text>}
+				{ !dot && <Text color="#ffffff" size={getFontSize(fontSize)} style={[styles.badge, flattenStyle(fontStyle)]} >{word}</Text>}
 			</View>
 		);
 	}
 }
 
 Badge.propTypes = {
-	size: PropTypes.oneOf(['small', 'large']),
+	fontSize: PropTypes.oneOfType([PropTypes.oneOf(fontSizes), PropTypes.number]),
 	text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 	corner: PropTypes.bool,
 	dot: PropTypes.bool,
 	overflowCount: PropTypes.number,
 	style: StyleProps,
+	fontStyle: StyleProps,
 }
 
 Badge.defaultProps = {
-	size: 'small',
+	fontSize: 'xs',
 	text: '',
 	corner: true,
 	dot: false,
 	overflowCount: 99,
-	style: {}
+	style: {},
+	fontStyle: {},
 }
 
 export default Badge;

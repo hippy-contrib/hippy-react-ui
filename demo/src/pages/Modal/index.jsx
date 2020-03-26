@@ -3,7 +3,7 @@ import { View } from '@hippy/react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
-import Modal, { Confirm, Popup } from '../../../../src/components/Modal';
+import Modal, { Confirm, Popup } from '../../../../lib/components/Modal';
 import Text from '../../../../src/components/Text';
 import Button from '../../../../src/components/Button';
 

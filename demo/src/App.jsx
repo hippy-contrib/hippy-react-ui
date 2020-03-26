@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
 	}
 });
 
+console.log('__PLATFORM__', __PLATFORM__);
 export default class App extends Component {
 	constructor(props) {
 		super(props);

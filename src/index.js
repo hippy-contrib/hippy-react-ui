@@ -5,6 +5,8 @@ export { default as Text } from './components/Text';
 export { default as Switch } from './components/Switch';
 export { default as Tabs } from './components/Tabs';
 export { default as Modal } from './components/Modal';
+export { Confirm } from './components/Modal';
+export { Popup } from './components/Modal';
 export { default as List } from './components/List';
 export { default as Button } from './components/Button';
 export { default as Card } from './components/Card';

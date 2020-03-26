@@ -13,7 +13,7 @@
 demo/ios/products
 dist
 demo/dist
-lib
+/lib
 
 
 # misc

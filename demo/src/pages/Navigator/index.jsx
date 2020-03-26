@@ -34,6 +34,7 @@ class NavigatorPage extends React.Component {
 				<Navigator
 					containerStyle={{ marginTop: 20 }}
 					title={'NavigatorPage'}
+					titleTextStyle={{ color: 'red'}}
 					rightContent={<Button type='ghost' style={{ borderWidth: 0 }}>点我</Button>}
 					back
 					onLeftClick={() => history.goBack()}

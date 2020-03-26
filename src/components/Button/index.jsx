@@ -6,6 +6,7 @@ import { StyleProps, ChildrenProps } from '../../types';
 import { stopPropagation } from '../../utils/event';
 import { fontSizesMap } from '../../utils/fontSize';
 import Text from '../Text';
+import { hairlineWidth, flattenStyle } from '../../utils';
 
 import {
 	// StyleProps,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
 	ghostContainer: {
 		backgroundColor: '#fff',
 		color: '#108ee9',
-		borderWidth: 1,
+		borderWidth: hairlineWidth,
 		borderColor: '#dddddd'
 	},
 	ghostText: {
@@ -86,7 +87,7 @@ export class Button extends React.Component {
 			styles.container,
 			size === 'small' ? small : large,
 			styles[`${type}Container`] || styles['primaryContainer'],
-			style,
+			flattenStyle(style),
 		];
 		disabled && containerStyle.push(styles.disabled);
 		isActive && containerStyle.push(activating, activeStyle);

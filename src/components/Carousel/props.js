@@ -20,4 +20,5 @@ export const Props = {
 
 export const DefaultProps = {
 	style: {},
+	selectedIndex: 0,
 }

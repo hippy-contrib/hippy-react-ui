@@ -38,11 +38,11 @@ export class Progress extends React.Component {
 	}
 	startAnimate ({ layout: { width } }) {
 		const containerWidth = width;
-		const { animated, ease_bezier } = this.props;
+		const { ease_bezier } = this.props;
 		const barWidth = Math.floor(containerWidth / 100 * this.getPercent());
 
 		this.scrollAnimation = new Animation({
-			duration: animated ? 5000 : 0,   //动画持续时长
+			duration:  1000,   //动画持续时长
 			startValue: 0,
 			toValue: barWidth,
 			delay: 0,     //至动画真正开始的延迟时间
@@ -60,9 +60,10 @@ export class Progress extends React.Component {
 		this.scrollAnimation && this.scrollAnimation.destroy();
 	}
 	render () {
-		const { style, barStyle, unfilled } = this.props;
+		const { style, barStyle, unfilled, animated } = this.props;
 		const { containerWidth } = this.state;
 		const fillStyle = unfilled ? {} : { backgroundColor: 'transparent' };
+		const barWidth = Math.floor(containerWidth / 100 * this.getPercent());
 		return (
 			<View
 				style={[styles.container, fillStyle, style]}
@@ -72,7 +73,7 @@ export class Progress extends React.Component {
 					containerWidth &&
 					<View
 						ref={ref => this.barref = ref}
-						style={[styles.barStyle, barStyle, { width: this.scrollAnimation || 0 }]}
+						style={[styles.barStyle, barStyle, { width: animated ? this.scrollAnimation : barWidth }]}
 					/>
 				}
 			</View>

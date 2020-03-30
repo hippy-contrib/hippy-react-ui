@@ -1,6 +1,10 @@
 {
   "name": "@tencent/hippy-react-components",
+<<<<<<< HEAD
   "version": "0.1.9",
+=======
+  "version": "0.1.17",
+>>>>>>> 38cdeef7c21ab8f2409a2abefafdaedc773710ab
   "main": "lib/index.js",
   "dependencies": {
     "@hippy/react": "^2.0.1",

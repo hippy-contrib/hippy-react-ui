@@ -84,11 +84,11 @@ export class Navigator extends React.Component {
 	}
 
 	renderTitle () {
-		const { title, titleStyle } = this.props;
+		const { title, titleStyle, titleTextStyle } = this.props;
 		return (
 			<View style={[ styles.titleContainer, flattenStyle(titleStyle)]}>
 				{
-					React.isValidElement(title) ? title : <Text size='md' >{ title }</Text>
+					React.isValidElement(title) ? title : <Text size='md' style={titleTextStyle} >{ title }</Text>
 				}
 			</View>
 		);

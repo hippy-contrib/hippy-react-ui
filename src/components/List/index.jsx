@@ -8,19 +8,21 @@ const styles = StyleSheet.create({
 	container: {
 	},
 	listItem: {
-		height: 56,
-		paddingLeft: 12,
-		justifyContent: 'center',
-		alignItems: 'center',
+		display: 'flex',
+		flexDirection: 'column',
 		backgroundColor: "#ffffff",
 		borderBottomWidth: 1,
 		borderBottomColor: '#eeeeee',
+		flexShrink: 0
 	}
 });
 
 // class Entry extends React.Component<Object, InitialState> {
 class Entry extends React.Component {
 	static propTypes = {
+		match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   };
 	constructor(props) {
 		super(props);
@@ -41,27 +43,34 @@ class Entry extends React.Component {
 	}
  	getRenderRow (index) {
 		if (index < 0 || index >= this.props.numberOfRows) return null;
-		this.state.cacheNodeList[index] = this.state.cacheNodeList[index] || {};
+		let cacheNode = this.state.cacheNodeList[index] || {}
 		return (
-			this.state.cacheNodeList[index].hide ? null : (
-				<View ref={this.setRef.bind(this, index)}>
+			cacheNode.hide ? null : (
+				<View ref={this.setRef.bind(this, index)}
+					style={styles.listItem}
+				>
 					{ this.props.renderRow(index) }
 				</View>
 			)
 		);
+	}
+	getStyle () {
+		console.log(arguments)
 	}
 	render () {
 		let props = {
 			...this.props,
 			renderRow: this.getRenderRow
 		}
+		let stylePro = Array.isArray(props.style) ? props.style : [props.style]
 		return (
 			<ListView
 				ref={this.listRef}
 				{...props}
 				style={[styles.container, {
 					paddingTop: this.state.offsetTop
-				}]}
+				}, ...stylePro]}
+				getRowStyle={this.getStyle.bind(this)}
 			/>
 		);
 	}
@@ -93,7 +102,6 @@ class Entry extends React.Component {
 		}
 	}
 	toggleItem () {
-		console.log('toggleitem', this.state.cacheNodeList)
 		if (Platform.OS === 'web') {
 			let { height } = Dimensions.get('window');
 			let { cacheNodeList } = this.state
@@ -105,7 +113,6 @@ class Entry extends React.Component {
 				let top = cacheNodeList[index].offsetTop - scrollTop
 				let isHide = (top <= -height || top >= 2 * height)
 				let isTopHide = top <= -height
-				console.log(index, isHide, top, height, cacheNodeList[index].offsetTop, scrollTop, isTopHide, offsetTop)
 				dataSource[index].hide = isHide
 				offsetTop = offsetTop + (isTopHide ? cacheNodeList[index].clientHeight : 0)
 			})

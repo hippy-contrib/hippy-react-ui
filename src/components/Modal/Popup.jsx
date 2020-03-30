@@ -13,8 +13,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#ffffff',
 		flex: 1,
 		minHeight: 60,
-		justifyContent: 'center',
-		alignItems: 'center',
+		display: 'block',
 	},
 	header: {
 		paddingHorizontal: 12,

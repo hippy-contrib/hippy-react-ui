@@ -23,7 +23,7 @@ export class NoticeBar extends React.Component {
 		const { children } = this.props;
 		return (
 			<View style={styles.container} >
-				{children}
+				{children}asdfad
 			</View>
 		)
 	}

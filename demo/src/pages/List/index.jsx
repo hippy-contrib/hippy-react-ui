@@ -15,15 +15,18 @@ const styles = StyleSheet.create({
 		paddingLeft: 12,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: "#ffffff",
 		borderBottomWidth: 1,
-		borderBottomColor: '#eeeeee',
+		borderBottomColor: '#eee',
+		flexShrink: 0
 	}
 });
 
 // class Entry extends React.Component<Object, InitialState> {
 class Entry extends React.Component {
 	static propTypes = {
+		match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   };
 	constructor(props) {
 		super(props);
@@ -56,13 +59,12 @@ class Entry extends React.Component {
     return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).substr(-6)
   }
 	getRowKey = (index) => {
-		return this.state.dataSource[index].path;
+		return this.state.dataSource[index].name;
 	}
 	render () {
 		const { dataSource = [] } = this.state;
 		return (
-			<ListView style={[styles.container, {
-			}]}
+			<ListView style={styles.container}
 				showScrollIndicator={false}
 				numberOfRows={dataSource.length}
 				renderRow={this.getRenderRow}

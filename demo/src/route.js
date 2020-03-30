@@ -18,6 +18,7 @@ import ProgressPage from './pages/Progress';
 import RatingPage from './pages/Rating';
 import PickerPage from './pages/Picker';
 import NavigatorPage from './pages/Navigator';
+import CarouselPage from './pages/Carousel';
 
 export const pages = [
 	{
@@ -25,6 +26,10 @@ export const pages = [
 		path: 'icon',
 		component: IconPage,
 	},{
+		name: 'Carousel',
+		path: 'carousel',
+		component: CarouselPage,
+},{
 		name: 'Navigator',
 		path: 'navigator',
 		component: NavigatorPage,

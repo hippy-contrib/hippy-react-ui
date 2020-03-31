@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from '@hippy/react';
+import { View } from '@hippy/react';
 
 export class Panel extends React.Component {
 
@@ -14,17 +14,13 @@ export class Panel extends React.Component {
 	}
 	handleOnLayout ({ layout: { width, height, x, y } }) {
 		this.panelLayout = { width, height, x, y };
-		console.log(this.panelLayout);
-	}
-	componentDidMount () {
-		console.log('panel componentDidMount');
 	}
 	render () {
-		const { children } = this.props;
+		const { children, style } = this.props;
 		const { height, width } = this.panelLayout;
-		const style = height || width ? { height, width } : {};
+		const customStyle = height || width ? { height, width } : {};
 		return (
-			<View style={style} onLayout={this.handleOnLayout}>
+			<View style={[ style, customStyle ]} onLayout={this.handleOnLayout}>
 				{ children }
 			</View>
 		);

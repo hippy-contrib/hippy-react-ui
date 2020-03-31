@@ -19,7 +19,7 @@ import RatingPage from './pages/Rating';
 import PickerPage from './pages/Picker';
 import NavigatorPage from './pages/Navigator';
 import CarouselPage from './pages/Carousel';
-import SwiperPage from './pages/Swiper';
+import SliderPage from './pages/Slider';
 
 export const pages = [
 	{
@@ -31,9 +31,9 @@ export const pages = [
 		path: 'carousel',
 		component: CarouselPage,
 	},{
-		name: 'Swiper',
-		path: 'swiper',
-		component: SwiperPage,
+		name: 'Slider',
+		path: 'Slider',
+		component: SliderPage,
 	},{
 		name: 'Navigator',
 		path: 'navigator',

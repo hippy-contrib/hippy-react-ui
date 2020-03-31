@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 import React from 'react';
 import { StyleSheet, View, ScrollView } from '@hippy/react';
 
@@ -8,18 +11,9 @@ import { ISWEB } from '../../utils';
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: '#fefcec',
-		height: 34,
-		lineHeight: 34,
-		justifyContent: 'center',
-		alignItems: 'center',
-		position: 'relative',
-		paddingLeft: 8,
-		paddingRight: 8,
-		flexDirection: 'row',
 	},
 })
-export class NoticeBar extends React.Component {
+export class Slider extends React.Component {
 
 	constructor (props) {
 		super(props);
@@ -68,6 +62,15 @@ export class NoticeBar extends React.Component {
 		}
 	}
 
+	scrollToIndex (index) {
+		const selectedPanel = this.panelRefs[`${index}`];
+		if (!selectedPanel) return;
+
+		const { panelLayout } = selectedPanel;
+		const currentDist = panelLayout[this.axis];
+		this.scrollTo(currentDist);
+	}
+
 	// web 需要优化，不需要每次都执行操作，看看速度是否为0
 	onScroll (e) {
 		const distance = e.contentOffset[this.axis];
@@ -80,25 +83,33 @@ export class NoticeBar extends React.Component {
 			}
 		}, 180);
 	}
+	getPanelStyle (index) {
+		const { cellSpacing, slideWidth, children, horizontal } = this.props;
+		const count = React.Children.count(children);
+		const marginName = horizontal ? 'marginLeft' : 'marginBottom';
+		const style = { [marginName]: count !== index + 1 ? cellSpacing : 0 };
+		if (this.props.hasOwnProperty('slideWidth')) style.width = slideWidth;
+		return style;
+	}
 	componentDidMount () {
-		console.log('componentDidMount');
+		const { selectedIndex } = this.props;
+		this.scrollToIndex(selectedIndex);
 	}
 	render () {
-		const { children, horizontal, style } = this.props;
-		// 兼容web和hippy，web没有onScrollEndDrag，所以只能在onScroll事件中做处理
-		const funcName = ISWEB ? 'onScroll' : 'onScroll';
-		const onScrollProps = { [funcName]: this.onScroll}
+		const { children, horizontal, style, contentContainerStyle } = this.props;
 		return (
 			<ScrollView
 				horizontal={horizontal}
-				contentContainerStyle={flattenStyle([styles.container, flattenStyle(style)])}
-				{ ...onScrollProps }
+				style={flattenStyle([styles.container, flattenStyle(style)])}
+				contentContainerStyle={flattenStyle(contentContainerStyle)}
+				onScroll={this.onScroll}
 				ref={el => (this.scrollerRef = el)}
 				scrollEventThrottle={32}
+				pagingEnabled
 			>
 				{
 					React.Children.map(children, (child, index) =>
-						<Panel ref={ref => this.panelRefs[index] = ref}>{ child }</Panel>
+						<Panel style={this.getPanelStyle(index)} ref={ref => this.panelRefs[index] = ref}>{ child }</Panel>
 					)
 				}
 			</ScrollView>
@@ -106,8 +117,7 @@ export class NoticeBar extends React.Component {
 	}
 }
 
+Slider.propTypes = Props;
+Slider.defaultProps = DefaultProps;
 
-NoticeBar.propTypes = Props;
-NoticeBar.defaultProps = DefaultProps;
-
-export default NoticeBar;
+export default Slider;

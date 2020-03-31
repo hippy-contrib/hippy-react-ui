@@ -86,7 +86,7 @@ export class Slider extends React.Component {
 	getPanelStyle (index) {
 		const { cellSpacing, slideWidth, children, horizontal } = this.props;
 		const count = React.Children.count(children);
-		const marginName = horizontal ? 'marginLeft' : 'marginBottom';
+		const marginName = horizontal ? 'marginRight' : 'marginBottom';
 		const style = { [marginName]: count !== index + 1 ? cellSpacing : 0 };
 		if (this.props.hasOwnProperty('slideWidth')) style.width = slideWidth;
 		return style;

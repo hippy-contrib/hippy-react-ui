@@ -26,33 +26,33 @@ class SliderPage extends React.Component {
 		const { history } = this.props;
 		return (
 			<View style={{  }} onClick={() => console.log('fuck')}>
-				<Slider>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>1</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>2</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>3</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>4</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>5</View>
+				<Slider cellSpacing={20}>
+					<View style={{ width: 100, backgroundColor: 'red' }}>1</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>2</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>3</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>4</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>5</View>
 				</Slider>
 				<Slider style={{ marginTop: 56 }} slideWidth={200} cellSpacing={50}>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>1</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>2</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>3</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>4</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>5</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>1</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>2</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>3</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>4</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>5</View>
 				</Slider>
 				<Slider style={{ backgroundColor: 'red', height: 100, marginTop: 56 }} horizontal={false} slideWidth={200} cellSpacing={50}>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>1</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>2</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>3</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>4</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>5</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>1</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>2</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>3</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>4</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>5</View>
 				</Slider>
 				<Slider style={{ backgroundColor: 'red', height: 100, marginTop: 56 }} horizontal={false} slideWidth={200} cellSpacing={20}>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>1</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>2</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>3</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>4</View>
-					<View style={{ width: 100, marginRight: 20, backgroundColor: 'red' }}>5</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>1</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>2</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>3</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>4</View>
+					<View style={{ width: 100, backgroundColor: 'red' }}>5</View>
 				</Slider>
 			</View>
 		);

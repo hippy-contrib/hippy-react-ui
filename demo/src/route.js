@@ -18,12 +18,22 @@ import ProgressPage from './pages/Progress';
 import RatingPage from './pages/Rating';
 import PickerPage from './pages/Picker';
 import NavigatorPage from './pages/Navigator';
+import CarouselPage from './pages/Carousel';
+import SliderPage from './pages/Slider';
 
 export const pages = [
 	{
 		name: 'Icon',
 		path: 'icon',
 		component: IconPage,
+	},{
+		name: 'Carousel',
+		path: 'carousel',
+		component: CarouselPage,
+	},{
+		name: 'Slider',
+		path: 'Slider',
+		component: SliderPage,
 	},{
 		name: 'Navigator',
 		path: 'navigator',

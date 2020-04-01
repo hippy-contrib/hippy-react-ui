@@ -37,9 +37,9 @@ class List extends React.Component {
 	}
  	getRenderRow (index) {
 		if (index < 0 || index >= this.props.numberOfRows) return null;
-		this.state.cacheNodeList[index] = this.state.cacheNodeList[index] || {};
+		let cacheNode = this.state.cacheNodeList[index] || {}
 		return (
-			this.state.cacheNodeList[index].hide ? null : (
+			cacheNode.hide ? null : (
 				<View ref={this.setRef.bind(this, index)}
 					style={styles.listItem}
 				>

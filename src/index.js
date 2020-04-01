@@ -20,3 +20,4 @@ export { default as Progress } from './components/Progress';
 export { default as Rating } from './components/Rating';
 export { default as Picker } from './components/Picker';
 export { default as Navigator } from './components/Navigator';
+export { default as Slider } from './components/Slider';

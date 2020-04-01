@@ -49,7 +49,6 @@ class List extends React.Component {
 		);
 	}
 	getStyle () {
-		console.log(arguments)
 	}
 	render () {
 		let props = {

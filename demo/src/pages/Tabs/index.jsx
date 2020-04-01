@@ -31,18 +31,28 @@ class TabsPage extends React.Component {
 		return (
 			<View style={{ flex: 1, padding: 12 }} onClick={() => history.goBack()}>
 				<Tabs tabs={[
-					{ key: 't1', title: 't1' },
-					{ key: 't2', title: 't2' },
-					{ key: 't3', title: 't3' },
-					{ key: 't4', title: 't4' },
-					{ key: 't5', title: 't5' },
-				]} initalPage={'t2'}
+						{ key: 't1', title: 't1' },
+						{ key: 't2', title: 't2' },
+						{ key: 't3', title: 't3' },
+						{ key: 't4', title: 't4' },
+						{ key: 't5', title: 't5' },
+						{ key: 't6', title: 't6' },
+						{ key: 't7', title: 't7' },
+						{ key: 't8', title: 't8' },
+						{ key: 't9', title: 't9' },
+					]}
+					initialPage={'t3'}
+					tabBarItemStyle={{ width: 80 }}
 				>
 					<View style={{ backgroundColor: 'red', flex: 1, display: 'flex' }} key="t1">content1<View key="t2">content2</View></View>
 					<View key="t2">content2</View>
 					<View key="t3">content3</View>
 					<View key="t4">content4</View>
 					<View key="t5">content5</View>
+					<View key="t6">content6</View>
+					<View key="t7">content7</View>
+					<View key="t8">content8</View>
+					<View key="t9">content9</View>
 				</Tabs>
 				<Tabs tabs={[
 					{ key: 't1', title:  <Item />},

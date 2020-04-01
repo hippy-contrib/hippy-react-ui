@@ -8,17 +8,11 @@ const styles = StyleSheet.create({
 	container: {
 	},
 	listItem: {
-		display: 'flex',
-		flexDirection: 'column',
-		backgroundColor: "#ffffff",
-		borderBottomWidth: 1,
-		borderBottomColor: '#eeeeee',
-		flexShrink: 0
 	}
 });
 
 // class Entry extends React.Component<Object, InitialState> {
-class Entry extends React.Component {
+class List extends React.Component {
 	static propTypes = {
 		match: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
@@ -76,7 +70,7 @@ class Entry extends React.Component {
 	}
 	initNodeCache () {
 		let cacheNodeList = []
-		this.listItem.forEach((item, index) => {
+		this.listItem && this.listItem.forEach((item, index) => {
 			let node = item.parentNode
 			let cacheNode = {}
 			cacheNode.clientHeight = cacheNode.clientHeight || node.clientHeight
@@ -134,4 +128,4 @@ class Entry extends React.Component {
 	}
 }
 
-export default withRouter(Entry);
+export default withRouter(List);

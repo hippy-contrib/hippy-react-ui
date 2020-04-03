@@ -51,7 +51,7 @@ class List extends React.Component {
 	getStyle () {
 	}
 	render () {
-		let {location, match, history, props} = this.props
+		let {location, match, history, ...props} = this.props
 		let stylePro = Array.isArray(props.style) ? props.style : [props.style]
 		return (
 			<ListView

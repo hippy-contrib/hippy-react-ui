@@ -1,16 +1,9 @@
 import React from 'react';
-import { View, StyleSheet, Animation } from '@hippy/react';
-import PropTypes from 'prop-types';
+import { View, StyleSheet, Animation, ScrollView } from '@hippy/react';
 
-import { tabPageProps, tabsProps } from './props';
-import { StyleProps } from '../../types';
-import {
-	// StyleProps,
-	// DefaultStyleProps,
-	ClickableProps,
-	DefaultClickableProps,
-} from '../../types';
-import { ISWEB } from '../../utils';
+import { TabBarPropTypes, TabBarDefaultProps } from './props';
+
+import { ISWEB, flattenStyle } from '../../utils';
 import { COLOR } from './props';
 import TabBarItem from './TabBarItem';
 
@@ -18,15 +11,14 @@ const DIVIDERHEIGHT = 1;
 
 const styles = StyleSheet.create({
 	container: {
-		position: 'relative',
+		borderBottomWidth: DIVIDERHEIGHT,
+		backgroundColor: COLOR.backgroundColor,
 	},
 	tabContainer: {
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		flexDirection: 'row',
 		display: 'flex',
-		borderBottomWidth: DIVIDERHEIGHT,
-		backgroundColor: COLOR.backgroundColor,
 	},
 	item: {
 		flex: 1,
@@ -54,13 +46,19 @@ export class TabBar extends React.Component {
 	constructor(props) {
 		super(props);
 
-		this.tabLayouts = {};
+		this.tabLayouts = {};			// 每个tabItem的位置信息
+		this.containerLayout = {}; // 可视窗口位置信息
+		this.scrollLayout = {} // 滚动条位置信息
 		this.state = {
 			cursor: {
 				left: 0,
 				width: 0,
 			}
 		}
+
+		this.handleOnScroll = this.handleOnScroll.bind(this);
+		this.onLayout = this.onLayout.bind(this);
+
 	}
 	onClick (event, { key }) {
 		event.preventDefault && event.preventDefault();
@@ -71,10 +69,32 @@ export class TabBar extends React.Component {
 	handleTabItemLayout ({ layout }, { key }) {
 		this.tabLayouts[key] = layout
 	}
+	/**
+	 * @description 滑动scrollview，使选择的item处于可视窗口中
+	 * @param {*} param0 
+	 */
+	setVisibleView ({ left, width }) {
+		const { containerLayout, scrollLayout } = this;
+		const visibleSize = { left: scrollLayout.x, right: scrollLayout.x + containerLayout.width };
+		// 当前处于可视窗口内，直接返回
+		if (left >= visibleSize.left && left + width <= visibleSize.right) {
+			return;
+		}
+		const targetX = left + width / 2 - containerLayout.width / 2;
+		this.scrollTo(Math.min(scrollLayout.width - containerLayout.width, Math.max(targetX, 0)));
+	}
+	scrollTo (x) {
+		if (this.scrollerRef) {
+			ISWEB ?
+				this.scrollerRef.scrollTo(x, 0, true) :
+				this.scrollerRef.scrollTo({ x, animated: true })
+		}
+	}
 	getCursorPosition () {
 		const { selected, tabs } = this.props;
 		const { cursor } = this.state;
 		const layout = this.tabLayouts[selected];
+
 		if (!layout) return { left: 0, width: 0 };
 		
 		let left = 0;
@@ -91,9 +111,16 @@ export class TabBar extends React.Component {
 			mode: "timing",  //动画模式，现在只支持timing
 			timingFunction: "ease_bezier"  //动画缓动函数
 		});
+		this.setVisibleView({ left, width: layout.width });
 		this.setState({ cursor: { left, width: layout.width } }, () => {
 			this.startAnimate();
 		});
+	}
+	handleOnScroll (layout) {
+		const { contentOffset, layoutMeasurement, contentSize } = layout
+		// hippy 中可以获取到scrollWidth，web通过instance获取
+		const width = layout.hasOwnProperty('contentSize') ? contentSize.width : this.scrollerRef.instance.scrollWidth;
+		this.scrollLayout = { ...contentOffset, ...layoutMeasurement, width};
 	}
 	startAnimate () {
 		if (this.cursorRef && this.cursorAnimation) {
@@ -104,8 +131,12 @@ export class TabBar extends React.Component {
 	destroyAnimation () {
 		this.cursorAnimation && this.cursorAnimation.destroy();
 	}
-	onLayout () {
+	onLayout ({ layout }) {
+		this.containerLayout = layout
 		setTimeout(() => this.getCursorPosition(), 0);
+	}
+	componentDidMount () {
+		this.scrollTo(1);
 	}
 	componentDidUpdate(prevProps, prevState, snapshot) {
 		this.props.selected !== prevProps.selected && this.getCursorPosition();
@@ -126,15 +157,27 @@ export class TabBar extends React.Component {
 		);
 	}
 	render () {
-		const { tabs, selected, dividerColor, color, selectedColor, style, tabBarPosition } = this.props;
-		const propsStyle = Array.isArray(style) ? style : [ style ];
+		const { tabs, selected, dividerColor, color, selectedColor, style, tabBarPosition, tabBarItemStyle } = this.props;
 		const dividerStyle = tabBarPosition === 'bottom' ? { borderTopWidth: DIVIDERHEIGHT, borderBottomWidth: 0 } : {};
 		return (
-			<View style={[styles.container, ...propsStyle]} onLayout={() => this.onLayout()}>
-				<View style={[ styles.tabContainer, { borderColor: dividerColor }, dividerStyle ]}>
+			<View
+				onLayout={this.onLayout}
+				style={[ { borderColor: dividerColor, height: 44 }, styles.container, dividerStyle, flattenStyle(style) ]}
+			>
+				<ScrollView
+					ref={ref => this.scrollerRef = ref}
+					horizontal={true}
+					style={{}}
+					onScroll={this.handleOnScroll}
+					contentContainerStyle={{}}
+					showsHorizontalScrollIndicator={false}
+					showsVerticalScrollIndicator={false}
+					scrollEventThrottle={160}
+				>
 					{
 						tabs.map(item => <TabBarItem
 							key={item.key}
+							style={tabBarItemStyle}
 							color={ selected === item.key ? selectedColor : color }
 							selected={ selected === item.key }
 							title={item.title}
@@ -142,34 +185,14 @@ export class TabBar extends React.Component {
 							onLayout={event => this.handleTabItemLayout(event, item)}
 						/>)
 					}
-				</View>
-				{ this.renderUnderline() }
+					{ this.renderUnderline() }
+				</ScrollView>
 			</View>
 		)
 	}
 }
 
-TabBar.propTypes = {
-	...ClickableProps,
-	tabs: tabsProps,
-	tabBarPosition: PropTypes.oneOf(['top', 'bottom']),
-	selected: tabPageProps,
-	style: StyleProps,
-	showUnderLine: PropTypes.bool,
-	color: PropTypes.string, // 默认颜色
-	selectedColor: PropTypes.string, // 选中的颜色
-	dividerColor: PropTypes.string, // 默认下划线颜色，选中下划线颜色跟selectedColor一致
-}
-
-TabBar.defaultProps = {
-	...DefaultClickableProps,
-	tabs: [],
-	color: COLOR.textColor,
-	selectedColor: COLOR.selectedTextColor,
-	dividerColor: COLOR.divider,
-	tabBarPosition: 'top',
-	style: {},
-	showUnderLine: true,
-}
+TabBar.propTypes = TabBarPropTypes;
+TabBar.defaultProps = TabBarDefaultProps;
 
 export default TabBar;

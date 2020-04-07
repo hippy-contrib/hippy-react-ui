@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/lib
 
 # testing
 /coverage
@@ -13,7 +14,7 @@
 demo/ios/products
 dist
 demo/dist
-/lib
+lib
 
 
 # misc

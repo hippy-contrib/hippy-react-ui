@@ -5,16 +5,12 @@
  * 
  */
 import React from 'react';
-import PropTypes from 'prop-types';
 import { View, StyleSheet, ViewPager } from '@hippy/react';
 
 import TabBar from './TabBar';
 import TabPanel from './TabPanel';
-import { tabPageProps, tabsProps } from './props';
-import { ISWEB } from '../../utils';
-// import { StyleProps } from '../../types';
-
-import { COLOR } from './props';
+import { TabsPropTypes, TabsDefaultProps } from './props';
+import { ISWEB, flattenStyle } from '../../utils';
 
 const styles = StyleSheet.create({
 	container: {
@@ -105,6 +101,8 @@ export class Tabs extends React.Component {
 			tabBarColor,
 			tabBarSelectedColor,
 			tabBarDividerColor,
+			tabBarContainerStyle,
+			tabBarItemStyle,
 		} = this.props;
 		const isBottom = tabBarPosition === 'bottom';
 		const containerStyle = {
@@ -114,7 +112,8 @@ export class Tabs extends React.Component {
 		return (
 			<View style={[ styles.container, containerStyle ]}>
 				<TabBar
-					style={{ ...styles.barContainer, marginBottom: isBottom ? 0 : 8 }}
+					style={[{ ...styles.barContainer, marginBottom: isBottom ? 0 : 8 }, flattenStyle(tabBarContainerStyle)]}
+					tabBarItemStyle={tabBarItemStyle}
 					tabBarPosition={tabBarPosition}
 					tabs={tabs}
 					selected={currentPage}
@@ -151,34 +150,7 @@ export class Tabs extends React.Component {
 
 
 
-Tabs.propTypes = {
-	tabs: tabsProps,
-	tabBarPosition: PropTypes.oneOf(['top', 'bottom']),
-	onChange: PropTypes.func,
-	initialPage: tabPageProps,
-	page: tabPageProps, // 选中
-	swipeable: PropTypes.bool, // 是否支持滑动切换
-	animated: PropTypes.bool, // 切换时是否展示动画
-	onTabClick: PropTypes.func, // 点击tab事件
-	destroyInactiveTab: PropTypes.bool, // 销毁超出范围Tab
-	children: PropTypes.arrayOf(PropTypes.element),
-	showUnderLine: PropTypes.bool, // tabbar是否展示选中下划线
-	tabBarColor: PropTypes.string, // 默认颜色
-	tabBarSelectedColor: PropTypes.string, // 选中的颜色
-	tabBarDividerColor: PropTypes.string, // 默认下划线颜色，选中下划线颜色跟selectedColor一致
-}
-
-Tabs.defaultProps = {
-	tabs: [],
-	tabBarPosition: 'top',
-	onChange: () => false,
-	onTabClick: () => false,
-	animated: true, // 至于在终端有效
-	swipeable: true,
-	showUnderLine: true,
-	tabBarColor: COLOR.textColor,
-	tabBarSelectedColor: COLOR.selectedTextColor,
-	tabBarDividerColor: COLOR.divider,
-}
+Tabs.propTypes = TabsPropTypes;
+Tabs.defaultProps = TabsDefaultProps;
 
 export default Tabs;

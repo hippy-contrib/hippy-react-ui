@@ -1,9 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from '@hippy/react';
-import PropTypes from 'prop-types';
-import { LayoutableProps, ClickableProps, DefaultLayoutableProps, DefaultClickableProps } from '../../types/event';
-import { titleProps } from './props';
-import { COLOR } from './props';
+import { TabBarItemPropTypes, TabBarItemDefaultProps } from './props';
 
 const styles = StyleSheet.create({
 	item: {
@@ -13,16 +10,18 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 		height: 36,
 		lineHeight: 36,
+		minWidth: 56,
+		paddingHorizontal: 8,
 	}
 })
 
 export class TabBarItem extends React.Component {
 	render () {
-		const { title, color, onClick, onLayout, selected } = this.props;
+		const { title, color, onClick, onLayout, selected, style } = this.props;
 		const isComp = React.isValidElement(title);
 		return (
 			<View
-			style={{ ...styles.item, color }}
+			style={[{ ...styles.item, color }, style]}
 			onClick={onClick}
 			onLayout={onLayout}
 		>
@@ -34,20 +33,7 @@ export class TabBarItem extends React.Component {
 	}
 }
 
-TabBarItem.propTypes = {
-	...ClickableProps,
-	...LayoutableProps,
-	color: PropTypes.string,
-	title: titleProps,
-	selected: PropTypes.bool,
-}
-
-TabBarItem.defaultProps = {
-	...DefaultClickableProps,
-	...DefaultLayoutableProps,
-	title: '',
-	color: COLOR.textColor,
-	selected: false,
-}
+TabBarItem.propTypes = TabBarItemPropTypes;
+TabBarItem.defaultProps = TabBarItemDefaultProps;
 
 export default TabBarItem;

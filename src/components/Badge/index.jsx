@@ -74,7 +74,7 @@ export class Badge extends React.Component {
 		const word = this.getText();
 		return (
 			<View style={this.getContainerStyle()}>
-				{ !dot && <Text color="#ffffff" size={getFontSize(fontSize)} style={[styles.badge, flattenStyle(fontStyle)]} >{word}</Text>}
+				{ !dot && <Text color="#ffffff"  numberOfLines={1} size={getFontSize(fontSize)} style={[styles.badge, flattenStyle(fontStyle)]} >{word}</Text>}
 			</View>
 		);
 	}

@@ -32,6 +32,8 @@ class ToastPage extends React.Component {
 					ref={ref => this.firstRef = ref}
 					visible={this.state.first.visible}
 					onClose={() => this.setState({ first: { visible: false } })}
+					style={{ backgroundColor: 'red' }}
+					titleStyle={{ color: 'yellow' }}
 					>sdfsdfsd</Toast>
 			</View>
 		);

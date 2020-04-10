@@ -59,7 +59,6 @@ export class Toast extends React.Component {
 	handleMaskClick (event) {
 		const { allowClose, onClose } = this.props;
 		allowClose && onClose();
-		console.log('handleMaskClick', allowClose);
 		return stopPropagation(event);
 	}
 	handleBodyClick (event) {
@@ -94,7 +93,7 @@ export class Toast extends React.Component {
   }
 
   componentWillUnmount() {
-		window.document.body.removeChild(this.node);
+		this.node && window.document.body.removeChild(this.node);
 		this.timeout && clearTimeout(this.timeout);
   }
 }

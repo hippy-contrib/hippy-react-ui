@@ -66,16 +66,16 @@ export class Toast extends React.Component {
 		return stopPropagation(event);
 	}
 	renderBody () {
-		const { children, onLayout } = this.props;
+		const { children, onLayout, style, titleStyle  } = this.props;
 		const isElement = (Array.isArray(children) ? children : [ children ])
 			.every(item => typeof item === 'string' || typeof item === 'number');
 		
 		return (
 			<View style={styles.container} onLayout={onLayout} onClick={this.handleMaskClick}>
-				<View style={styles.bodyContainer} onClick={this.handleBodyClick}>
+				<View style={[styles.bodyContainer, style]} onClick={this.handleBodyClick}>
 					{
 						isElement ?
-							<Text color="#ffffff">{children}</Text> :
+							<Text style={titleStyle} color="#ffffff">{children}</Text> :
 							this.props.children
 					}
 				</View>

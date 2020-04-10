@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { StyleProps } from '../../types';
 
 import { LayoutableProps, DefaultLayoutableProps } from '../../types/event';
 
@@ -9,6 +10,8 @@ export const toastPropTypes = {
 	showMask: PropTypes.bool, // 暂时不支持，都会显示mask
 	allowClose: PropTypes.bool,
 	visible: PropTypes.bool,
+	style: StyleProps,
+	titleStyle: StyleProps,
 }
 
 export const toastDefaultProps = {
@@ -18,4 +21,6 @@ export const toastDefaultProps = {
 	showMask: true,
 	allowClose: true,
 	visible: true,
+	style: {},
+	titleStyle: {},
 }

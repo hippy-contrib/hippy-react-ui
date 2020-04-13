@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 
 import Button from '../../../../lib/components/Button';
+import Text from '../../../../lib/components/Text';
 
 class ButtonPage extends React.Component {
 	static propTypes = {
@@ -20,6 +21,7 @@ class ButtonPage extends React.Component {
 				<Button style={{ marginTop: 24 }} size='small' type='ghost' onClick={() => console.log('onClick')}>Ghost</Button>
 				<Button style={{ marginTop: 24 }} disabled onClick={() => console.log('onClick')}>Ghost</Button>
 				<Button style={{ marginTop: 24 }} activeStyle={{ backgroundColor: 'red' }} onClick={() => console.log('onClick')}>Ghost</Button>
+				<Button style={{ marginTop: 24 }} activeStyle={{ backgroundColor: 'red' }} onClick={() => console.log('onClick')}><Text color='red'>custom title</Text></Button>
 			</View>
 		);
 	}

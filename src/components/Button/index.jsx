@@ -100,6 +100,9 @@ export class Button extends React.Component {
 	}
 	renderChildren () {
 		const { title, children, type, size, titleStyle } = this.props;
+		if (React.isValidElement(children || title)) {
+			return children || title;
+		}
 		return (
 			<Text style={[ styles[`${type}Text`] || styles['primaryText'], titleStyle ]} size={size === 'large' ? 'md' : 'xs'}>
 				{ children || title }

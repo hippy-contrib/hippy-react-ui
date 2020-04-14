@@ -66,6 +66,14 @@ export class Confirm extends React.Component {
 			children,
 			title,
 			footer,
+			cancelText,
+			okText,
+			onCancel,
+			onOk,
+			containerStyle,
+			titleStyle,
+			bodyStyle,
+			footerStyle,
 			...otherProps
 		} = this.props;
 		return (

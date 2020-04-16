@@ -43,8 +43,10 @@ export class Tabs extends React.Component {
 		this.onPageSelected = this.onPageSelected.bind(this);
 		const { initialPage, page, tabs } = props;
 		const defaultCurrentPage = tabs && tabs[0] && tabs[0].key;
+		const currentPage = initialPage || page || defaultCurrentPage;
 		this.state = {
-			currentPage: initialPage || page || defaultCurrentPage,
+			currentPage,
+			initialIndex: this.getInitialIndex(currentPage, tabs),
 		}
 	}
 	handleBarClick (key) {
@@ -87,6 +89,11 @@ export class Tabs extends React.Component {
 			!animated && (this.viewpager.viewPagerSwiper.params.speed = 0);
 		}
 	}
+	getInitialIndex (currentPage, tabs) {
+		if (!Array.isArray(tabs)) return;
+		const index = (tabs || []).findIndex(item => item.key === currentPage);
+		return index !== -1 ? index : 0;
+	}
 	componentDidMount () {
 		const { animated, swipeable } = this.props;
 		ISWEB && this.setWebBehavior({ animated, swipeable });
@@ -108,7 +115,7 @@ export class Tabs extends React.Component {
 		const containerStyle = {
 			flexDirection: isBottom ? 'column-reverse' : 'column',
 		} 
-		const { currentPage } = this.state;
+		const { currentPage, initialIndex } = this.state;
 		return (
 			<View style={[ styles.container, containerStyle ]}>
 				<TabBar
@@ -126,7 +133,7 @@ export class Tabs extends React.Component {
 				<ViewPager
 					ref={(ref) => { this.viewpager = ref; }}
 					style={styles.bodyContainer}
-					initialPage={0}
+					initialPage={initialIndex}
 					keyboardDismissMode="none"
 					onPageSelected={this.onPageSelected}
 					scrollEnabled={swipeable}

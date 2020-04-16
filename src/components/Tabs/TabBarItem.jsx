@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from '@hippy/react';
+import { StyleSheet, View } from '@hippy/react';
 import { TabBarItemPropTypes, TabBarItemDefaultProps } from './props';
 import Text from '../Text';
 
@@ -21,7 +21,11 @@ export class TabBarItem extends React.Component {
 		const isComp = React.isValidElement(title);
 
 		if (isComp) {
-			return React.cloneElement(title, { selected, height: 36 });
+			return (
+				<View onLayout={onLayout}>
+					{ React.cloneElement(title, { selected, height: 36 }) }
+				</View>
+			);
 		} else {
 			return (
 				<Text

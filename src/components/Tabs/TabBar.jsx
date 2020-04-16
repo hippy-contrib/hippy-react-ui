@@ -75,13 +75,16 @@ export class TabBar extends React.Component {
 	 */
 	setVisibleView ({ left, width }) {
 		const { containerLayout, scrollLayout } = this;
-		const visibleSize = { left: scrollLayout.x, right: scrollLayout.x + containerLayout.width };
+		const visibleSize = { left: scrollLayout.x || 0, right: (scrollLayout.x  || 0) + containerLayout.width };
 		// 当前处于可视窗口内，直接返回
 		if (left >= visibleSize.left && left + width <= visibleSize.right) {
 			return;
 		}
 		const targetX = left + width / 2 - containerLayout.width / 2;
-		this.scrollTo(Math.min(scrollLayout.width - containerLayout.width, Math.max(targetX, 0)));
+		// 直接通过 item 计算 scrollview 的宽度
+		const scrollLayoutWidth = Object.values(this.tabLayouts).reduce((sum, item) => sum += item.width, 0);
+
+		this.scrollTo(Math.min(scrollLayoutWidth - containerLayout.width, Math.max(targetX, 0)));
 	}
 	scrollTo (x) {
 		if (this.scrollerRef) {
@@ -117,6 +120,7 @@ export class TabBar extends React.Component {
 		});
 	}
 	handleOnScroll (layout) {
+		// android、web 首次 scrollTo(1) 不会触发handleOnScroll
 		const { contentOffset, layoutMeasurement, contentSize } = layout
 		// hippy 中可以获取到scrollWidth，web通过instance获取
 		const width = layout.hasOwnProperty('contentSize') ? contentSize.width : this.scrollerRef.instance.scrollWidth;
@@ -136,7 +140,7 @@ export class TabBar extends React.Component {
 		setTimeout(() => this.getCursorPosition(), 0);
 	}
 	componentDidMount () {
-		this.scrollTo(1);
+		// this.scrollTo(1);
 	}
 	componentDidUpdate(prevProps, prevState, snapshot) {
 		this.props.selected !== prevProps.selected && this.getCursorPosition();
@@ -169,6 +173,7 @@ export class TabBar extends React.Component {
 					horizontal={true}
 					style={{}}
 					onScroll={this.handleOnScroll}
+					// onLayout={this.handleOnScroll}
 					contentContainerStyle={{}}
 					showsHorizontalScrollIndicator={false}
 					showsVerticalScrollIndicator={false}

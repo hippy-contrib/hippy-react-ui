@@ -50,6 +50,8 @@ export class HippyModal extends React.Component {
 		} = this.props;
 		return (
 			<Modal
+				immersionStatusBar={true}
+				supportedOrientations={false}
 				{ ...otherProps }
 				transparent
 				animated={animated}

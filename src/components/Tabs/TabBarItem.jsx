@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, StyleSheet } from '@hippy/react';
+import { StyleSheet } from '@hippy/react';
 import { TabBarItemPropTypes, TabBarItemDefaultProps } from './props';
+import Text from '../Text';
 
 const styles = StyleSheet.create({
 	item: {
-		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
 		textAlign: 'center',
@@ -19,17 +19,20 @@ export class TabBarItem extends React.Component {
 	render () {
 		const { title, color, onClick, onLayout, selected, style } = this.props;
 		const isComp = React.isValidElement(title);
-		return (
-			<View
-			style={[{ ...styles.item, color }, style]}
-			onClick={onClick}
-			onLayout={onLayout}
-		>
-			{
-				isComp ? React.cloneElement(title, { selected }) : title
-			}
-		</View>
-		)
+
+		if (isComp) {
+			return React.cloneElement(title, { selected, height: 36 });
+		} else {
+			return (
+				<Text
+					style={[{ ...styles.item, color }, style]}
+					onClick={onClick}
+					onLayout={onLayout}
+					numberOfLines={1}
+				>{title}
+				</Text>
+			);
+		}
 	}
 }
 

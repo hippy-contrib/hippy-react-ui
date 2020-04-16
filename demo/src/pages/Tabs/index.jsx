@@ -6,7 +6,7 @@ import { withRouter } from 'react-router';
 import Tabs from '../../../../src/components/Tabs';
 import Text from '../../../../src/components/Text';
 
-const Item = (props) => <Text color={props.selected ? 'red' : 'green'}>2lksd</Text>;
+const Item = (props) => <Text style={{ height: props.height, lineHeight: props.height }} color={props.selected ? 'red' : 'green'}>2lksd</Text>;
 
 class TabsPage extends React.Component {
 	static propTypes = {
@@ -59,13 +59,13 @@ class TabsPage extends React.Component {
 					{ key: 't2', title: 't2' },
 					{ key: 't3', title: 't3' },
 					{ key: 't4', title: 't4' },
-					{ key: 't5', title: 't5' },
+					{ key: 't5', title: 't5sfadfasdfasdfasdfadsf' },
 				]} initalPage={'t2'}
 					tabBarPosition='bottom'
 					onChange={page => console.log('onChange', page)}
 					onTabClick={() => console.log('onTabClick')}
 				>
-					<View style={{ backgroundColor: 'red', flex: 1, display: 'flex' }} key="t1">content1<View key="t2">content2</View></View>
+					<View style={{ backgroundColor: 'red', flex: 1, display: 'flex', justifyContent: 'center'}} key="t1">content1<View key="t2">content2</View></View>
 					<View key="t2">content2</View>
 					<View key="t3">content3</View>
 					<View key="t4">content4</View>

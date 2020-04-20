@@ -1,8 +1,8 @@
 import React from "react";
 import {ListView, View, StyleSheet, Dimensions, Platform} from "@hippy/react";
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
+import { ListPropTypes, ListDefaultPropTypes} from './props'
 
 const styles = StyleSheet.create({
 	container: {
@@ -13,11 +13,8 @@ const styles = StyleSheet.create({
 
 // class Entry extends React.Component<Object, InitialState> {
 class List extends React.Component {
-	static propTypes = {
-		match: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
-    history: PropTypes.object.isRequired
-  };
+	static propTypes = ListPropTypes
+	static defaultProps = ListDefaultPropTypes
 	constructor(props) {
 		super(props);
 		this.state = {

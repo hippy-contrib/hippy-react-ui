@@ -1,4 +1,10 @@
 /demo
+/config
+/node_modules
+/public
+/src
+/scripts
+
 
 .*.swp
 ._*

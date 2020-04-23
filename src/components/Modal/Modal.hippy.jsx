@@ -2,7 +2,7 @@
  * Hippy modal中间层，统一
  */
 import React from 'react';
-import { Modal, View } from '@hippy/react';
+import { Modal, View, HippyEventEmitter } from '@hippy/react';
 
 import { modalPropTypes, modalDefaultProps } from './props';
 import { stopPropagation } from '../../utils/event';
@@ -38,6 +38,14 @@ export class HippyModal extends React.Component {
 		onMaskClick(event);
 		return stopPropagation(event);
 	}
+	componentDidMount () {
+		const { primaryKey, onClose } = this.props
+		const hippyEventEmitter = new HippyEventEmitter()
+		this.modalDismiss = hippyEventEmitter.addListener(`${primaryKey}ModalDismiss`, (params) => {
+			onClose && onClose(params)
+			this.modalDismiss.remove()
+		});
+	}
 	render () {
 		const {
 			children,
@@ -46,6 +54,7 @@ export class HippyModal extends React.Component {
 			transparent,
 			maskStyle,
 			style,
+			onClose,
 			...otherProps
 		} = this.props;
 		return (

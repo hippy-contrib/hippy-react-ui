@@ -3,8 +3,8 @@
   "version": "0.1.2",
   "main": "lib/index.js",
   "keywords": ["hippy", "hippy-react", "components", "ui"],
-  "homepage": "https://github.com/Tencent/Hippy",
-  "repository": "https://github.com/Tencent/Hippy/tree/master/packages/hippy-vue",
+  "homepage": "https://github.com/xxs665/hippy-ui",
+  "repository": "https://github.com/xxs665/hippy-ui.git",
   "dependencies": {
     "@hippy/react": "^2.0.1",
     "@hippy/react-web": "^2.0.1",

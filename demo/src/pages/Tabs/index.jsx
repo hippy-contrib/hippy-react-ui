@@ -42,6 +42,7 @@ class TabsPage extends React.Component {
 					]}
 					initialPage={'t3'}
 					tabBarItemStyle={{ width: 80 }}
+					tabBarSelectedStyle={{ fontWeight: '100' }}
 				>
 					<View style={{ backgroundColor: 'red', flex: 1, display: 'flex' }} key="t1">content1<View key="t2">content2</View></View>
 					<View key="t2">content2</View>

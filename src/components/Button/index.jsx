@@ -104,7 +104,7 @@ export class Button extends React.Component {
 			return children || title;
 		}
 		return (
-			<Text style={[ styles[`${type}Text`] || styles['primaryText'], titleStyle ]} size={size === 'large' ? 'md' : 'xs'}>
+			<Text numberOfLines={1} ellipsizeMode='tail' style={[ styles[`${type}Text`] || styles['primaryText'], titleStyle ]} size={size === 'large' ? 'md' : 'xs'}>
 				{ children || title }
 			</Text>
 		);

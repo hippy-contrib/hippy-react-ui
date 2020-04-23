@@ -1,6 +1,6 @@
 # hippy-ui
 
-> 基于 `hippy-react` 2.0 的 `UI基础组件`
+> hippy-react ui components for hippy2.0
 
 目前已经支持的组件有
 

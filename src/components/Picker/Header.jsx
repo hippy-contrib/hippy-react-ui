@@ -35,9 +35,9 @@ export class Header extends React.Component {
 		const { okText, dismissText, onOk, onDismiss, title } = this.props;
 		return (
 			<View style={styles.container}>
-				<Button style={styles.button} onClick={onOk} type='ghost'>{dismissText}</Button>
+				<Button style={styles.button} onClick={onDismiss} type='ghost'>{dismissText}</Button>
 				<Text size='md' style={styles.title} >{title}</Text>
-				<Button style={styles.button} onClick={onDismiss} type='ghost'>{okText}</Button>
+				<Button style={styles.button} onClick={onOk} type='ghost'>{okText}</Button>
 			</View>
 		);
 	}

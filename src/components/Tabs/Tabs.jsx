@@ -110,6 +110,7 @@ export class Tabs extends React.Component {
 			tabBarDividerColor,
 			tabBarContainerStyle,
 			tabBarItemStyle,
+			tabBarSelectedStyle,
 		} = this.props;
 		const isBottom = tabBarPosition === 'bottom';
 		const containerStyle = {
@@ -121,6 +122,7 @@ export class Tabs extends React.Component {
 				<TabBar
 					style={[{ ...styles.barContainer, marginBottom: isBottom ? 0 : 8 }, flattenStyle(tabBarContainerStyle)]}
 					tabBarItemStyle={tabBarItemStyle}
+					tabBarSelectedStyle={tabBarSelectedStyle}
 					tabBarPosition={tabBarPosition}
 					tabs={tabs}
 					selected={currentPage}

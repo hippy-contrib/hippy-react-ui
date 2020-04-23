@@ -161,7 +161,7 @@ export class TabBar extends React.Component {
 		);
 	}
 	render () {
-		const { tabs, selected, dividerColor, color, selectedColor, style, tabBarPosition, tabBarItemStyle } = this.props;
+		const { tabs, selected, dividerColor, color, selectedColor, style, tabBarPosition, tabBarItemStyle, tabBarSelectedStyle } = this.props;
 		const dividerStyle = tabBarPosition === 'bottom' ? { borderTopWidth: DIVIDERHEIGHT, borderBottomWidth: 0 } : {};
 		return (
 			<View
@@ -182,7 +182,7 @@ export class TabBar extends React.Component {
 					{
 						tabs.map(item => <TabBarItem
 							key={item.key}
-							style={tabBarItemStyle}
+							style={ selected === item.key ? { ...tabBarItemStyle, ...tabBarSelectedStyle } : tabBarItemStyle }
 							color={ selected === item.key ? selectedColor : color }
 							selected={ selected === item.key }
 							title={item.title}

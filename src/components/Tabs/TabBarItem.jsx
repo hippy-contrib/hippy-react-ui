@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
 export class TabBarItem extends React.Component {
 	render () {
 		const { title, color, onClick, onLayout, selected, style } = this.props;
+		console.log('TabBarItem', style);
 		const isComp = React.isValidElement(title);
 
 		if (isComp) {

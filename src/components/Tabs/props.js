@@ -45,8 +45,10 @@ export const TabBarPropTypes = {
 	showUnderLine: PropTypes.bool,
 	color: PropTypes.string, // 默认颜色
 	selectedColor: PropTypes.string, // 选中的颜色
+	selectedStyle: StyleProps,
 	dividerColor: PropTypes.string, // 默认下划线颜色，选中下划线颜色跟selectedColor一致
 	tabBarItemStyle: StyleProps,
+	tabBarSelectedStyle: StyleProps,
 }
 
 export const TabBarDefaultProps = {
@@ -59,6 +61,8 @@ export const TabBarDefaultProps = {
 	style: {},
 	showUnderLine: true,
 	tabBarItemStyle: {},
+	selectedStyle: {},
+	tabBarSelectedStyle: StyleProps,
 }
 
 
@@ -78,6 +82,7 @@ export const TabsPropTypes = {
 	tabBarSelectedColor: PropTypes.string, // 选中的颜色
 	tabBarDividerColor: PropTypes.string, // 默认下划线颜色，选中下划线颜色跟selectedColor一致
 	tabBarItemStyle: StyleProps,
+	tabBarSelectedStyle: StyleProps,
 	tabBarContainerStyle: StyleProps,
 }
 
@@ -94,4 +99,5 @@ export const TabsDefaultProps = {
 	tabBarDividerColor: COLOR.divider,
 	tabBarContainerStyle: {},
 	tabBarItemStyle: {},
+	tabBarSelectedStyle: {},
 }

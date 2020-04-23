@@ -1,6 +1,6 @@
 /demo
 /config
-/node_modules
+node_modules
 /public
 /src
 /scripts

@@ -1,6 +1,6 @@
 {
   "name": "hippy-ui",
-  "version": "0.1.40",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "dependencies": {
     "@hippy/react": "^2.0.1",
